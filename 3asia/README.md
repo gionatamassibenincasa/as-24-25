@@ -25,7 +25,7 @@ Introduzione al linguaggio C++ e principi di programmazione
 
 __Se non vedi una presentazione, eseguilo su LiaScript:__
 
-https://liascript.github.io/course/?https://raw.githubusercontent.com/gionatamassibenincasa/as-23-24/main/3a-sia/README.md
+https://liascript.github.io/course/?https://raw.githubusercontent.com/gionatamassibenincasa/as-24-25/refs/heads/main/3asia/README.md
 
 > Programmare è capire
 >
