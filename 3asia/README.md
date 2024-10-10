@@ -19,7 +19,7 @@ import: https://raw.githubusercontent.com/LiaScript/CodeRunner/master/README.md
 import: https://raw.githubusercontent.com/liascript-templates/plantUML/master/README.md
 -->
 
-# C++ - AS 2023-24 - 3A Mod SIA
+# C++ - AS 2024-25 - 3A Mod SIA
 
 Introduzione al linguaggio C++ e principi di programmazione
 
@@ -90,7 +90,7 @@ Il C++ è un linguaggio compilato.
 
 ## Ciao, Mondo!
 
-> S'impara a programmare scrivendo programmi.”
+> S'impara a programmare scrivendo programmi.
 >
 > — Brian Kernighan
 
@@ -122,7 +122,7 @@ ridotto  ridotto.cpp  ridotto.ii  ridotto.o  ridotto.s
 cat ridotto.ii
 ```
 
-``` text, ridotto.ii 
+``` text ridotto.ii 
 # 0 "ridotto.cpp"
 # 0 "<built-in>"
 # 0 "<command-line>"
