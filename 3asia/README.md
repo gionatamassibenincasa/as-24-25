@@ -311,3 +311,184 @@ int main() {
 @LIA.cpp
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23include%20%3Ciostream%3E%0Ausing%20namespace%20std%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20int%20a1%20%3D%204,%0A%20%20%20%20%20%20%20%20a2%20%3D%209,%0A%20%20%20%20%20%20%20%20s%20%3D%20a1%20%2B%20a2%3B%0A%20%20%20%20cout%20%3C%3C%20a1%20%3C%3C%20%22%20%2B%20%22%0A%20%20%20%20%20%20%20%20%20%3C%3C%20a2%20%3C%3C%20%22%20%3D%20%22%0A%20%20%20%20%20%20%20%20%20%3C%3C%20s%20%3C%3C%20endl%3B%0A%20%20%20%20return%200%3B%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=cpp_g%2B%2B9.3.0&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+## Esercizi
+
+Risolvi gli esercizi e rispondi alle domande
+
+### Esercizio 1 - Predict
+Considera il seguente programma
+
+``` c
+#include <iostream>
+using namespace std;
+int main() {
+    double raggio, circonferenza, area;
+    const double pi = 3.14159;
+    cout << "Inserisci il raggio del cerchio: ";
+    cin >> raggio;
+    circonferenza = 2 * pi * raggio;
+    area = pi * raggio * raggio;
+    cout << "La circonferenza è: " << circonferenza << endl;
+    cout << "L'area è: " << area << endl;
+    return 0;
+}
+```
+@LIA.cpp
+
+Quesito 1.1: Cosa farà questo programma se inserisco il valore 5 per il raggio?
+
+Quesito 1.2: Cosa fa esattamente il codice sotto quando viene eseguito?
+
+### Esercizio 2 - Predict
+Considera il seguente programma
+
+``` c
+#include <iostream>
+using namespace std;
+int main() {
+    int numero;
+    cout << "Inserisci un numero: ";
+    cin >> numero;
+    if (numero % 7 == 0) {
+        cout << "Il numero è divisibile per 7" << endl;
+    } else {
+	cout << "Il numero NON è divisibile per 7" << endl;
+    }
+    return 0;
+}
+```
+@LIA.cpp
+
+Quesito 2.1: Se inserisco il numero 28, cosa verrà stampato a schermo?
+
+Quesito 2.2: E se inserisco 13?
+
+Quesito 2.3: In generale, cosa fa questo programma?
+
+Quesito 2.4: Termina sempre?
+
+
+### Esercizio 3:  - Predict
+Considera il seguente programma
+
+``` c
+#include <iostream>
+using namespace std;
+int main() {
+    int num1, num2, num3 = 0;
+    cout << "Inserisci due numeri: ";
+    cin >> num1 >> num2;
+    while (num2 > 0) {
+        num3 = num3 + num1;
+        num2--;
+    }
+    cout << "L'operazione tra " << num1 << " e " << num2 << " produce " << num3 << endl;
+    return 0;
+}
+```
+@LIA.cpp
+
+Quesito 3.1: Quanto vale num3 quando inserisco i valori 2 e 0?
+
+Quesito 3.2: Quanto vale num3 quando inserisco i valori 2 e 3?
+
+Quesito 3.3: Cosa fa, in generale, questo programma, dati due numeri naturali qualsiasi?
+
+Quesito 3.4: Termina sempre?
+
+### Esercizio 4 - Predict
+
+Considera il seguente programma
+
+``` c
+#include <iostream>
+using namespace std;
+int main() {
+    int numero = 1, accumulatore = 1;
+    const int fine = 10;
+    do {
+        accumulatore *= numero;
+        numero++;
+    } while (numero <= fine);
+    cout<< accumulatore << endl;
+    return 0;
+}
+```
+@LIA.cpp
+
+Quesito 4.1: Cosa stampa a video il programma?
+
+Quesito 4.2: Quante volte si entra nel ciclo?
+
+Quesito 4.3: Cosa fa, in generale, questo programma, considerando che fine potrebbe essere una variabile?
+
+Quesito 4.4: Termina sempre?
+
+### Esercizio 5 - Predict
+
+``` c
+#include <iostream>
+using namespace std;
+int main() {
+    int accumulatore = 0;
+    const int inizio = 10;
+    const int fine = 20;
+    for (int i = inizio; i <= fine; i++) {
+        accumulatore += i;
+    }
+    cout << accumulatore << endl;
+    return 0;
+}
+```
+@LIA.cpp
+
+Quesito 5.1: Cosa stampa a video il programma?
+
+Quesito 5.2: Quante volte si entra nel ciclo?
+
+Quesito 5.3: Cosa fa, in generale, questo programma, considerando che inizio e fine potrebbero essere due variabili?
+
+Quesito 5.4: Termina sempre?
+
+
+### Esercizio 6 - Modify
+
+Considera il seguente frammento di codice da completare
+
+``` c
+#include <iostream>
+using namespace std;
+int main() {
+    const int fine = …;
+    int j = 0;
+
+    for (int i = 0; i < fine; i++) {
+        j++;
+    }
+    cout << j << endl;
+
+    return 0;
+}
+```
+@LIA.cpp
+
+Quesito 6.1: Quale/i valori deve assumere la variabile fine affinché venga stampato 0?
+
+Quesito 6.2: Quale valore devo assegnare a fine per far stampare 10?
+
+### Esercizio 7 - Modify
+
+Quesito 7.1: Modifica il programma dell’esercizio 2 per stampare “Pari” se il numero fornito in input è divisibile per due, “Dispari” altrimenti.
+
+### Esercizio 8 - Modify
+
+Quesito 8.1: Modifica il programma dell’esercizio 4 per ottenere la somma dei numeri naturali compresi tra 5 e 10, estremi inclusi
+
+### Esercizio 9 - Make
+
+Quesito 9.1: Scrivi un programma che chiede l’età e scrive “Maggiorenne” se l’età è maggiore o uguale a 18 anni, “Minorenne” altrimenti
+
+### Esercizio 10 - Make
+
+Quesito 10.1: Scrivi un programma che stampa a video 10 volte il tuo nome.
