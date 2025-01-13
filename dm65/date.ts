@@ -35,7 +35,7 @@ class Lezione {
     aula: string;
     materiali: string;
 
-    constructor (id: number, edizione: string, fasciaOrariaGiornaliera: FasciaOrariaGionaliera, aula: string, materiali: string) {
+    constructor(id: number, edizione: string, fasciaOrariaGiornaliera: FasciaOrariaGionaliera, aula: string, materiali: string) {
         this.id = id;
         this.edizione = edizione;
         this.data = fasciaOrariaGiornaliera.data;
@@ -62,7 +62,7 @@ interface Edizione {
 
 let edizioni: Edizione[] = [
     {
-        edizione: "RicOp",
+        edizione: "RicOp5A",
         oreTotali: 10,
         // lun 1,2
         fascieOrarie: [
@@ -125,6 +125,20 @@ let edizioni: Edizione[] = [
         formatore: "Massi",
         tutor: "Pomili"
     },
+    {
+        edizione: "RelAx4E",
+        oreTotali: 10,
+        // mer 2
+        fascieOrarie: [
+            new FasciaOrariaGionaliera("2025-02-05", 2),
+        ],
+        aule: ["FabLab"],
+        materiali: ["Raspberry Pi"],
+        dirittoSettimanaBianca: false,
+        formatore: "Massi",
+        tutor: "Pomili"
+    },
+
     {
         edizione: "PhyComp",
         oreTotali: 10,
@@ -261,7 +275,7 @@ edizioni.forEach(edizione => {
     if (!orarioPersonale.has(edizione.tutor)) {
         orarioPersonale.set(edizione.tutor, new Set());
     }
-    if(!mappaLezioni.has(edizione.edizione)) {
+    if (!mappaLezioni.has(edizione.edizione)) {
         mappaLezioni.set(edizione.edizione, []);
     }
     const c = orarioCorsi.get(edizione.edizione);
