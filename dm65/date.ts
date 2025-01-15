@@ -152,7 +152,7 @@ let edizioni: Edizione[] = [
         materiali: ["Micro:bit", "Micro:bit"],
         dirittoSettimanaBianca: false,
         formatore: "Massi",
-        tutor: "Pomili"
+        tutor: "Sciamanna"
     },
     {
         edizione: "LM2",
@@ -167,21 +167,6 @@ let edizioni: Edizione[] = [
         dirittoSettimanaBianca: true,
         formatore: "Massi",
         tutor: "Marrucchiello"
-    },
-    {
-        edizione: "Crypto2B",
-        // Massi, Pomili
-        oreTotali: 10,
-        // mer 4, sab 1
-        fascieOrarie: [
-            new FasciaOrariaGionaliera("2025-01-29", 4),
-            new FasciaOrariaGionaliera("2025-02-01", 1)
-        ],
-        aule: ["Lab", "Lab"],
-        materiali: ["PC", "PC"],
-        dirittoSettimanaBianca: true,
-        formatore: "Massi",
-        tutor: "Pomili"
     },
     {
         edizione: "Crypto1B",
@@ -238,6 +223,21 @@ let edizioni: Edizione[] = [
         dirittoSettimanaBianca: false,
         formatore: "Taccari",
         tutor: "Sciamanna"
+    },
+    {
+        edizione: "Crypto2B",
+        // Massi, Pomili
+        oreTotali: 10,
+        // mer 4, sab 1
+        fascieOrarie: [
+            new FasciaOrariaGionaliera("2025-01-22", 4),
+            // new FasciaOrariaGionaliera("2025-02-01", 1)
+        ],
+        aule: ["Lab"],
+        materiali: ["PC"],
+        dirittoSettimanaBianca: true,
+        formatore: "Massi",
+        tutor: "Pomili"
     }
 ];
 
