@@ -347,7 +347,7 @@ SELECT
      group_concat(distinct (giorno || ' ' || L.idFasciaOraria)) AS orarioSettimanale,
     orariAttesi,
     min(L.data) AS inizio,
-    max(L.data) AS fine, group_concat(distinct substr(L.data, 9, 2) || "/" || substr(L.data, 6, 2)) AS elencoGiorni
+    max(L.data) AS fine, group_concat(distinct substr(L.data, 9, 2) || '/' || substr(L.data, 6, 2)) AS elencoGiorni
 FROM 
     Formatore F INNER JOIN
     Personale P ON F.idPersonale=P.idPersonale INNER JOIN
@@ -389,7 +389,7 @@ SELECT * FROM Lezione INNER JOIN festivita USING(data);
 CREATE VIEW RiepilogoCorsiInterniMattutini AS
 SELECT denominazione, classe, personale, orarioSettimanale, inizio, fine, elencoGiorni FROM RiepilogoCorsi WHERE bando='interno';
 
-CREATE VIEW PersonaleInterferente AS SELECT F1.idPersonale, F2.idEdizione || "," || group_concat(DISTINCT F1.idEdizione) AS corsiInterferenti FROM Formatore F1 INNER JOIN Formatore F2 USING(idPersonale) WHERE F1.idEdizione > F2.idEdizione GROUP BY F1.idPersonale;
+CREATE VIEW PersonaleInterferente AS SELECT F1.idPersonale, F2.idEdizione || ',' || group_concat(DISTINCT F1.idEdizione) AS corsiInterferenti FROM Formatore F1 INNER JOIN Formatore F2 USING(idPersonale) WHERE F1.idEdizione > F2.idEdizione GROUP BY F1.idPersonale;
 
 INSERT INTO Lezione VALUES
 -- Solo per controllo delle sovrapposizioni
@@ -419,16 +419,16 @@ INSERT INTO Lezione VALUES
 , (6, 'MIT2B', '2025-01-22', 4, 'AulaClasse', 'Portatile')
 
 -- Lillini
-, (1, 'LM3', '2025-03-14', 5, NULL, NULL)
-, (2, 'LM3', '2025-03-14', 6, NULL, NULL)
-, (3, 'LM3', '2025-03-21', 5, NULL, NULL)
-, (4, 'LM3', '2025-03-21', 6, NULL, NULL)
-, (5, 'LM3', '2025-03-28', 5, NULL, NULL)
-, (6, 'LM3', '2025-03-28', 6, NULL, NULL)
-, (7, 'LM3', '2025-04-04', 5, NULL, NULL)
-, (8, 'LM3', '2025-04-04', 6, NULL, NULL)
-, (9, 'LM3', '2025-04-11', 5, NULL, NULL)
-, (10, 'LM3', '2025-04-11', 6, NULL, NULL)
+-- , (1, 'LM3', '2025-03-14', 5, NULL, NULL)
+-- , (2, 'LM3', '2025-03-14', 6, NULL, NULL)
+-- , (3, 'LM3', '2025-03-21', 5, NULL, NULL)
+-- , (4, 'LM3', '2025-03-21', 6, NULL, NULL)
+-- , (5, 'LM3', '2025-03-28', 5, NULL, NULL)
+-- , (6, 'LM3', '2025-03-28', 6, NULL, NULL)
+-- , (7, 'LM3', '2025-04-04', 5, NULL, NULL)
+-- , (8, 'LM3', '2025-04-04', 6, NULL, NULL)
+-- , (9, 'LM3', '2025-04-11', 5, NULL, NULL)
+-- , (10, 'LM3', '2025-04-11', 6, NULL, NULL)
 
 -- Solo per aggiungere la riga
 , (1, 'EduRobot', '2025-01-08', 7, 'FabLab', 'Spike')
@@ -437,14 +437,15 @@ INSERT INTO Lezione VALUES
 -- COPIA DA QUI
 , (1, 'RicOp5A', '2025-02-03', 1, 'AulaClasse', 'PC')
 , (2, 'RicOp5A', '2025-02-03', 2, 'AulaClasse', 'PC')
-, (3, 'RicOp5A', '2025-02-10', 1, 'AulaClasse', 'PC')
-, (4, 'RicOp5A', '2025-02-10', 2, 'AulaClasse', 'PC')
-, (5, 'RicOp5A', '2025-02-17', 1, 'AulaClasse', 'PC')
-, (6, 'RicOp5A', '2025-02-17', 2, 'AulaClasse', 'PC')
-, (7, 'RicOp5A', '2025-02-24', 1, 'AulaClasse', 'PC')
-, (8, 'RicOp5A', '2025-02-24', 2, 'AulaClasse', 'PC')
-, (9, 'RicOp5A', '2025-03-03', 1, 'AulaClasse', 'PC')
-, (10, 'RicOp5A', '2025-03-03', 2, 'AulaClasse', 'PC')
+, (3, 'RicOp5A', '2025-02-17', 1, 'AulaClasse', 'PC')
+, (4, 'RicOp5A', '2025-02-17', 2, 'AulaClasse', 'PC')
+, (5, 'RicOp5A', '2025-02-24', 1, 'AulaClasse', 'PC')
+, (6, 'RicOp5A', '2025-02-24', 2, 'AulaClasse', 'PC')
+, (7, 'RicOp5A', '2025-03-03', 1, 'AulaClasse', 'PC')
+, (8, 'RicOp5A', '2025-03-03', 2, 'AulaClasse', 'PC')
+, (9, 'RicOp5A', '2025-03-10', 1, 'AulaClasse', 'PC')
+, (10, 'RicOp5A', '2025-03-10', 2, 'AulaClasse', 'PC')
+
 , (1, 'RelAx5E', '2024-12-11', 3, 'FabLab', 'Raspberry Pi')
 , (2, 'RelAx5E', '2024-12-16', 2, 'FabLab', 'Raspberry Pi')
 , (3, 'RelAx5E', '2024-12-18', 3, 'FabLab', 'Raspberry Pi')
@@ -453,8 +454,9 @@ INSERT INTO Lezione VALUES
 , (6, 'RelAx5E', '2025-01-15', 3, 'FabLab', 'Raspberry Pi')
 , (7, 'RelAx5E', '2025-01-20', 2, 'FabLab', 'Raspberry Pi')
 , (8, 'RelAx5E', '2025-01-22', 3, 'FabLab', 'Raspberry Pi')
-, (9, 'RelAx5E', '2025-01-27', 2, 'FabLab', 'Raspberry Pi')
-, (10, 'RelAx5E', '2025-01-29', 3, 'FabLab', 'Raspberry Pi')
+, (9, 'RelAx5E', '2025-01-29', 3, 'FabLab', 'Raspberry Pi')
+, (10, 'RelAx5E', '2025-02-10', 2, 'FabLab', 'Raspberry Pi')
+
 , (1, 'RelAx4F', '2024-12-11', 4, 'FabLab', 'Raspberry Pi')
 , (2, 'RelAx4F', '2024-12-16', 1, 'FabLab', 'Raspberry Pi')
 , (3, 'RelAx4F', '2024-12-18', 4, 'FabLab', 'Raspberry Pi')
@@ -463,8 +465,9 @@ INSERT INTO Lezione VALUES
 , (6, 'RelAx4F', '2025-01-15', 4, 'FabLab', 'Raspberry Pi')
 , (7, 'RelAx4F', '2025-01-20', 1, 'FabLab', 'Raspberry Pi')
 , (8, 'RelAx4F', '2025-01-22', 4, 'FabLab', 'Raspberry Pi')
-, (9, 'RelAx4F', '2025-01-27', 1, 'FabLab', 'Raspberry Pi')
-, (10, 'RelAx4F', '2025-01-29', 4, 'FabLab', 'Raspberry Pi')
+, (9, 'RelAx4F', '2025-01-29', 4, 'FabLab', 'Raspberry Pi')
+, (10, 'RelAx4F', '2025-02-10', 1, 'FabLab', 'Raspberry Pi')
+
 , (1, 'RelAx5LSinf', '2024-12-13', 5, 'FabLab', 'Raspberry Pi')
 , (2, 'RelAx5LSinf', '2024-12-20', 5, 'FabLab', 'Raspberry Pi')
 , (3, 'RelAx5LSinf', '2025-01-10', 5, 'FabLab', 'Raspberry Pi')
@@ -475,6 +478,7 @@ INSERT INTO Lezione VALUES
 , (8, 'RelAx5LSinf', '2025-03-28', 5, 'FabLab', 'Raspberry Pi')
 , (9, 'RelAx5LSinf', '2025-04-04', 5, 'FabLab', 'Raspberry Pi')
 , (10, 'RelAx5LSinf', '2025-04-11', 5, 'FabLab', 'Raspberry Pi')
+
 , (1, 'RelAx4E', '2025-02-05', 2, 'FabLab', 'Raspberry Pi')
 , (2, 'RelAx4E', '2025-02-12', 2, 'FabLab', 'Raspberry Pi')
 , (3, 'RelAx4E', '2025-02-19', 2, 'FabLab', 'Raspberry Pi')
@@ -485,16 +489,18 @@ INSERT INTO Lezione VALUES
 , (8, 'RelAx4E', '2025-03-26', 2, 'FabLab', 'Raspberry Pi')
 , (9, 'RelAx4E', '2025-04-02', 2, 'FabLab', 'Raspberry Pi')
 , (10, 'RelAx4E', '2025-04-09', 2, 'FabLab', 'Raspberry Pi')
-, (1, 'PhyComp', '2025-03-10', 2, 'Lab', 'Micro:bit')
-, (2, 'PhyComp', '2025-03-12', 4, 'Lab', 'Micro:bit')
-, (3, 'PhyComp', '2025-03-17', 2, 'Lab', 'Micro:bit')
-, (4, 'PhyComp', '2025-03-19', 4, 'Lab', 'Micro:bit')
-, (5, 'PhyComp', '2025-03-24', 2, 'Lab', 'Micro:bit')
-, (6, 'PhyComp', '2025-03-26', 4, 'Lab', 'Micro:bit')
-, (7, 'PhyComp', '2025-03-31', 2, 'Lab', 'Micro:bit')
-, (8, 'PhyComp', '2025-04-02', 4, 'Lab', 'Micro:bit')
-, (9, 'PhyComp', '2025-04-07', 2, 'Lab', 'Micro:bit')
-, (10, 'PhyComp', '2025-04-09', 4, 'Lab', 'Micro:bit')
+
+, (1, 'PhyComp', '2025-03-12', 4, 'Lab', 'Micro:bit')
+, (2, 'PhyComp', '2025-03-17', 2, 'Lab', 'Micro:bit')
+, (3, 'PhyComp', '2025-03-19', 4, 'Lab', 'Micro:bit')
+, (4, 'PhyComp', '2025-03-24', 2, 'Lab', 'Micro:bit')
+, (5, 'PhyComp', '2025-03-26', 4, 'Lab', 'Micro:bit')
+, (6, 'PhyComp', '2025-03-31', 2, 'Lab', 'Micro:bit')
+, (7, 'PhyComp', '2025-04-02', 4, 'Lab', 'Micro:bit')
+, (8, 'PhyComp', '2025-04-07', 2, 'Lab', 'Micro:bit')
+, (9, 'PhyComp', '2025-04-09', 4, 'Lab', 'Micro:bit')
+, (10, 'PhyComp', '2025-04-14', 2, 'Lab', 'Micro:bit')
+
 , (1, 'LM2', '2025-01-31', 5, 'AulaClasse', 'Notebook')
 , (2, 'LM2', '2025-01-31', 6, 'AulaClasse', 'Notebook')
 , (3, 'LM2', '2025-02-07', 5, 'AulaClasse', 'Notebook')
@@ -505,6 +511,7 @@ INSERT INTO Lezione VALUES
 , (8, 'LM2', '2025-02-21', 6, 'AulaClasse', 'Notebook')
 , (9, 'LM2', '2025-03-07', 5, 'AulaClasse', 'Notebook')
 , (10, 'LM2', '2025-03-07', 6, 'AulaClasse', 'Notebook')
+
 , (1, 'Crypto1B', '2025-02-05', 1, 'Lab', 'PC')
 , (2, 'Crypto1B', '2025-02-08', 4, 'Lab', 'PC')
 , (3, 'Crypto1B', '2025-02-12', 1, 'Lab', 'PC')
@@ -515,6 +522,7 @@ INSERT INTO Lezione VALUES
 , (8, 'Crypto1B', '2025-03-01', 4, 'Lab', 'PC')
 , (9, 'Crypto1B', '2025-03-05', 1, 'Lab', 'PC')
 , (10, 'Crypto1B', '2025-03-08', 4, 'Lab', 'PC')
+
 , (1, 'Crypto4G', '2025-02-04', 2, 'FabLab', 'Raspberry Pi')
 , (2, 'Crypto4G', '2025-02-11', 2, 'FabLab', 'Raspberry Pi')
 , (3, 'Crypto4G', '2025-02-18', 2, 'FabLab', 'Raspberry Pi')
@@ -525,6 +533,7 @@ INSERT INTO Lezione VALUES
 , (8, 'Crypto4G', '2025-03-25', 2, 'FabLab', 'Raspberry Pi')
 , (9, 'Crypto4G', '2025-04-01', 2, 'FabLab', 'Raspberry Pi')
 , (10, 'Crypto4G', '2025-04-08', 2, 'FabLab', 'Raspberry Pi')
+
 , (1, 'CyberSec3B', '2025-01-29', 5, 'FabLab', 'Raspberry Pi')
 , (2, 'CyberSec3B', '2025-01-31', 6, 'FabLab', 'Raspberry Pi')
 , (3, 'CyberSec3B', '2025-02-05', 5, 'FabLab', 'Raspberry Pi')
@@ -545,6 +554,7 @@ INSERT INTO Lezione VALUES
 , (18, 'CyberSec3B', '2025-04-09', 5, 'FabLab', 'Raspberry Pi')
 , (19, 'CyberSec3B', '2025-04-11', 6, 'FabLab', 'Raspberry Pi')
 , (20, 'CyberSec3B', '2025-04-16', 5, 'FabLab', 'Raspberry Pi')
+
 , (1, 'CyberSec4B', '2025-01-29', 6, 'FabLab', 'Raspberry Pi')
 , (2, 'CyberSec4B', '2025-01-31', 4, 'FabLab', 'Raspberry Pi')
 , (3, 'CyberSec4B', '2025-02-05', 6, 'FabLab', 'Raspberry Pi')
@@ -565,6 +575,7 @@ INSERT INTO Lezione VALUES
 , (18, 'CyberSec4B', '2025-04-02', 6, 'FabLab', 'Raspberry Pi')
 , (19, 'CyberSec4B', '2025-04-04', 4, 'FabLab', 'Raspberry Pi')
 , (20, 'CyberSec4B', '2025-04-09', 6, 'FabLab', 'Raspberry Pi')
+
 , (1, 'Crypto2B', '2025-02-05', 1, 'Lab', 'PC')
 , (2, 'Crypto2B', '2025-02-05', 4, 'Lab', 'PC')
 , (3, 'Crypto2B', '2025-02-12', 4, 'Lab', 'PC')
@@ -574,5 +585,6 @@ INSERT INTO Lezione VALUES
 , (7, 'Crypto2B', '2025-04-23', 4, 'Lab', 'PC')
 , (8, 'Crypto2B', '2025-04-30', 4, 'Lab', 'PC')
 , (9, 'Crypto2B', '2025-05-07', 4, 'Lab', 'PC')
-, (10, 'Crypto2B', '2025-05-14', 4, 'Lab', 'PC');
+, (10, 'Crypto2B', '2025-05-14', 4, 'Lab', 'PC')
 ;
+
