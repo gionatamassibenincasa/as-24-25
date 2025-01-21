@@ -6,8 +6,8 @@ CREATE TABLE Corso (
  );
  
 INSERT INTO Corso VALUES
-  ('CryptoWithBlocks','Crittografia con un linguaggio a blocchi', 10, 'Il corso è un''introduzione alle "grandi idee" della crittografia. L''approccio didattico procede "per scoperta" con attività che si susseguono con una successione di crittosistemi (dai classici ai più moderni). Lo studente può sperimentare caratteristiche di ciascun crittosistema, realizzado possibili procedure di attacco e valutandone i limiti. Dalle debolezze di un sistema lo studente dovrebbe avere necessità di scoprire il crittosistema successivo, che avrà superato i limiti del sistema precedente ma che potrà presentare altri aspetti limitanti. L''impianto generale del corso si basa su M. Lodi - M. Sbaraglia - S. Martini, "PROGRAMMARE PER IMPARARE LA CRITTOGRAFIA AL LICEO MATEMATICO". I crittosistemi, la loro analisi ed le possibili procedure di attacco sono realizzate in Snap! (un linguaggio di programmazione visuale a blocchi) da Michael Lodi (Università di Bologna).')
-, ('CyberSec','Cyber sicurezza', 20, 'Il percorso avvicina le studentesse e gli studenti alla sicurezza informatica tramite attività di gioco (challenge). È propedeutico alla partecipazione alle iniziative sulla sicurezza informatica proposte dalla rete CyberHighSchools (OliCyber, CyberChallenge, CyberTrials). Il laborartorio propone l''uso di un ecosistema hardware (Rasperry Pi 5) e software (sistema operativo GNU/Linux, interprete Python, strumenti per l''analisi del traffico di rete, strumenti per l''analisi dei file eseguibili) a sorgente aperto con il quale scoprire giocando le problematiche di sicurezza, sviluppare una coscienza critica sull''argomento e promuovere comportamenti orientati ad una protezione dei dati personali.')
+  ('CryptoWithBlocks','Crittografia con un linguaggio a blocchi', 10, 'Il corso fornisce un''introduzione alle "grandi idee" della crittografia tramite un approccio didattico che procede "per scoperta" e “per necessità”. Partendo da attività progettate per la comprensione dei crittosistemi classici si procede per tappe fino alla crittografia moderna. Ogni attività prevede la sperimentazione del crittosistema, una realizzazione di quelle grandi idee, e richiede agli studenti la costruzione di possibili procedure di attacco. Gli studenti saranno quindi in grado di valutare i limiti del sistema stesso e la consapevolezza delle debolezze dovrebbe indurre la necessità di scoprire un crittosistema successivo  (approccio didattico orientato dalla necessità, Necessity Learning Design).' || CHAR(10) || 'Il corso si basa sul lavoro di M. Lodi - M. Sbaraglia - S. Martini, "PROGRAMMARE PER IMPARARE LA CRITTOGRAFIA AL LICEO MATEMATICO" e usa il materiale didattico realizzato in Snap! (un linguaggio di programmazione visuale a blocchi) da Michael Lodi (Università di Bologna) che consiste in procedure di codifica e decodifica, di analisi e di attacco e attività guidate')
+, ('CyberSec','Cyber sicurezza', 20, 'Il percorso avvicina le studentesse e gli studenti alla sicurezza informatica tramite attività di gioco (challenge) ed è propedeutico alla partecipazione alle iniziative sulla sicurezza informatica proposte dalla rete CyberHighSchools (OliCyber, CyberChallenge, CyberTrials).' | CHAR(10) || 'Il laboratorio propone l''uso di un ecosistema hardware e software libero e/o a sorgente aperto con il quale scoprire giocando le problematiche di sicurezza, sviluppare una coscienza critica sull''argomento e promuovere comportamenti orientati ad una protezione dei dati personali.')
 , ('EduRobot', 'Robotica educativa', 20, 'Il corso coniuga una fase di ricerca ed esposizione ad una o più gare di robotica.')
 , ('LabMat1','Laboratorio di matematica 1 -L''ottica geometrica, la matematica e la fisica del "come" vediamo', 10, NULL)
 , ('LabMat2','Laboratorio di matematica 2 - Giochi di numeri - La natura ricorsiva delle operazioni', 10, 'Il corso mira a sviluppare il pensiero ricorsivo attraverso lo sviluppo dell''aritmetica. Tra induzione e ricorsione saranno definiti l''insieme dei numeri naturali e, con le sole funzioni primitive di riconoscimento dello zero, successore e predecessore, saranno definiti alcuni operatori di confronto e operazioni di addizione, sottrazione, moltiplicazione e divisione intera. Lo stesso modo di ragionare su problemi numerici può essere applicato alla risoluzione di tutti problemi che l''informatica può risolvere. Sono questi ragionamenti il vero oggetto del corso.')
@@ -16,8 +16,8 @@ INSERT INTO Corso VALUES
 , ('MIT2B','GTL MIT - RelAx', 6, NULL)
 , ('PassInf', 'Passione informatica', 20, 'Il corso ha come obiettivo quello di sviluppare competenze algoritmiche e di programmazione.')
 , ('PhyComp','Physical Computing', 10, 'Il percorso vuole fornire un''introduzione al Physical computing e usando Micro:bit, Raspberry Pi e Arduino. L''uso delle schede elettroniche programmabili permette l''interazione con il mondo reale e rende visibile l''effetto dell''esecuzione del programma che lo studente andrà a realizzare. Obiettivi del corso sono la ')
-, ('RelAx','Algebra delle relazioni', 10, 'Il percorso introduce le basi della teoria delle basi di dati relazionali, un pilastro fondamentale dell''informatica intesa come disciplina che studia i metodi per estrarre informazioni in modo automatico da dati grezzi.' || CHAR(13) || 'La presentazione degli argomenti è declinata in modo rendere evidente come l''informatica sia una disciplina scientifica e ingegneristica. Vengono esposti sia gli aspetti scientifici e formali, come quelli dell''algebra delle relazioni, sia quelli ingegneristici legati all''efficienza computazionale degli algoritmi.' || CHAR(13) || 'I contenuti si collocano in un contesto interdisciplinare, come è proprio dell''informatica, dove la teoria si unisce alla pratica, grazie all''utilizzo di una piattaforma web per la valutazione di espressioni algebriche relazionali.' || CHAR(13) || 'Obiettivi generali:' || CHAR(13) || '  -  cogliere la stretta relazione tra pensiero scientifico e sviluppo tecnologico.' || CHAR(13) || '  - comprendere le strutture fondamentali dei ragionamenti logico-deduttivi e padroneggiare il linguaggio logico-formale per risolvere problemi di varia natura.' || CHAR(13) || '  - utilizzare strumenti informatici per modellare e risolvere problemi.' || CHAR(13) || '  - acquisire una comprensione approfondita della disciplina informatica per orientare le proprie scelte future, sia a livello universitario che professionale.')
-, ('RicOp','Ricerca Operativa', 10, 'Il laboratorio introduce, per mezzo di attività laboratoriali, le problematiche affrontate della Ricerca Operativa, una disciplina che si avvale di metodi scientifici, matematici e informatici per risolvere problemi complessi che si presentano in svariati contesti, dalla logistica all''economia, passando per l''ingegneria e la medicina.')
+, ('RelAx','Algebra delle relazioni', 10, 'Il percorso introduce le basi della teoria delle basi di dati relazionali, un pilastro fondamentale dell''informatica intesa come disciplina che studia i metodi per estrarre informazioni in modo automatico da dati grezzi.' || CHAR(10) || 'La presentazione degli argomenti è declinata in modo rendere evidente come l''informatica sia una disciplina scientifica e ingegneristica. Vengono esposti sia gli aspetti scientifici e formali, come quelli dell''algebra delle relazioni, sia quelli ingegneristici legati all''efficienza computazionale degli algoritmi.' || CHAR(10) || 'I contenuti si collocano in un contesto interdisciplinare, come è proprio dell''informatica, dove la teoria si unisce alla pratica, grazie all''utilizzo di una piattaforma web per la valutazione di espressioni algebriche relazionali.' || CHAR(10) || 'Obiettivi generali:' || CHAR(10) || '  -  cogliere la stretta relazione tra pensiero scientifico e sviluppo tecnologico.' || CHAR(10) || '  - comprendere le strutture fondamentali dei ragionamenti logico-deduttivi e padroneggiare il linguaggio logico-formale per risolvere problemi di varia natura.' || CHAR(10) || '  - utilizzare strumenti informatici per modellare e risolvere problemi.' || CHAR(10) || '  - acquisire una comprensione approfondita della disciplina informatica per orientare le proprie scelte future, sia a livello universitario che professionale.')
+, ('RicOp','Ricerca Operativa', 10, 'Il corso, articolato in 10 ore e rivolto agli studenti delle classi quinte, intende offrire un’esperienza formativa rivolta principalmente alla comprensione del valore pratico della matematica, attraverso lo sviluppo di competenze di problem solving scientifico e un approccio critico alla realtà.' || CHAR(10) || 'Uno degli aspetti centrali del corso è insegnare a risolvere problemi complessi in modo sistematico, incoraggiando gli studenti a riflettere sui dati, sui metodi e sui criteri che stanno alla base delle soluzioni proposte. Questo esercizio favorisce lo sviluppo del senso critico e, dal punto di vista delle competenze, della capacità di modellare problemi reali attraverso strumenti matematici, qualità indispensabili per valutare l’efficacia e la robustezza delle scelte decisionali in ogni contesto applicativo.' || CHAR(10) || 'Il corso illustra metodi e strumenti a cavallo tra matematica e informatica. La Ricerca Operativa sarà utilizzata per mostrare il ruolo complementare delle due discipline: da un lato, la matematica come strumento per costruire modelli e analizzarne le proprietà; dall’altro, l’informatica come mezzo per sviluppare algoritmi e implementare soluzioni. Questa sinergia non solo arricchisce il bagaglio culturale degli studenti, offrendo una visione interdisciplinare dove la matematica non è un fine a sé stessa, ma getta nuova luce sull’importanza di discipline tradizionali come algebra, geometria e analisi.' || CHAR(10) || 'Infine, l’obiettivo generale del corso è accrescere la motivazione allo studio della matematica, specialmente per quegli studenti che spesso incontrano difficoltà e percepiscono questa disciplina come arida o distante. Attraverso esempi concreti e significativi, il corso vuole mostrare come la matematica possa essere uno strumento utile e appassionante, contribuendo così a ridurre il divario di rendimento tra gli studenti.')
 ;
 
 CREATE TABLE Classe (
@@ -191,12 +191,12 @@ CREATE TABLE Lezione (
 
 CREATE INDEX orario_lezioni ON Lezione(data, idFasciaOraria);
 
-CREATE TABLE giorno (
+CREATE TABLE Giorno (
     idGiorno INTEGER PRIMARY KEY,
     giorno TEXT
 );
 
-INSERT INTO giorno VALUES
+INSERT INTO Giorno VALUES
   (0, 'Dom')
 , (1, 'Lun')
 , (2, 'Mar')
@@ -299,6 +299,41 @@ INSERT INTO OrarioAmmissibile VALUES
 , ('Aperto', 5, 7)
 ;
 
+CREATE TABLE Obiettivo(
+  idObiettivo TEXT PRIMARY KEY,
+  elenco TEXT NOT NULL
+);
+
+INSERT INTO Obiettivo VALUES
+  ('generaliScientifici', '- Stimolare l’interesse verso le materie tecnico scientifiche e, in particolare, verso l’informatica.' || CHAR(10) || '- Cogliere la stretta relazione tra pensiero scientifico e sviluppo tecnologico.' || CHAR(10) || '- Comprendere le strutture fondamentali dei ragionamenti logico-deduttivi e padroneggiare il linguaggio logico-formale per risolvere problemi di varia natura.' || CHAR(10) || '- Utilizzare strumenti informatici per modellizzare e risolvere problemi.')
+, ('generaliInformatica', '- Comprendre meno superficialmente gli oggetti di studio e i metodi della disciplina informatica per poter orientare com maggior consapevolezza le proprie scelte future.')
+, ('generaliCybersicurezza', '- Diventare consapevoli delle problematiche di sicurezza nell''uso di strumenti e tecnologie informatiche' || CHAR(10) || '- Possedere le conoscenze di base necessarie a operare in sicurezza nel digitale, con responsabile attenzione per la sicurezza dei dati personali' || CHAR(10) || '- Rafforzare le competenze nell’affrontare i rischi legati all’uso di social network, al trattamento dei dati e alle truffe online.')
+;
+
+CREATE TABLE ObiettivoCorso(
+  idCorso TEXT REFERENCES Corso(idCorso),
+  idObiettivo TEXT REFERENCES Obiettivo(id),
+  PRIMARY KEY(idCorso, idObiettivo)
+);
+
+INSERT INTO ObiettivoCorso VALUES 
+  ('CryptoWithBlocks', 'generaliScientifici')
+, ('CryptoWithBlocks', 'generaliCybersicurezza')
+, ('CyberSec', 'generaliScientifici')
+, ('CyberSec', 'generaliCybersicurezza')
+, ('EduRobot', 'generaliScientifici')
+, ('LabMat2', 'generaliScientifici')
+, ('LabMat2', 'generaliInformatica')
+, ('PassInf', 'generaliScientifici')
+, ('PassInf', 'generaliInformatica')
+, ('PhyComp', 'generaliScientifici')
+, ('PhyComp', 'generaliInformatica')
+, ('RelAx', 'generaliScientifici')
+, ('RelAx', 'generaliInformatica')
+, ('RicOp', 'generaliScientifici')
+, ('RicOp', 'generaliInformatica')
+;
+
 CREATE VIEW OrariAttesi AS
 SELECT
     idClasse,
@@ -391,6 +426,14 @@ SELECT denominazione, classe, personale, orarioSettimanale, inizio, fine, elenco
 
 CREATE VIEW PersonaleInterferente AS SELECT F1.idPersonale, F2.idEdizione || ',' || group_concat(DISTINCT F1.idEdizione) AS corsiInterferenti FROM Formatore F1 INNER JOIN Formatore F2 USING(idPersonale) WHERE F1.idEdizione > F2.idEdizione GROUP BY F1.idPersonale;
 
+CREATE VIEW ObiettiviFormativi AS
+SELECT idCorso, group_concat(elenco, CHAR(10)) AS elenco
+FROM 
+    Corso INNER JOIN
+    ObiettivoCorso USING (idCorso) INNER JOIN 
+    Obiettivo USING (idObiettivo)
+GROUP BY idCorso;
+
 INSERT INTO Lezione VALUES
 -- Solo per controllo delle sovrapposizioni
   (1, 'LM1', '2024-12-13', 5, NULL, NULL)
@@ -437,14 +480,14 @@ INSERT INTO Lezione VALUES
 -- COPIA DA QUI
 , (1, 'RicOp5A', '2025-02-03', 1, 'AulaClasse', 'PC')
 , (2, 'RicOp5A', '2025-02-03', 2, 'AulaClasse', 'PC')
-, (3, 'RicOp5A', '2025-02-17', 1, 'AulaClasse', 'PC')
-, (4, 'RicOp5A', '2025-02-17', 2, 'AulaClasse', 'PC')
-, (5, 'RicOp5A', '2025-02-24', 1, 'AulaClasse', 'PC')
-, (6, 'RicOp5A', '2025-02-24', 2, 'AulaClasse', 'PC')
-, (7, 'RicOp5A', '2025-03-03', 1, 'AulaClasse', 'PC')
-, (8, 'RicOp5A', '2025-03-03', 2, 'AulaClasse', 'PC')
-, (9, 'RicOp5A', '2025-03-10', 1, 'AulaClasse', 'PC')
-, (10, 'RicOp5A', '2025-03-10', 2, 'AulaClasse', 'PC')
+, (3, 'RicOp5A', '2025-02-10', 1, 'AulaClasse', 'PC')
+, (4, 'RicOp5A', '2025-02-10', 2, 'AulaClasse', 'PC')
+, (5, 'RicOp5A', '2025-02-17', 1, 'AulaClasse', 'PC')
+, (6, 'RicOp5A', '2025-02-17', 2, 'AulaClasse', 'PC')
+, (7, 'RicOp5A', '2025-02-24', 1, 'AulaClasse', 'PC')
+, (8, 'RicOp5A', '2025-02-24', 2, 'AulaClasse', 'PC')
+, (9, 'RicOp5A', '2025-03-03', 1, 'AulaClasse', 'PC')
+, (10, 'RicOp5A', '2025-03-03', 2, 'AulaClasse', 'PC')
 
 , (1, 'RelAx5E', '2024-12-11', 3, 'FabLab', 'Raspberry Pi')
 , (2, 'RelAx5E', '2024-12-16', 2, 'FabLab', 'Raspberry Pi')
@@ -455,7 +498,7 @@ INSERT INTO Lezione VALUES
 , (7, 'RelAx5E', '2025-01-20', 2, 'FabLab', 'Raspberry Pi')
 , (8, 'RelAx5E', '2025-01-22', 3, 'FabLab', 'Raspberry Pi')
 , (9, 'RelAx5E', '2025-01-29', 3, 'FabLab', 'Raspberry Pi')
-, (10, 'RelAx5E', '2025-02-10', 2, 'FabLab', 'Raspberry Pi')
+, (10, 'RelAx5E', '2025-03-10', 2, 'FabLab', 'Raspberry Pi')
 
 , (1, 'RelAx4F', '2024-12-11', 4, 'FabLab', 'Raspberry Pi')
 , (2, 'RelAx4F', '2024-12-16', 1, 'FabLab', 'Raspberry Pi')
@@ -466,7 +509,7 @@ INSERT INTO Lezione VALUES
 , (7, 'RelAx4F', '2025-01-20', 1, 'FabLab', 'Raspberry Pi')
 , (8, 'RelAx4F', '2025-01-22', 4, 'FabLab', 'Raspberry Pi')
 , (9, 'RelAx4F', '2025-01-29', 4, 'FabLab', 'Raspberry Pi')
-, (10, 'RelAx4F', '2025-02-10', 1, 'FabLab', 'Raspberry Pi')
+, (10, 'RelAx4F', '2025-03-10', 1, 'FabLab', 'Raspberry Pi')
 
 , (1, 'RelAx5LSinf', '2024-12-13', 5, 'FabLab', 'Raspberry Pi')
 , (2, 'RelAx5LSinf', '2024-12-20', 5, 'FabLab', 'Raspberry Pi')

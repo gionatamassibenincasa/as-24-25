@@ -1,21 +1,47 @@
 ## PHYSICAL COMPUTING
 
-**Studenti/Classe**: E2B
+Agli studenti della classe E2B<br />
+Alle loro famiglie<br />
+Ai loro insegnanti<br />
+Al formatore Massi<br />
+Al tutor Sciamanna<br />
+Alla segreteria didattica<br />
+All'Ufficio personale<br />
+Ai collaboratori scolastici<br />
+Al DSGA M. Zagaglia<br />
 
-**Formatore**: *Massi*
+**Oggetto: PTOF 2024-25 Avvio corso DM65/23 Linea A edizione "PHYSICAL COMPUTING"**
 
-**Tutor**: *Sciamanna*
+Si comunica che, a partire dal giorno mer 12/03/2025, prenderanno avvio le attività del corso “**PHYSICAL COMPUTING**”. Il percorso rientra nell’ambito del progetto scolastico “Citizen scientists of the future” M4C1I3.1-2023-1143-P-31174, C.U.P. H34D23002330006 finanziato dal Piano nazionale di ripresa e resilienza, Missione 4 – Istruzione e ricerca – Componente 1 – Potenziamento dell’offerta dei servizi di istruzione: dagli asili nido alle università – Investimento 3.1 “Nuove competenze e nuovi linguaggi”, finanziato dall’Unione europea – Next Generation EU – “Azioni di potenziamento delle competenze STEM e multilinguistiche”.
 
-**Descrizione**: Il percorso vuole fornire un'introduzione al Physical computing e usando Micro:bit, Raspberry Pi e Arduino. L'uso delle schede elettroniche programmabili permette l'interazione con il mondo reale e rende visibile l'effetto dell'esecuzione del programma che lo studente andrà a realizzare. Obiettivi del corso sono la 
+Le lezioni saranno svolte, salvo imprevisti, nelle date seguenti: 
 
-**Calendario**
 
-| Incontro | Data | Ora | Incontro | Data | Ora |
-|--:|:-:|:-:|--:|:-:|:-:|
-|1|mer 12/03/2025 |4|2|lun 17/03/2025 |2|
-|3|mer 19/03/2025 |4|4|lun 24/03/2025 |2|
-|5|mer 26/03/2025 |4|6|lun 31/03/2025 |2|
-|7|mer 02/04/2025 |4|8|lun 07/04/2025 |2|
-|9|mer 09/04/2025 |4|10|lun 14/04/2025 |2|
+1. mer 12/03/2025 4<sup>a</sup> ora
+2. lun 17/03/2025 2<sup>a</sup> ora
+3. mer 19/03/2025 4<sup>a</sup> ora
+4. lun 24/03/2025 2<sup>a</sup> ora
+5. mer 26/03/2025 4<sup>a</sup> ora
+6. lun 31/03/2025 2<sup>a</sup> ora
+7. mer 02/04/2025 4<sup>a</sup> ora
+8. lun 07/04/2025 2<sup>a</sup> ora
+9. mer 09/04/2025 4<sup>a</sup> ora
+10. lun 14/04/2025 2<sup>a</sup> ora
 
+
+Il percorso vuole fornire un'introduzione al Physical computing e usando Micro:bit, Raspberry Pi e Arduino. L'uso delle schede elettroniche programmabili permette l'interazione con il mondo reale e rende visibile l'effetto dell'esecuzione del programma che lo studente andrà a realizzare. Obiettivi del corso sono la 
+
+Gli obiettivi generali del corso includono:
+
+- Comprendre meno superficialmente gli oggetti di studio e i metodi della disciplina informatica per poter orientare com maggior consapevolezza le proprie scelte future.
+- Stimolare l’interesse verso le materie tecnico scientifiche e, in particolare, verso l’informatica.
+- Cogliere la stretta relazione tra pensiero scientifico e sviluppo tecnologico.
+- Comprendere le strutture fondamentali dei ragionamenti logico-deduttivi e padroneggiare il linguaggio logico-formale per risolvere problemi di varia natura.
+- Utilizzare strumenti informatici per modellizzare e risolvere problemi.
+
+Docente referente del progetto: Prof. Gionata Massi.
+
+Cordiali saluti.
+
+Ancona, xx.01.2025
 

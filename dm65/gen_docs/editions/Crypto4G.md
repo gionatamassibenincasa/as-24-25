@@ -1,21 +1,50 @@
 ## CRITTOGRAFIA CON BLOCCHI 2
 
-**Studenti/Classe**: S4G
+Agli studenti della classe S4G<br />
+Alle loro famiglie<br />
+Ai loro insegnanti<br />
+Al formatore Taccari<br />
+Al tutor Lorenzoni<br />
+Alla segreteria didattica<br />
+All'Ufficio personale<br />
+Ai collaboratori scolastici<br />
+Al DSGA M. Zagaglia<br />
 
-**Formatore**: *Taccari*
+**Oggetto: PTOF 2024-25 Avvio corso DM65/23 Linea A edizione "CRITTOGRAFIA CON BLOCCHI 2"**
 
-**Tutor**: *Lorenzoni*
+Si comunica che, a partire dal giorno mar 04/02/2025, prenderanno avvio le attività del corso “**CRITTOGRAFIA CON BLOCCHI 2**”. Il percorso rientra nell’ambito del progetto scolastico “Citizen scientists of the future” M4C1I3.1-2023-1143-P-31174, C.U.P. H34D23002330006 finanziato dal Piano nazionale di ripresa e resilienza, Missione 4 – Istruzione e ricerca – Componente 1 – Potenziamento dell’offerta dei servizi di istruzione: dagli asili nido alle università – Investimento 3.1 “Nuove competenze e nuovi linguaggi”, finanziato dall’Unione europea – Next Generation EU – “Azioni di potenziamento delle competenze STEM e multilinguistiche”.
 
-**Descrizione**: Il corso è un'introduzione alle "grandi idee" della crittografia. L'approccio didattico procede "per scoperta" con attività che si susseguono con una successione di crittosistemi (dai classici ai più moderni). Lo studente può sperimentare caratteristiche di ciascun crittosistema, realizzado possibili procedure di attacco e valutandone i limiti. Dalle debolezze di un sistema lo studente dovrebbe avere necessità di scoprire il crittosistema successivo, che avrà superato i limiti del sistema precedente ma che potrà presentare altri aspetti limitanti. L'impianto generale del corso si basa su M. Lodi - M. Sbaraglia - S. Martini, "PROGRAMMARE PER IMPARARE LA CRITTOGRAFIA AL LICEO MATEMATICO". I crittosistemi, la loro analisi ed le possibili procedure di attacco sono realizzate in Snap! (un linguaggio di programmazione visuale a blocchi) da Michael Lodi (Università di Bologna).
+Le lezioni saranno svolte, salvo imprevisti, nelle date seguenti: 
 
-**Calendario**
 
-| Incontro | Data | Ora | Incontro | Data | Ora |
-|--:|:-:|:-:|--:|:-:|:-:|
-|1|mar 04/02/2025 |2|2|mar 11/02/2025 |2|
-|3|mar 18/02/2025 |2|4|mar 25/02/2025 |2|
-|5|mar 04/03/2025 |2|6|mar 11/03/2025 |2|
-|7|mar 18/03/2025 |2|8|mar 25/03/2025 |2|
-|9|mar 01/04/2025 |2|10|mar 08/04/2025 |2|
+1. mar 04/02/2025 2<sup>a</sup> ora
+2. mar 11/02/2025 2<sup>a</sup> ora
+3. mar 18/02/2025 2<sup>a</sup> ora
+4. mar 25/02/2025 2<sup>a</sup> ora
+5. mar 04/03/2025 2<sup>a</sup> ora
+6. mar 11/03/2025 2<sup>a</sup> ora
+7. mar 18/03/2025 2<sup>a</sup> ora
+8. mar 25/03/2025 2<sup>a</sup> ora
+9. mar 01/04/2025 2<sup>a</sup> ora
+10. mar 08/04/2025 2<sup>a</sup> ora
 
+
+Il corso fornisce un'introduzione alle "grandi idee" della crittografia tramite un approccio didattico che procede "per scoperta" e “per necessità”. Partendo da attività progettate per la comprensione dei crittosistemi classici si procede per tappe fino alla crittografia moderna. Ogni attività prevede la sperimentazione del crittosistema, una realizzazione di quelle grandi idee, e richiede agli studenti la costruzione di possibili procedure di attacco. Gli studenti saranno quindi in grado di valutare i limiti del sistema stesso e la consapevolezza delle debolezze dovrebbe indurre la necessità di scoprire un crittosistema successivo  (approccio didattico orientato dalla necessità, Necessity Learning Design).
+Il corso si basa sul lavoro di M. Lodi - M. Sbaraglia - S. Martini, "PROGRAMMARE PER IMPARARE LA CRITTOGRAFIA AL LICEO MATEMATICO" e usa il materiale didattico realizzato in Snap! (un linguaggio di programmazione visuale a blocchi) da Michael Lodi (Università di Bologna) che consiste in procedure di codifica e decodifica, di analisi e di attacco e attività guidate
+
+Gli obiettivi generali del corso includono:
+
+- Diventare consapevoli delle problematiche di sicurezza nell'uso di strumenti e tecnologie informatiche
+- Possedere le conoscenze di base necessarie a operare in sicurezza nel digitale, con responsabile attenzione per la sicurezza dei dati personali
+- Rafforzare le competenze nell’affrontare i rischi legati all’uso di social network, al trattamento dei dati e alle truffe online.
+- Stimolare l’interesse verso le materie tecnico scientifiche e, in particolare, verso l’informatica.
+- Cogliere la stretta relazione tra pensiero scientifico e sviluppo tecnologico.
+- Comprendere le strutture fondamentali dei ragionamenti logico-deduttivi e padroneggiare il linguaggio logico-formale per risolvere problemi di varia natura.
+- Utilizzare strumenti informatici per modellizzare e risolvere problemi.
+
+Docente referente del progetto: Prof. Gionata Massi.
+
+Cordiali saluti.
+
+Ancona, xx.01.2025
 

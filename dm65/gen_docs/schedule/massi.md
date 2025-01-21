@@ -20,7 +20,7 @@
 |16|lun 03/02/2025|1,2|RicOp|
 |17|mer 05/02/2025|1,2,4|CryptoWithBlocks,RelAx|
 |18|ven 07/02/2025|5,6|LabMat2|
-|19|lun 10/02/2025|1,2|RelAx|
+|19|lun 10/02/2025|1,2|RicOp|
 |20|mer 12/02/2025|2,4|CryptoWithBlocks,RelAx|
 |21|ven 14/02/2025|5,6|LabMat2|
 |22|lun 17/02/2025|1,2|RicOp|
@@ -31,7 +31,7 @@
 |27|lun 03/03/2025|1,2|RicOp|
 |28|mer 05/03/2025|2,4|CryptoWithBlocks,RelAx|
 |29|ven 07/03/2025|5,6|LabMat2|
-|30|lun 10/03/2025|1,2|RicOp|
+|30|lun 10/03/2025|1,2|RelAx|
 |31|mer 12/03/2025|2,4|PhyComp,RelAx|
 |32|ven 14/03/2025|5|RelAx|
 |33|lun 17/03/2025|2|PhyComp|
