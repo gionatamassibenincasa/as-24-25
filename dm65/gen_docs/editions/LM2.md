@@ -23,8 +23,8 @@ Le lezioni saranno svolte, salvo imprevisti, nelle date seguenti:
 4. ven 07/02/2025 6<sup>a</sup> ora
 5. ven 14/02/2025 5<sup>a</sup> ora
 6. ven 14/02/2025 6<sup>a</sup> ora
-7. ven 21/02/2025 5<sup>a</sup> ora
-8. ven 21/02/2025 6<sup>a</sup> ora
+7. ven 28/02/2025 5<sup>a</sup> ora
+8. ven 28/02/2025 6<sup>a</sup> ora
 9. ven 07/03/2025 5<sup>a</sup> ora
 10. ven 07/03/2025 6<sup>a</sup> ora
 

@@ -1,24 +1,57 @@
+/**
+ * Represents a daily time slot with a date and a time slot number.
+ */
 class FasciaOrariaGionaliera {
+    /**
+     * The date of the time slot, in ISO format (YYYY-MM-DD).
+     */
     data: string;
+
+    /**
+     * The time slot number.
+     */
     fasciaOraria: number;
 
+    /**
+     * Initializes a new instance with a date string and a time slot number.
+     * @param data The date string in ISO format (YYYY-MM-DD).
+     * @param fasciaOraria The time slot number.
+     */
     constructor(data: string, fasciaOraria: number) {
         this.data = data;
         this.fasciaOraria = fasciaOraria;
     }
+
+    /**
+     * Returns a human-readable string representation of the date and time slot.
+     * @returns A string in the format "DD/MM/YYYY ora n. X".
+     */
     toString() {
         const [aaaa, mm, gg] = this.data.split("-");
         return "" + gg + "/" + mm + "/" + aaaa + " ora n. " + this.fasciaOraria;
     }
 
+    /**
+     * Returns the date string in ISO format.
+     * @returns The date string in ISO format (YYYY-MM-DD).
+     */
     dataISO() {
         return this.data;
     }
 
+    /**
+     * Returns a numerical representation of the date and time slot.
+     * @returns A number calculated by combining the year, month, day, and time slot number.
+     */
     toNumber() {
         const [yyyy, mm, dd] = this.data.split("-");
         return parseInt(yyyy) % 10 * 100000 + parseInt(mm) * 1000 + parseInt(dd) * 10 + this.fasciaOraria;
     }
+
+    /**
+     * Returns a new instance of FasciaOrariaGionaliera representing the same time slot, but one week later.
+     * @returns A new FasciaOrariaGionaliera instance with the same time slot number, but a date one week later.
+     */
     prossimaSettimana() {
         let d = new Date(this.data + "T10:00:00");
         d.setDate(d.getDate() + 7);
@@ -27,14 +60,48 @@ class FasciaOrariaGionaliera {
     }
 }
 
+/**
+ * Represents a lesson with an optional ID, an edition code, a date, a time slot, a classroom, and some materials.
+ */
 class Lezione {
+    /**
+     * The ID of the lesson. Optional, as it is not needed for new lessons being inserted.
+     */
     id?: number;
+
+    /**
+     * The edition code for the lesson. For example, "RicOp5A".
+     */
     edizione: string;
+
+    /**
+     * The date of the lesson, in ISO format (YYYY-MM-DD).
+     */
     data: string;
+
+    /**
+     * The time slot number of the lesson.
+     */
     fasciaOraria: number;
+
+    /**
+     * The classroom where the lesson is held.
+     */
     aula: string;
+
+    /**
+     * The materials needed for the lesson.
+     */
     materiali: string;
 
+    /**
+     * Initializes a new instance with an optional ID, an edition code, a FasciaOrariaGionaliera, a classroom, and some materials.
+     * @param id The ID of the lesson. Optional.
+     * @param edizione The edition code for the lesson.
+     * @param fasciaOrariaGiornaliera The time slot of the lesson.
+     * @param aula The classroom where the lesson is held.
+     * @param materiali The materials needed for the lesson.
+     */
     constructor(id: number, edizione: string, fasciaOrariaGiornaliera: FasciaOrariaGionaliera, aula: string, materiali: string) {
         this.id = id;
         this.edizione = edizione;
@@ -44,19 +111,68 @@ class Lezione {
         this.materiali = materiali;
     }
 
+    /**
+     * Returns a string representing the SQL code to insert the lesson in the database.
+     * @returns A string in the format ", (id, edizione, data, fascia_oraria, aula, materiali)".
+     */
     sqlInsert() {
         return `, (${this.id}, '${this.edizione}', '${this.data}', ${this.fasciaOraria}, '${this.aula}', '${this.materiali}')`;
     }
 }
 
+/**
+ * Represents an edition of a course, e.g. "RelAx4E", "RelAx5E" and so on for the "Algebra delle Relazioni" course.
+ */
 interface Edizione {
+    /**
+     * The edition code.
+     */
     edizione: string;
+
+    /**
+     * The total number of lessons hours .
+     */
     oreTotali: number;
+
+    /**
+     * The list of daily time slots for the lesson.
+     * Values initialitialesed in the array are for template
+     */
     fascieOrarie: FasciaOrariaGionaliera[];
+
+    /**
+     * Days in which the lesson cannot be held (at least one among class, teacher or tutor is not available).
+     */
+    giorniNonDisponibili?: string[];
+
+    /**
+     * Daily time slots in which the lesson is held outside the regular schedule.
+     */
+    lezioniFuoriOrario?: FasciaOrariaGionaliera[];
+
+    /**
+     * The list of classrooms where the lesson is held.
+     */
     aule: string[];
+
+    /**
+     * The materials needed for the lesson.
+     */
     materiali: string[];
+
+    /**
+     * Whether the class has the right to partecipate to the "settimana sportiva in ambiente naturale".
+     */
     dirittoSettimanaBianca: boolean;
+    
+    /**
+     * The teacher of the lesson.
+     */
     formatore: "Marinelli" | "Massi" | "Taccari";
+
+    /**
+     * The tutor of the lesson.
+     */
     tutor: "Lorenzoni" | "Marrucchiello" | "Massi" | "Pomili" | "Sciamanna";
 }
 
@@ -67,10 +183,18 @@ let edizioni: Edizione[] = [
         // lun 1,2
         fascieOrarie: [
             new FasciaOrariaGionaliera("2025-02-03", 1),
-            new FasciaOrariaGionaliera("2025-02-03", 2)
+            new FasciaOrariaGionaliera("2025-02-03", 2),
+            new FasciaOrariaGionaliera("2025-02-10", 1),
+            new FasciaOrariaGionaliera("2025-02-10", 2),
+            new FasciaOrariaGionaliera("2025-02-17", 1),
+            new FasciaOrariaGionaliera("2025-02-17", 2),
+            new FasciaOrariaGionaliera("2025-02-24", 1),
+            new FasciaOrariaGionaliera("2025-02-24", 2),
+            new FasciaOrariaGionaliera("2025-03-03", 1),
+            new FasciaOrariaGionaliera("2025-03-03", 2)
         ],
-        aule: ["AulaClasse", "AulaClasse"],
-        materiali: ["PC", "PC"],
+        aule: Array(10).fill("AulaClasse"),
+        materiali: Array(10).fill("PC"),
         dirittoSettimanaBianca: false,
         formatore: "Marinelli",
         tutor: "Massi"
@@ -218,9 +342,11 @@ let edizioni: Edizione[] = [
             new FasciaOrariaGionaliera("2025-01-29", 6),
             new FasciaOrariaGionaliera("2025-01-31", 4)
         ],
+        // 12/02 UnivPM
+        // 07 or 12/03 Gita
         aule: ["FabLab", "FabLab"],
         materiali: ["Raspberry Pi", "Raspberry Pi"],
-        dirittoSettimanaBianca: false,
+        dirittoSettimanaBianca: true, // !
         formatore: "Taccari",
         tutor: "Sciamanna"
     },
