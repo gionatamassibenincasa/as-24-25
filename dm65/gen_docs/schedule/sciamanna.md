@@ -25,23 +25,25 @@
 |21|ven 07/03/2025|4,6|CyberSec|
 |22|sab 08/03/2025|4|CryptoWithBlocks|
 |23|lun 10/03/2025|2|PhyComp|
-|24|mer 12/03/2025|4,5,6|CyberSec,PhyComp|
+|24|mer 12/03/2025|5,6|CyberSec|
 |25|lun 17/03/2025|2|PhyComp|
-|26|mer 19/03/2025|4,5,6|CyberSec,PhyComp|
+|26|mer 19/03/2025|5,6|CyberSec|
 |27|ven 21/03/2025|4,6|CyberSec|
 |28|lun 24/03/2025|2|PhyComp|
-|29|mer 26/03/2025|4,5,6|CyberSec,PhyComp|
+|29|mer 26/03/2025|5,6|CyberSec|
 |30|ven 28/03/2025|4,6|CyberSec|
 |31|lun 31/03/2025|2|PhyComp|
-|32|mer 02/04/2025|4,5,6|CyberSec,PhyComp|
+|32|mer 02/04/2025|5,6|CyberSec|
 |33|ven 04/04/2025|4,6|CyberSec|
 |34|lun 07/04/2025|2|PhyComp|
-|35|mer 09/04/2025|4,5,6|CyberSec,PhyComp|
+|35|mer 09/04/2025|5,6|CyberSec|
 |36|ven 11/04/2025|4,6|CyberSec|
-|37|mer 16/04/2025|5,6|CyberSec|
-|38|mer 23/04/2025|5,6|CyberSec|
-|39|mer 30/04/2025|5,6|CyberSec|
-|40|mer 07/05/2025|6|CyberSec|
-|41|ven 09/05/2025|4|CyberSec|
+|37|lun 14/04/2025|2|PhyComp|
+|38|mer 16/04/2025|4,5,6|CyberSec,PhyComp|
+|39|mer 23/04/2025|4,5,6|CyberSec,PhyComp|
+|40|lun 28/04/2025|2|PhyComp|
+|41|mer 30/04/2025|4,5,6|CyberSec,PhyComp|
+|42|mer 07/05/2025|6|CyberSec|
+|43|ven 09/05/2025|4|CyberSec|
 
 
