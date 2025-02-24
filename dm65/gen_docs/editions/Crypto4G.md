@@ -20,13 +20,13 @@ Le lezioni saranno svolte, salvo imprevisti, nelle date seguenti:
 1. mar 04/02/2025 2<sup>a</sup> ora
 2. mar 11/02/2025 2<sup>a</sup> ora
 3. mar 18/02/2025 2<sup>a</sup> ora
-4. mar 25/02/2025 2<sup>a</sup> ora
 5. mar 04/03/2025 2<sup>a</sup> ora
 6. mar 11/03/2025 2<sup>a</sup> ora
 7. mar 18/03/2025 2<sup>a</sup> ora
 8. mar 25/03/2025 2<sup>a</sup> ora
 9. mar 01/04/2025 2<sup>a</sup> ora
 10. mar 08/04/2025 2<sup>a</sup> ora
+11. mar 15/04/2025 2<sup>a</sup> ora
 
 
 Il corso fornisce un'introduzione alle "grandi idee" della crittografia tramite un approccio didattico che procede "per scoperta" e “per necessità”. Partendo da attività progettate per la comprensione dei crittosistemi classici si procede per tappe fino alla crittografia moderna. Ogni attività prevede la sperimentazione del crittosistema, una realizzazione di quelle grandi idee, e richiede agli studenti la costruzione di possibili procedure di attacco. Gli studenti saranno quindi in grado di valutare i limiti del sistema stesso e la consapevolezza delle debolezze dovrebbe indurre la necessità di scoprire un crittosistema successivo  (approccio didattico orientato dalla necessità, Necessity Learning Design).
