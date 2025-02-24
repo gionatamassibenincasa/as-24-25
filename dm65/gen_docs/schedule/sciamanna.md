@@ -17,9 +17,9 @@
 |13|mer 12/02/2025|1,5|CryptoWithBlocks,CyberSec|
 |14|ven 14/02/2025|4,6|CyberSec|
 |15|sab 15/02/2025|4|CryptoWithBlocks|
-|16|mer 19/02/2025|5,6|CyberSec|
+|16|mer 19/02/2025|1,5,6|CryptoWithBlocks,CyberSec|
 |17|sab 22/02/2025|4|CryptoWithBlocks|
-|18|mer 26/02/2025|1,4|CryptoWithBlocks,RelAx|
+|18|mer 26/02/2025|4|RelAx|
 |19|sab 01/03/2025|4|CryptoWithBlocks|
 |20|mer 05/03/2025|1,5,6|CryptoWithBlocks,CyberSec|
 |21|ven 07/03/2025|4,6|CyberSec|

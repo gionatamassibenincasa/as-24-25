@@ -17,10 +17,10 @@
 |13|ven 14/02/2025|6|CyberSec|6|S3B|
 |14|sab 15/02/2025|4|CryptoWithBlocks|4|S1B|
 |15|mar 18/02/2025|2|CryptoWithBlocks|3|S4G|
-|16|mer 19/02/2025|5|CyberSec|7|S3B|
-|17|mer 19/02/2025|6|CyberSec|6|S4B|
-|18|sab 22/02/2025|4|CryptoWithBlocks|6|S1B|
-|19|mer 26/02/2025|1|CryptoWithBlocks|7|S1B|
+|16|mer 19/02/2025|1|CryptoWithBlocks|5|S1B|
+|17|mer 19/02/2025|5|CyberSec|7|S3B|
+|18|mer 19/02/2025|6|CyberSec|6|S4B|
+|19|sab 22/02/2025|4|CryptoWithBlocks|6|S1B|
 |20|sab 01/03/2025|4|CryptoWithBlocks|8|S1B|
 |21|mar 04/03/2025|2|CryptoWithBlocks|5|S4G|
 |22|mer 05/03/2025|1|CryptoWithBlocks|9|S1B|

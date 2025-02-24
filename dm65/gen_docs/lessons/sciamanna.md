@@ -33,10 +33,10 @@
 |29|ven 14/02/2025|4|CyberSec|5|S4B|
 |30|ven 14/02/2025|6|CyberSec|6|S3B|
 |31|sab 15/02/2025|4|CryptoWithBlocks|4|S1B|
-|32|mer 19/02/2025|5|CyberSec|7|S3B|
-|33|mer 19/02/2025|6|CyberSec|6|S4B|
-|34|sab 22/02/2025|4|CryptoWithBlocks|6|S1B|
-|35|mer 26/02/2025|1|CryptoWithBlocks|7|S1B|
+|32|mer 19/02/2025|1|CryptoWithBlocks|5|S1B|
+|33|mer 19/02/2025|5|CyberSec|7|S3B|
+|34|mer 19/02/2025|6|CyberSec|6|S4B|
+|35|sab 22/02/2025|4|CryptoWithBlocks|6|S1B|
 |36|mer 26/02/2025|4|RelAx|10|S4F|
 |37|sab 01/03/2025|4|CryptoWithBlocks|8|S1B|
 |38|mer 05/03/2025|1|CryptoWithBlocks|9|S1B|
