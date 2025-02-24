@@ -37,19 +37,19 @@
 |33|mer 19/03/2025|2,4|CryptoWithBlocks,RelAx|
 |34|ven 21/03/2025|5|RelAx|
 |35|lun 24/03/2025|2|PhyComp|
-|36|mer 26/03/2025|2,4|CryptoWithBlocks,RelAx|
-|37|ven 28/03/2025|5|RelAx|
-|38|lun 31/03/2025|2|PhyComp|
-|39|mer 02/04/2025|2,4|CryptoWithBlocks,RelAx|
-|40|ven 04/04/2025|5|RelAx|
-|41|lun 07/04/2025|2|PhyComp|
-|42|mer 09/04/2025|2,4|CryptoWithBlocks,RelAx|
-|43|ven 11/04/2025|5|RelAx|
-|44|lun 14/04/2025|2|PhyComp|
-|45|mer 16/04/2025|4|PhyComp|
-|46|mer 23/04/2025|4|PhyComp|
-|47|lun 28/04/2025|2|PhyComp|
-|48|mer 30/04/2025|4|PhyComp|
-|49|ven 09/05/2025|5|RelAx|
+|36|mer 26/03/2025|2|RelAx|
+|37|lun 31/03/2025|2|PhyComp|
+|38|mer 02/04/2025|2,4|CryptoWithBlocks,RelAx|
+|39|ven 04/04/2025|5|RelAx|
+|40|lun 07/04/2025|2|PhyComp|
+|41|mer 09/04/2025|2,4|CryptoWithBlocks,RelAx|
+|42|ven 11/04/2025|5|RelAx|
+|43|lun 14/04/2025|2|PhyComp|
+|44|mer 16/04/2025|4|CryptoWithBlocks|
+|45|mer 23/04/2025|4|PhyComp|
+|46|lun 28/04/2025|2|PhyComp|
+|47|mer 30/04/2025|4|PhyComp|
+|48|mer 07/05/2025|4|PhyComp|
+|49|ven 09/05/2025|5,6|RelAx|
 
 

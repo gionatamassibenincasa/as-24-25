@@ -23,14 +23,14 @@
 |19|mer 19/03/2025|4|CryptoWithBlocks|7|S2B|
 |20|ven 21/03/2025|5|RelAx|7|S5B+S5D|
 |21|mer 26/03/2025|2|RelAx|8|S4E|
-|22|mer 26/03/2025|4|CryptoWithBlocks|8|S2B|
-|23|ven 28/03/2025|5|RelAx|8|S5B+S5D|
-|24|mer 02/04/2025|2|RelAx|9|S4E|
-|25|mer 02/04/2025|4|CryptoWithBlocks|9|S2B|
-|26|ven 04/04/2025|5|RelAx|9|S5B+S5D|
-|27|mer 09/04/2025|2|RelAx|10|S4E|
-|28|mer 09/04/2025|4|CryptoWithBlocks|10|S2B|
-|29|ven 11/04/2025|5|RelAx|10|S5B+S5D|
-|30|ven 09/05/2025|5|RelAx|11|S5B+S5D|
+|22|mer 02/04/2025|2|RelAx|9|S4E|
+|23|mer 02/04/2025|4|CryptoWithBlocks|9|S2B|
+|24|ven 04/04/2025|5|RelAx|9|S5B+S5D|
+|25|mer 09/04/2025|2|RelAx|10|S4E|
+|26|mer 09/04/2025|4|CryptoWithBlocks|10|S2B|
+|27|ven 11/04/2025|5|RelAx|10|S5B+S5D|
+|28|mer 16/04/2025|4|CryptoWithBlocks|11|S2B|
+|29|ven 09/05/2025|5|RelAx|11|S5B+S5D|
+|30|ven 09/05/2025|6|RelAx|12|S5B+S5D|
 
 
