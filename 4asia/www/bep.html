@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Analisi del punto di pareggio</title>
+        <meta charset="utf-8">
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css"
+        />
+    </head>
+    <body>
+        <h1>Analisi del punto di pareggio</h1>
+
+        <h2>Immissione dati</h2>
+        <form>
+            <fieldset>
+                <label>Costi fissi <strong><em>C<sub>f</sub></em></strong>
+                    <input
+                        type="number"
+                        min="0"
+                        name="cf"
+                        id="cf"
+                        placeholder="Costi fissi"
+                        aria-label="Costi fissi" />
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>Costo variabile unitario <strong><em>c<sub>v</sub></em></strong>
+                    <input
+                        type="number"
+                        min="0"
+                        name="cv"
+                        id="cv"
+                        placeholder="Costo variabile unitario"
+                        aria-label="Costo variabile unitario" />
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>Prezzo unitario <strong><em>p</em></strong>
+                    <input
+                        type="number"
+                        min="0"
+                        name="p"
+                        id="p"
+                        placeholder="Prezzo unitario"
+                        aria-label="Prezzo unitario" />
+                </label>
+            </fieldset>
+            <fieldset>
+                <button
+                    id="calcola"
+                >
+                Calcola!
+                </button>
+            </fieldset>
+        </form>
+        
+        <h2>Valori calcolati</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Quantità di equilibrio
+                            <strong>
+                                <em>q<sub>BEP</sub></em>
+                            </strong>
+                        <input
+                            type="number"
+                            id="qbep"
+                            readonly>
+                    </label>
+                    <label>
+                        Ricavo totale
+                            <strong>
+                                <em>R<sub>t</sub></em>
+                            </strong>
+                        <input
+                            type="number"
+                            id="rt"
+                            readonly>
+                    </label>
+                    <label>
+                        Costo totale
+                            <strong>
+                                <em>C<sub>t</sub></em>
+                            </strong>
+                        <input
+                            type="number"
+                            id="ct"
+                            readonly>
+                    </label>
+                </fieldset>
+            </form>
+        <script>
+            document.getElementById("calcola")
+                .addEventListener("click",
+                    (event) => {
+                      event.preventDefault();
+                      const cf = parseFloat(document.getElementById("cf").value);
+                      const cv = parseFloat(document.getElementById("cv").value);
+                      const p = parseFloat(document.getElementById("p").value);
+                      const qbep = cf / (p - cv);
+                      const ct = cf + cv * qbep;
+                      const rt = p * qbep;
+                      document.getElementById("qbep").setAttribute("value", qbep);
+                      document.getElementById("ct").setAttribute("value", ct);
+                      document.getElementById("rt").setAttribute("value", rt);
+                    });
+        </script>
+    </body>
+</html>
