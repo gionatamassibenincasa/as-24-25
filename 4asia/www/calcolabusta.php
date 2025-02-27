@@ -1,0 +1,37 @@
+<h1>Calcola la busta paga</h1>
+
+<?php
+$sql = "SELECT nome " .
+"FROM Dipendente " .
+"WHERE cf='" .
+$_REQUEST["cf"] . "'";
+   // DataBase File path
+   $dbf = "data/bustapaga.db3";
+   // Data Source Name (DSN)
+   $dsn = "sqlite:$dbf";
+
+   try {
+	   $conn = new PDO($dsn);
+   } catch (PDOException $e) {
+	   echo $e->getMessage();
+	   die();
+   }
+   $result = $conn->query($sql);
+   if (!$result) {
+	   echo "<p>Could not retrieve Dipendente list: " .
+		   $conn->errorInfo() .
+		   "</p>";
+	   die();
+   }
+   
+   echo $sql;
+   $row = $result->fetch();
+   $nome = $row['nome'];
+   $conn = null;
+?>
+
+<p>Ciao <?= $nome ?></p>
+
+
+
+
