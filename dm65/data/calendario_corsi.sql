@@ -362,7 +362,7 @@ FROM
 ORDER BY E.idEdizione, L.data, L.idFasciaOraria, P.idPersonale
 ;
 
-CREATE VIEW SovrapposizioniPersonale AS
+CREATE VIEW SovrapposizionePersonale AS
 SELECT L1.idEdizione, F1.idPersonale, L2.idEdizione, F2.idPersonale, L1.data, L1.idFasciaOraria
 FROM
 	Lezione L1 INNER JOIN
@@ -559,10 +559,10 @@ INSERT INTO Lezione VALUES
 , (4, 'LM2', '2025-02-07', 6, 'AulaClasse', 'Notebook')
 , (5, 'LM2', '2025-02-14', 5, 'AulaClasse', 'Notebook')
 , (6, 'LM2', '2025-02-14', 6, 'AulaClasse', 'Notebook') -- OK
-, (7, 'LM2', '2025-02-28', 5, 'AulaClasse', 'Notebook')
-, (8, 'LM2', '2025-02-28', 6, 'AulaClasse', 'Notebook')
-, (9, 'LM2', '2025-03-07', 5, 'AulaClasse', 'Notebook')
-, (10, 'LM2', '2025-03-07', 6, 'AulaClasse', 'Notebook')
+, (7, 'LM2', '2025-03-07', 5, 'AulaClasse', 'Notebook')
+, (8, 'LM2', '2025-03-07', 6, 'AulaClasse', 'Notebook')
+, (9, 'LM2', '2025-03-14', 5, 'AulaClasse', 'Notebook')
+, (10, 'LM2', '2025-03-14', 6, 'AulaClasse', 'Notebook')
 
 , (1, 'Crypto1B', '2025-02-05', 1, 'Lab', 'PC')
 , (2, 'Crypto1B', '2025-02-08', 4, 'Lab', 'PC')

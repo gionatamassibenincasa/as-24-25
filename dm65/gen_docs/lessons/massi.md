@@ -2,17 +2,17 @@
 
 |Progr.| Data | Ora | Corso | Lezione | Classe |
 |--:|:-:|:-:|:-:|--:|:-:|
-|1|ven 28/02/2025|5|LabMat2|7|LicMat|
-|2|ven 28/02/2025|6|LabMat2|8|LicMat|
-|3|lun 03/03/2025|1|RicOp|9|E5ASIA|
-|4|lun 03/03/2025|2|RicOp|10|E5ASIA|
-|5|mer 05/03/2025|2|RelAx|5|S4E|
-|6|mer 05/03/2025|4|CryptoWithBlocks|5|S2B|
-|7|ven 07/03/2025|5|LabMat2|9|LicMat|
-|8|ven 07/03/2025|6|LabMat2|10|LicMat|
-|9|lun 10/03/2025|2|PhyComp|1|E2B|
-|10|mer 12/03/2025|2|RelAx|6|S4E|
-|11|mer 12/03/2025|4|CryptoWithBlocks|6|S2B|
+|1|lun 03/03/2025|1|RicOp|9|E5ASIA|
+|2|lun 03/03/2025|2|RicOp|10|E5ASIA|
+|3|mer 05/03/2025|2|RelAx|5|S4E|
+|4|mer 05/03/2025|4|CryptoWithBlocks|5|S2B|
+|5|ven 07/03/2025|5|LabMat2|7|LicMat|
+|6|ven 07/03/2025|6|LabMat2|8|LicMat|
+|7|lun 10/03/2025|2|PhyComp|1|E2B|
+|8|mer 12/03/2025|2|RelAx|6|S4E|
+|9|mer 12/03/2025|4|CryptoWithBlocks|6|S2B|
+|10|ven 14/03/2025|5|LabMat2|9|LicMat|
+|11|ven 14/03/2025|6|LabMat2|10|LicMat|
 |12|lun 17/03/2025|2|PhyComp|2|E2B|
 |13|mer 19/03/2025|2|RelAx|7|S4E|
 |14|mer 19/03/2025|4|CryptoWithBlocks|7|S2B|
