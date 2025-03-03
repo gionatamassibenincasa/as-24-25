@@ -1,9 +1,9 @@
 <h1>Calcola la busta paga</h1>
 
 <?php
-$sql = "SELECT nome " .
+$sql = "SELECT nome, cognome, CF " .
 "FROM Dipendente " .
-"WHERE cf='" .
+"WHERE CF='" .
 $_REQUEST["cf"] . "'";
    // DataBase File path
    $dbf = "data/bustapaga.db3";
@@ -24,13 +24,31 @@ $_REQUEST["cf"] . "'";
 	   die();
    }
    
-   echo $sql;
-   $row = $result->fetch();
-   $nome = $row['nome'];
+   // echo $sql;
+   $dipendente = $result->fetch();
    $conn = null;
+
+   $mese = date("m");
+   $anno = date("Y");
 ?>
 
-<p>Ciao <?= $nome ?></p>
+
+<table>
+   <thead>
+      <th>Cognome</th>
+      <th>Nome</th>
+      <th>Codice fiscale</th>
+      <th>Mese</th>
+      <th>Anno</th>
+   </thead>
+   <tbody>
+      <td><?= $dipendente["cognome"] ?></td>
+      <td><?= $dipendente["nome"] ?></td>
+      <td><?= $dipendente["CF"] ?></td>
+      <td><?= $mese ?></td>
+      <td><?= $anno ?></td>
+   </tbody>
+</table>
 
 
 
