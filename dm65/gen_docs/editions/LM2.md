@@ -23,10 +23,10 @@ Le lezioni saranno svolte, salvo imprevisti, nelle date seguenti:
 4. ven 07/02/2025 6<sup>a</sup> ora
 5. ven 14/02/2025 5<sup>a</sup> ora
 6. ven 14/02/2025 6<sup>a</sup> ora
-7. ven 28/02/2025 5<sup>a</sup> ora
-8. ven 28/02/2025 6<sup>a</sup> ora
-9. ven 07/03/2025 5<sup>a</sup> ora
-10. ven 07/03/2025 6<sup>a</sup> ora
+7. ven 07/03/2025 5<sup>a</sup> ora
+8. ven 07/03/2025 6<sup>a</sup> ora
+9. ven 14/03/2025 5<sup>a</sup> ora
+10. ven 14/03/2025 6<sup>a</sup> ora
 
 
 Il corso mira a sviluppare il pensiero ricorsivo attraverso lo sviluppo dell'aritmetica. Tra induzione e ricorsione saranno definiti l'insieme dei numeri naturali e, con le sole funzioni primitive di riconoscimento dello zero, successore e predecessore, saranno definiti alcuni operatori di confronto e operazioni di addizione, sottrazione, moltiplicazione e divisione intera. Lo stesso modo di ragionare su problemi numerici può essere applicato alla risoluzione di tutti problemi che l'informatica può risolvere. Sono questi ragionamenti il vero oggetto del corso.

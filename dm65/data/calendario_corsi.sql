@@ -4,8 +4,8 @@ CREATE TABLE Corso (
   ore INTEGER,
   descrizione TEXT NULL
  );
- 
-INSERT INTO Corso VALUES
+
+INSERT INTO Corso (idCorso, descrizioneBreve, ore, descrizione) VALUES
   ('CryptoWithBlocks','Crittografia con un linguaggio a blocchi', 10, 'Il corso fornisce un''introduzione alle "grandi idee" della crittografia tramite un approccio didattico che procede "per scoperta" e “per necessità”. Partendo da attività progettate per la comprensione dei crittosistemi classici si procede per tappe fino alla crittografia moderna. Ogni attività prevede la sperimentazione del crittosistema, una realizzazione di quelle grandi idee, e richiede agli studenti la costruzione di possibili procedure di attacco. Gli studenti saranno quindi in grado di valutare i limiti del sistema stesso e la consapevolezza delle debolezze dovrebbe indurre la necessità di scoprire un crittosistema successivo  (approccio didattico orientato dalla necessità, Necessity Learning Design).' || CHAR(10) || 'Il corso si basa sul lavoro di M. Lodi - M. Sbaraglia - S. Martini, "PROGRAMMARE PER IMPARARE LA CRITTOGRAFIA AL LICEO MATEMATICO" e usa il materiale didattico realizzato in Snap! (un linguaggio di programmazione visuale a blocchi) da Michael Lodi (Università di Bologna) che consiste in procedure di codifica e decodifica, di analisi e di attacco e attività guidate')
 , ('CyberSec','Cyber sicurezza', 20, 'Il percorso avvicina le studentesse e gli studenti alla sicurezza informatica tramite attività di gioco (challenge) ed è propedeutico alla partecipazione alle iniziative sulla sicurezza informatica proposte dalla rete CyberHighSchools (OliCyber, CyberChallenge, CyberTrials).' | CHAR(10) || 'Il laboratorio propone l''uso di un ecosistema hardware e software libero e/o a sorgente aperto con il quale scoprire giocando le problematiche di sicurezza, sviluppare una coscienza critica sull''argomento e promuovere comportamenti orientati ad una protezione dei dati personali.')
 , ('EduRobot', 'Robotica educativa', 20, 'Il corso coniuga una fase di ricerca ed esposizione ad una o più gare di robotica.')
@@ -47,10 +47,11 @@ CREATE TABLE Edizione
   idCorso TEXT REFERENCES Corso(idCorso),
   idClasse TEXT REFERENCES Classe(idClasse),
   bando TEXT CHECK (bando IN ('interno', 'esterno')),
-  denominazione TEXT
+  denominazione TEXT,
+  stato TEXT DEFAULT "NON AVVIATO" CHECK (stato IN ('CHIUSO', 'DA CHIUDERE', 'INCOMPLETO', 'IN CORSO', 'NON AVVIATO'))
 );
 
-INSERT INTO Edizione VALUES
+INSERT INTO Edizione (idEdizione, idCorso, idClasse, bando, denominazione) VALUES
 --  ('LM1', 'LabMat1', 'LicMat', 'interno', 'LABORATORIO DI MATEMATICA 1') -- Petrella
   ('LM2', 'LabMat2', 'LicMat', 'interno', 'LABORATORIO DI MATEMATICA 2') -- Massi
 -- , ('LM3', 'LabMat3', 'LicMat', 'interno', 'LABORATORIO DI MATEMATICA 3') -- Lillini
@@ -67,8 +68,8 @@ INSERT INTO Edizione VALUES
 , ('RelAx5E', 'RelAx', 'S5E', 'interno', 'ALGEBRA DELLE RELAZIONI 3') -- Massi
 , ('RicOp5A', 'RicOp', 'E5ASIA', 'esterno', 'RICERCA OPERATIVA') -- Marinelli, Massi
 , ('PhyComp', 'PhyComp', 'E2B', 'interno', 'PHYSICAL COMPUTING')  -- Massi
--- , ('EduRobot', 'EduRobot', 'Aperto', 'esterno', 'ROBOTICA EDUCATIVA')  -- Agostinelli
--- , ('PassInf', 'PassInf', 'Aperto', 'esterno', 'PASSIONE INFORMATICA')  -- Agostinelli
+, ('EduRobot', 'EduRobot', 'Aperto', 'esterno', 'ROBOTICA EDUCATIVA')  -- Agostinelli
+, ('PassInf', 'PassInf', 'Aperto', 'esterno', 'PASSIONE INFORMATICA')  -- Agostinelli
 ;
 
 CREATE TABLE Personale (
@@ -361,7 +362,7 @@ FROM
 ORDER BY E.idEdizione, L.data, L.idFasciaOraria, P.idPersonale
 ;
 
-CREATE VIEW SovrapposizioniPersonale AS
+CREATE VIEW SovrapposizionePersonale AS
 SELECT L1.idEdizione, F1.idPersonale, L2.idEdizione, F2.idPersonale, L1.data, L1.idFasciaOraria
 FROM
 	Lezione L1 INNER JOIN
@@ -558,10 +559,10 @@ INSERT INTO Lezione VALUES
 , (4, 'LM2', '2025-02-07', 6, 'AulaClasse', 'Notebook')
 , (5, 'LM2', '2025-02-14', 5, 'AulaClasse', 'Notebook')
 , (6, 'LM2', '2025-02-14', 6, 'AulaClasse', 'Notebook') -- OK
-, (7, 'LM2', '2025-02-28', 5, 'AulaClasse', 'Notebook')
-, (8, 'LM2', '2025-02-28', 6, 'AulaClasse', 'Notebook')
-, (9, 'LM2', '2025-03-07', 5, 'AulaClasse', 'Notebook')
-, (10, 'LM2', '2025-03-07', 6, 'AulaClasse', 'Notebook')
+, (7, 'LM2', '2025-03-07', 5, 'AulaClasse', 'Notebook')
+, (8, 'LM2', '2025-03-07', 6, 'AulaClasse', 'Notebook')
+, (9, 'LM2', '2025-03-14', 5, 'AulaClasse', 'Notebook')
+, (10, 'LM2', '2025-03-14', 6, 'AulaClasse', 'Notebook')
 
 , (1, 'Crypto1B', '2025-02-05', 1, 'Lab', 'PC')
 , (2, 'Crypto1B', '2025-02-08', 4, 'Lab', 'PC')
@@ -654,3 +655,34 @@ INSERT INTO Lezione VALUES
 , (10, 'Crypto2B', '2025-04-09', 4, 'Lab', 'PC')
 , (11, 'Crypto2B', '2025-04-16', 4, 'Lab', 'PC')
 ;
+
+UPDATE Edizione
+SET stato = 'DA CHIUDERE'
+WHERE idEdizione IN (
+ 'EduRobot',
+ 'PassInf',
+ 'RelAx4F'
+);
+
+UPDATE Edizione
+SET stato = 'CHIUSO'
+WHERE idEdizione IN (
+ 'RelAx5E'
+);
+
+UPDATE Edizione
+SET stato = 'IN CORSO'
+WHERE idEdizione IN (
+ 'RicOp5A' -- 80 %
+ , 'Crypto1B' -- 70 %
+ , 'LM2' -- 60 %
+ , 'RelAx5LSinf' -- 50 %
+ , 'Crypto2B' -- 40 %
+ , 'RelAx4E' -- 40 %
+ , 'Crypto4G' -- 30 %
+ , 'CyberSec3B' -- 30 %
+ , 'CyberSec4B' -- 20 %
+);
+
+-- NON AVVIATO
+-- PhyComp
