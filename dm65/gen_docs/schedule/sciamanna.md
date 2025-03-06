@@ -19,13 +19,13 @@
 |15|sab 15/02/2025|4|CryptoWithBlocks|
 |16|mer 19/02/2025|1,5,6|CryptoWithBlocks,CyberSec|
 |17|sab 22/02/2025|4|CryptoWithBlocks|
-|18|mer 26/02/2025|4|RelAx|
+|18|mer 26/02/2025|1,4|CryptoWithBlocks,RelAx|
 |19|sab 01/03/2025|4|CryptoWithBlocks|
 |20|mer 05/03/2025|1,5,6|CryptoWithBlocks,CyberSec|
-|21|ven 07/03/2025|4,6|CyberSec|
+|21|ven 07/03/2025|4,5,6|CyberSec|
 |22|sab 08/03/2025|4|CryptoWithBlocks|
 |23|lun 10/03/2025|2|PhyComp|
-|24|mer 12/03/2025|1,5,6|CryptoWithBlocks,CyberSec|
+|24|mer 12/03/2025|5,6|CyberSec|
 |25|lun 17/03/2025|2|PhyComp|
 |26|mer 19/03/2025|5,6|CyberSec|
 |27|ven 21/03/2025|4,6|CyberSec|
@@ -42,8 +42,7 @@
 |38|mer 16/04/2025|5,6|CyberSec|
 |39|mer 23/04/2025|4,5,6|CyberSec,PhyComp|
 |40|lun 28/04/2025|2|PhyComp|
-|41|mer 30/04/2025|4,5,6|CyberSec,PhyComp|
-|42|mer 07/05/2025|4,6|CyberSec,PhyComp|
-|43|ven 09/05/2025|4|CyberSec|
+|41|mer 07/05/2025|2,4,5,6|CyberSec,PhyComp|
+|42|ven 09/05/2025|4|CyberSec|
 
 
