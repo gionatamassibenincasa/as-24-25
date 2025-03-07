@@ -539,19 +539,19 @@ INSERT INTO Lezione VALUES
 , (1, 'PhyComp', '2025-03-10', 2, 'Lab', 'Micro:bit')
 --, (2, 'PhyComp', '2025-03-12', 4, 'Lab', 'Micro:bit')
 , (2, 'PhyComp', '2025-03-17', 2, 'Lab', 'Micro:bit')
---, (4, 'PhyComp', '2025-03-19', 4, 'Lab', 'Micro:bit')
+-- , (3, 'PhyComp', '2025-03-19', 4, 'Lab', 'Micro:bit')
 , (3, 'PhyComp', '2025-03-24', 2, 'Lab', 'Micro:bit')
---, (6, 'PhyComp', '2025-03-26', 4, 'Lab', 'Micro:bit')
-, (4, 'PhyComp', '2025-03-31', 2, 'Lab', 'Micro:bit')
---, (8, 'PhyComp', '2025-04-02', 4, 'Lab', 'Micro:bit')
-, (5, 'PhyComp', '2025-04-07', 2, 'Lab', 'Micro:bit')
---, (10, 'PhyComp', '2025-04-09', 4, 'Lab', 'Micro:bit')
-, (6, 'PhyComp', '2025-04-14', 2, 'Lab', 'Micro:bit')
--- , (7, 'PhyComp', '2025-04-16', 4, 'Lab', 'Micro:bit')
-, (7, 'PhyComp', '2025-04-23', 4, 'Lab', 'Micro:bit')
-, (8, 'PhyComp', '2025-04-28', 2, 'Lab', 'Micro:bit')
-, (9, 'PhyComp', '2025-05-07', 2, 'Lab', 'Micro:bit')
-, (10, 'PhyComp', '2025-05-07', 4, 'Lab', 'Micro:bit')
+, (4, 'PhyComp', '2025-03-26', 4, 'Lab', 'Micro:bit')
+, (5, 'PhyComp', '2025-03-31', 2, 'Lab', 'Micro:bit')
+--, (7, 'PhyComp', '2025-04-02', 4, 'Lab', 'Micro:bit')
+, (6, 'PhyComp', '2025-04-07', 2, 'Lab', 'Micro:bit')
+-- , (9, 'PhyComp', '2025-04-09', 4, 'Lab', 'Micro:bit')
+, (7, 'PhyComp', '2025-04-14', 2, 'Lab', 'Micro:bit')
+-- , (8, 'PhyComp', '2025-04-16', 4, 'Lab', 'Micro:bit')
+, (8, 'PhyComp', '2025-04-23', 4, 'Lab', 'Micro:bit')
+, (9, 'PhyComp', '2025-04-28', 2, 'Lab', 'Micro:bit')
+, (10, 'PhyComp', '2025-05-07', 2, 'Lab', 'Micro:bit')
+-- , (10, 'PhyComp', '2025-05-07', 4, 'Lab', 'Micro:bit')
 -- , (12, 'PhyComp', '2025-05-14', 4, 'Lab', 'Micro:bit')
 
 , (1, 'LM2', '2025-01-31', 5, 'AulaClasse', 'Notebook')
@@ -559,9 +559,9 @@ INSERT INTO Lezione VALUES
 , (3, 'LM2', '2025-02-07', 5, 'AulaClasse', 'Notebook')
 , (4, 'LM2', '2025-02-07', 6, 'AulaClasse', 'Notebook')
 , (5, 'LM2', '2025-02-14', 5, 'AulaClasse', 'Notebook')
-, (6, 'LM2', '2025-02-14', 6, 'AulaClasse', 'Notebook') -- OK
+, (6, 'LM2', '2025-02-14', 6, 'AulaClasse', 'Notebook')
 , (7, 'LM2', '2025-03-07', 5, 'AulaClasse', 'Notebook')
-, (8, 'LM2', '2025-03-07', 6, 'AulaClasse', 'Notebook')
+, (8, 'LM2', '2025-03-07', 6, 'AulaClasse', 'Notebook') -- OK
 , (9, 'LM2', '2025-03-14', 5, 'AulaClasse', 'Notebook')
 , (10, 'LM2', '2025-03-14', 6, 'AulaClasse', 'Notebook')
 
@@ -581,7 +581,7 @@ INSERT INTO Lezione VALUES
 , (2, 'Crypto4G', '2025-02-11', 2, 'FabLab', 'Raspberry Pi')
 , (3, 'Crypto4G', '2025-02-18', 2, 'FabLab', 'Raspberry Pi')
 -- , (4, 'Crypto4G', '2025-02-25', 2, 'FabLab', 'Raspberry Pi') -- Settimana bianca
-, (5, 'Crypto4G', '2025-03-04', 2, 'FabLab', 'Raspberry Pi')
+, (5, 'Crypto4G', '2025-03-04', 2, 'FabLab', 'Raspberry Pi') -- OK
 , (6, 'Crypto4G', '2025-03-11', 2, 'FabLab', 'Raspberry Pi')
 , (7, 'Crypto4G', '2025-03-18', 2, 'FabLab', 'Raspberry Pi')
 , (8, 'Crypto4G', '2025-03-25', 2, 'FabLab', 'Raspberry Pi')
@@ -622,9 +622,9 @@ INSERT INTO Lezione VALUES
 --, (7, 'CyberSec4B', '2025-02-21', 4, 'FabLab', 'Raspberry Pi')
 --, (8, 'CyberSec4B', '2025-02-26', 6, 'FabLab', 'Raspberry Pi')
 --, (9, 'CyberSec4B', '2025-02-28', 4, 'FabLab', 'Raspberry Pi')
-, (5, 'CyberSec4B', '2025-03-05', 6, 'FabLab', 'Raspberry Pi') -- OK
+, (5, 'CyberSec4B', '2025-03-05', 6, 'FabLab', 'Raspberry Pi')
 , (6, 'CyberSec4B', '2025-03-07', 4, 'FabLab', 'Raspberry Pi')
-, (7, 'CyberSec4B', '2025-03-07', 5, 'FabLab', 'Raspberry Pi')
+, (7, 'CyberSec4B', '2025-03-07', 5, 'FabLab', 'Raspberry Pi') -- OK
 , (8, 'CyberSec4B', '2025-03-12', 6, 'FabLab', 'Raspberry Pi')
 --, (13, 'CyberSec4B', '2025-03-14', 4, 'FabLab', 'Raspberry Pi')
 , (9, 'CyberSec4B', '2025-03-19', 6, 'FabLab', 'Raspberry Pi')
@@ -652,7 +652,7 @@ INSERT INTO Lezione VALUES
 , (5, 'Crypto2B', '2025-03-05', 4, 'Lab', 'PC') -- OK
 , (6, 'Crypto2B', '2025-03-12', 4, 'Lab', 'PC')
 , (7, 'Crypto2B', '2025-03-19', 4, 'Lab', 'PC')
--- , (8, 'Crypto2B', '2025-03-26', 4, 'Lab', 'PC') -- Prove comuni classi seconde
+-- , (8, 'Crypto2B', '2025-03-26', 4, 'Lab', 'PC') -- Prove comuni classi seconde, da controllare con la classe
 , (8, 'Crypto2B', '2025-04-02', 4, 'Lab', 'PC')
 , (9, 'Crypto2B', '2025-04-09', 4, 'Lab', 'PC')
 , (10, 'Crypto2B', '2025-04-16', 4, 'Lab', 'PC')
@@ -681,7 +681,7 @@ WHERE idEdizione IN (
  , 'Crypto4G' -- 40 %
  , 'CyberSec3B' -- 40 % (7)
  , 'CyberSec4B' -- 20 % (5)
- , 'LM2' -- 60 %
+ , 'LM2' -- 80 %
  , 'RelAx5LSinf' -- 50 %
  , 'RelAx4E' -- 50 %
 );

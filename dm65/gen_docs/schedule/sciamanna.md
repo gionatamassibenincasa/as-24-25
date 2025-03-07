@@ -30,7 +30,7 @@
 |26|mer 19/03/2025|5,6|CyberSec|
 |27|ven 21/03/2025|4,6|CyberSec|
 |28|lun 24/03/2025|2|PhyComp|
-|29|mer 26/03/2025|5,6|CyberSec|
+|29|mer 26/03/2025|4,5,6|CyberSec,PhyComp|
 |30|ven 28/03/2025|4,6|CyberSec|
 |31|lun 31/03/2025|2|PhyComp|
 |32|mer 02/04/2025|5,6|CyberSec|
@@ -42,7 +42,7 @@
 |38|mer 16/04/2025|5,6|CyberSec|
 |39|mer 23/04/2025|4,5,6|CyberSec,PhyComp|
 |40|lun 28/04/2025|2|PhyComp|
-|41|mer 07/05/2025|2,4,5,6|CyberSec,PhyComp|
+|41|mer 07/05/2025|2,5,6|CyberSec,PhyComp|
 |42|ven 09/05/2025|4|CyberSec|
 
 

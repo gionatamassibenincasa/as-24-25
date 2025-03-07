@@ -37,7 +37,7 @@
 |33|mer 19/03/2025|2,4|CryptoWithBlocks,RelAx|
 |34|ven 21/03/2025|5|RelAx|
 |35|lun 24/03/2025|2|PhyComp|
-|36|mer 26/03/2025|2|RelAx|
+|36|mer 26/03/2025|2,4|PhyComp,RelAx|
 |37|lun 31/03/2025|2|PhyComp|
 |38|mer 02/04/2025|2,4|CryptoWithBlocks,RelAx|
 |39|ven 04/04/2025|5|RelAx|
@@ -48,7 +48,7 @@
 |44|mer 16/04/2025|4|CryptoWithBlocks|
 |45|mer 23/04/2025|4|PhyComp|
 |46|lun 28/04/2025|2|PhyComp|
-|47|mer 07/05/2025|2,4|PhyComp|
+|47|mer 07/05/2025|2|PhyComp|
 |48|ven 09/05/2025|5,6|RelAx|
 
 
