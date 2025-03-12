@@ -26,7 +26,7 @@ Le lezioni saranno svolte, salvo imprevisti, nelle date seguenti:
 7. lun 14/04/2025 2<sup>a</sup> ora
 8. mer 23/04/2025 4<sup>a</sup> ora
 9. lun 28/04/2025 2<sup>a</sup> ora
-10. mer 07/05/2025 2<sup>a</sup> ora
+10. lun 05/05/2025 2<sup>a</sup> ora
 
 
 Il percorso vuole fornire un'introduzione al Physical computing e usando Micro:bit, Raspberry Pi e Arduino. L'uso delle schede elettroniche programmabili permette l'interazione con il mondo reale e rende visibile l'effetto dell'esecuzione del programma che lo studente andrà a realizzare. Obiettivi del corso sono la 

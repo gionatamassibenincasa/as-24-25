@@ -42,7 +42,8 @@
 |38|mer 16/04/2025|5,6|CyberSec|
 |39|mer 23/04/2025|4,5,6|CyberSec,PhyComp|
 |40|lun 28/04/2025|2|PhyComp|
-|41|mer 07/05/2025|2,5,6|CyberSec,PhyComp|
-|42|ven 09/05/2025|4|CyberSec|
+|41|lun 05/05/2025|2|PhyComp|
+|42|mer 07/05/2025|5,6|CyberSec|
+|43|ven 09/05/2025|4|CyberSec|
 
 

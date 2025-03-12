@@ -90,8 +90,6 @@
 |mer 12/03/2025|4|Crypto2B|Massi,Pomili|S2B|6|
 |mer 12/03/2025|5|CyberSec3B|Sciamanna,Taccari|S3B|9|
 |mer 12/03/2025|6|CyberSec4B|Sciamanna,Taccari|S4B|8|
-|ven 14/03/2025|5|LM2|Marrucchiello,Massi|LicMat|9|
-|ven 14/03/2025|6|LM2|Marrucchiello,Massi|LicMat|10|
 |lun 17/03/2025|2|PhyComp|Massi,Sciamanna|E2B|2|
 |mar 18/03/2025|2|Crypto4G|Lorenzoni,Taccari|S4G|6|
 |mer 19/03/2025|2|RelAx4E|Massi,Pomili|S4E|7|
@@ -99,8 +97,9 @@
 |mer 19/03/2025|5|CyberSec3B|Sciamanna,Taccari|S3B|10|
 |mer 19/03/2025|6|CyberSec4B|Sciamanna,Taccari|S4B|9|
 |ven 21/03/2025|4|CyberSec4B|Sciamanna,Taccari|S4B|10|
-|ven 21/03/2025|5|RelAx5LSinf|Massi,Pomili|S5B+S5D|6|
+|ven 21/03/2025|5|LM2|Marrucchiello,Massi|LicMat|9|
 |ven 21/03/2025|6|CyberSec3B|Sciamanna,Taccari|S3B|11|
+|ven 21/03/2025|6|LM2|Marrucchiello,Massi|LicMat|10|
 |lun 24/03/2025|2|PhyComp|Massi,Sciamanna|E2B|3|
 |mar 25/03/2025|2|Crypto4G|Lorenzoni,Taccari|S4G|7|
 |mer 26/03/2025|2|RelAx4E|Massi,Pomili|S4E|8|
@@ -108,6 +107,7 @@
 |mer 26/03/2025|5|CyberSec3B|Sciamanna,Taccari|S3B|12|
 |mer 26/03/2025|6|CyberSec4B|Sciamanna,Taccari|S4B|11|
 |ven 28/03/2025|4|CyberSec4B|Sciamanna,Taccari|S4B|12|
+|ven 28/03/2025|5|RelAx5LSinf|Massi,Pomili|S5B+S5D|6|
 |ven 28/03/2025|6|CyberSec3B|Sciamanna,Taccari|S3B|13|
 |lun 31/03/2025|2|PhyComp|Massi,Sciamanna|E2B|5|
 |mar 01/04/2025|2|Crypto4G|Lorenzoni,Taccari|S4G|8|
@@ -136,7 +136,7 @@
 |mer 23/04/2025|5|CyberSec3B|Sciamanna,Taccari|S3B|19|
 |mer 23/04/2025|6|CyberSec4B|Sciamanna,Taccari|S4B|18|
 |lun 28/04/2025|2|PhyComp|Massi,Sciamanna|E2B|9|
-|mer 07/05/2025|2|PhyComp|Massi,Sciamanna|E2B|10|
+|lun 05/05/2025|2|PhyComp|Massi,Sciamanna|E2B|10|
 |mer 07/05/2025|5|CyberSec3B|Sciamanna,Taccari|S3B|20|
 |mer 07/05/2025|6|CyberSec4B|Sciamanna,Taccari|S4B|19|
 |ven 09/05/2025|4|CyberSec4B|Sciamanna,Taccari|S4B|20|

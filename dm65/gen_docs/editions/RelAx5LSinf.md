@@ -22,11 +22,11 @@ Le lezioni saranno svolte, salvo imprevisti, nelle date seguenti:
 3. ven 10/01/2025 5<sup>a</sup> ora
 4. ven 17/01/2025 5<sup>a</sup> ora
 5. ven 24/01/2025 5<sup>a</sup> ora
-7. ven 21/03/2025 5<sup>a</sup> ora
-9. ven 04/04/2025 5<sup>a</sup> ora
-10. ven 11/04/2025 5<sup>a</sup> ora
-11. ven 09/05/2025 5<sup>a</sup> ora
-12. ven 09/05/2025 6<sup>a</sup> ora
+6. ven 28/03/2025 5<sup>a</sup> ora
+7. ven 04/04/2025 5<sup>a</sup> ora
+8. ven 11/04/2025 5<sup>a</sup> ora
+9. ven 09/05/2025 5<sup>a</sup> ora
+10. ven 09/05/2025 6<sup>a</sup> ora
 
 
 Il percorso introduce le basi della teoria delle basi di dati relazionali, un pilastro fondamentale dell'informatica intesa come disciplina che studia i metodi per estrarre informazioni in modo automatico da dati grezzi.
