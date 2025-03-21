@@ -36,19 +36,18 @@
 |32|mer 19/03/2025|2,4|CryptoWithBlocks,RelAx|
 |33|ven 21/03/2025|5,6|LabMat2|
 |34|lun 24/03/2025|2|PhyComp|
-|35|mer 26/03/2025|2,4|PhyComp,RelAx|
-|36|ven 28/03/2025|5|RelAx|
-|37|lun 31/03/2025|2|PhyComp|
-|38|mer 02/04/2025|2,4|CryptoWithBlocks,RelAx|
-|39|ven 04/04/2025|5|RelAx|
-|40|lun 07/04/2025|2|PhyComp|
-|41|mer 09/04/2025|2,4|CryptoWithBlocks,RelAx|
-|42|ven 11/04/2025|5|RelAx|
-|43|lun 14/04/2025|2|PhyComp|
-|44|mer 16/04/2025|4|CryptoWithBlocks|
-|45|mer 23/04/2025|4|PhyComp|
-|46|lun 28/04/2025|2|PhyComp|
-|47|lun 05/05/2025|2|PhyComp|
-|48|ven 09/05/2025|5,6|RelAx|
+|35|mer 26/03/2025|4|PhyComp|
+|36|lun 31/03/2025|2|PhyComp|
+|37|mer 02/04/2025|2,4|CryptoWithBlocks,RelAx|
+|38|ven 04/04/2025|5,6|RelAx|
+|39|lun 07/04/2025|2|PhyComp|
+|40|mer 09/04/2025|2,4|CryptoWithBlocks,RelAx|
+|41|ven 11/04/2025|5,6|RelAx|
+|42|lun 14/04/2025|2|PhyComp|
+|43|mer 16/04/2025|2,4|CryptoWithBlocks,RelAx|
+|44|mer 23/04/2025|4|PhyComp|
+|45|lun 28/04/2025|2|PhyComp|
+|46|lun 05/05/2025|2|PhyComp|
+|47|ven 09/05/2025|5|RelAx|
 
 
