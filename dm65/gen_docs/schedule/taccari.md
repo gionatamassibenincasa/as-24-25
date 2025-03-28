@@ -27,7 +27,7 @@
 |23|ven 21/03/2025|4,6|CyberSec|
 |24|mar 25/03/2025|2|CryptoWithBlocks|
 |25|mer 26/03/2025|5,6|CyberSec|
-|26|ven 28/03/2025|4,6|CyberSec|
+|26|ven 28/03/2025|1,3,4,6|CyberSec|
 |27|mar 01/04/2025|2|CryptoWithBlocks|
 |28|mer 02/04/2025|5,6|CyberSec|
 |29|ven 04/04/2025|4,6|CyberSec|
@@ -37,7 +37,6 @@
 |33|mar 15/04/2025|2|CryptoWithBlocks|
 |34|mer 16/04/2025|5,6|CyberSec|
 |35|mer 23/04/2025|5,6|CyberSec|
-|36|mer 07/05/2025|5,6|CyberSec|
-|37|ven 09/05/2025|4|CyberSec|
+|36|mer 07/05/2025|6|CyberSec|
 
 

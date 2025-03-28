@@ -29,14 +29,14 @@ Le lezioni saranno svolte, salvo imprevisti, nelle date seguenti:
 10. mer 19/03/2025 5<sup>a</sup> ora
 11. ven 21/03/2025 6<sup>a</sup> ora
 12. mer 26/03/2025 5<sup>a</sup> ora
-13. ven 28/03/2025 6<sup>a</sup> ora
-14. mer 02/04/2025 5<sup>a</sup> ora
-15. ven 04/04/2025 6<sup>a</sup> ora
-16. mer 09/04/2025 5<sup>a</sup> ora
-17. ven 11/04/2025 6<sup>a</sup> ora
-18. mer 16/04/2025 5<sup>a</sup> ora
-19. mer 23/04/2025 5<sup>a</sup> ora
-20. mer 07/05/2025 5<sup>a</sup> ora
+13. ven 28/03/2025 1<sup>a</sup> ora
+14. ven 28/03/2025 6<sup>a</sup> ora
+15. mer 02/04/2025 5<sup>a</sup> ora
+16. ven 04/04/2025 6<sup>a</sup> ora
+17. mer 09/04/2025 5<sup>a</sup> ora
+18. ven 11/04/2025 6<sup>a</sup> ora
+19. mer 16/04/2025 5<sup>a</sup> ora
+20. mer 23/04/2025 5<sup>a</sup> ora
 
 
 0
