@@ -568,37 +568,36 @@ INSERT INTO Lezione VALUES
 , (5, 'RelAx5LSinf', '2025-01-24', 5, 'FabLab', 'Raspberry Pi')  -- OK
 , (6, 'RelAx5LSinf', '2025-04-04', 5, 'FabLab', 'Raspberry Pi')
 , (7, 'RelAx5LSinf', '2025-04-04', 6, 'FabLab', 'Raspberry Pi')
-, (8, 'RelAx5LSinf', '2025-04-11', 5, 'FabLab', 'Raspberry Pi')
-, (9, 'RelAx5LSinf', '2025-04-11', 6, 'FabLab', 'Raspberry Pi')
-, (10, 'RelAx5LSinf', '2025-05-09', 5, 'FabLab', 'Raspberry Pi')
---, (11, 'RelAx5LSinf', '2025-05-09', 6, 'FabLab', 'Raspberry Pi') -- Possibile?
+--, (8, 'RelAx5LSinf', '2025-04-11', 5, 'FabLab', 'Raspberry Pi')
+, (8, 'RelAx5LSinf', '2025-04-11', 6, 'FabLab', 'Raspberry Pi')
+, (9, 'RelAx5LSinf', '2025-05-09', 5, 'FabLab', 'Raspberry Pi')
+, (10, 'RelAx5LSinf', '2025-05-09', 6, 'FabLab', 'Raspberry Pi')
 
-, (1, 'RelAx4E', '2025-02-05', 2, 'FabLab', 'Raspberry Pi')
-, (2, 'RelAx4E', '2025-02-12', 2, 'FabLab', 'Raspberry Pi')
-, (3, 'RelAx4E', '2025-02-19', 2, 'FabLab', 'Raspberry Pi')
-, (4, 'RelAx4E', '2025-02-26', 2, 'FabLab', 'Raspberry Pi')
-, (5, 'RelAx4E', '2025-03-05', 2, 'FabLab', 'Raspberry Pi')
-, (6, 'RelAx4E', '2025-03-12', 2, 'FabLab', 'Raspberry Pi')
-, (7, 'RelAx4E', '2025-03-19', 2, 'FabLab', 'Raspberry Pi') -- OK
--- , (8, 'RelAx4E', '2025-03-26', 2, 'FabLab', 'Raspberry Pi') -- Rimossa per avere lezione stesso giorno Crypto2B
-, (8, 'RelAx4E', '2025-04-02', 2, 'FabLab', 'Raspberry Pi')
-, (9, 'RelAx4E', '2025-04-09', 2, 'FabLab', 'Raspberry Pi')
+, (1, 'RelAx4E', '2025-02-05', 2, 'Lab', 'PC')
+, (2, 'RelAx4E', '2025-02-12', 2, 'Lab', 'PC')
+, (3, 'RelAx4E', '2025-02-19', 2, 'Lab', 'PC')
+, (4, 'RelAx4E', '2025-02-26', 2, 'Lab', 'PC')
+, (5, 'RelAx4E', '2025-03-05', 2, 'Lab', 'PC')
+, (6, 'RelAx4E', '2025-03-12', 2, 'Lab', 'PC')
+, (7, 'RelAx4E', '2025-03-19', 2, 'Lab', 'PC') -- OK
+, (8, 'RelAx4E', '2025-04-02', 2, 'Lab', 'PC')
+, (9, 'RelAx4E', '2025-04-09', 2, 'Lab', 'PC')
 , (10, 'RelAx4E', '2025-04-16', 2, 'Lab', 'PC')
 
 , (1, 'PhyComp', '2025-03-10', 2, 'Lab', 'Micro:bit')
-, (2, 'PhyComp', '2025-03-17', 2, 'Lab', 'Micro:bit') -- OK
+, (2, 'PhyComp', '2025-03-17', 2, 'Lab', 'Micro:bit')
 , (3, 'PhyComp', '2025-03-24', 2, 'Lab', 'Micro:bit')
 , (4, 'PhyComp', '2025-03-26', 4, 'Lab', 'Micro:bit')
-, (5, 'PhyComp', '2025-03-31', 2, 'Lab', 'Micro:bit')
---, (7, 'PhyComp', '2025-04-02', 4, 'Lab', 'Micro:bit')
+, (5, 'PhyComp', '2025-03-31', 2, 'Lab', 'Micro:bit') -- OK
+--, (7, 'PhyComp', '2025-04-02', 4, 'Lab', 'Micro:bit') -- Crypto2B
 , (6, 'PhyComp', '2025-04-07', 2, 'Lab', 'Micro:bit')
--- , (9, 'PhyComp', '2025-04-09', 4, 'Lab', 'Micro:bit')
-, (7, 'PhyComp', '2025-04-14', 2, 'Lab', 'Micro:bit')
--- , (8, 'PhyComp', '2025-04-16', 4, 'Lab', 'Micro:bit')
-, (8, 'PhyComp', '2025-04-23', 4, 'Lab', 'Micro:bit')
-, (9, 'PhyComp', '2025-04-28', 2, 'Lab', 'Micro:bit')
-, (10, 'PhyComp', '2025-05-05', 2, 'Lab', 'Micro:bit')
--- , (11, 'PhyComp', '2025-05-07', 4, 'Lab', 'Micro:bit')
+-- , (9, 'PhyComp', '2025-04-09', 4, 'Lab', 'Micro:bit') -- Crypto2B
+-- , (7, 'PhyComp', '2025-04-14', 2, 'Lab', 'Micro:bit') -- Impegni Daniela
+-- , (8, 'PhyComp', '2025-04-16', 4, 'Lab', 'Micro:bit') -- Crypto2B
+, (7, 'PhyComp', '2025-04-23', 4, 'Lab', 'Micro:bit')
+, (8, 'PhyComp', '2025-04-28', 2, 'Lab', 'Micro:bit')
+, (9, 'PhyComp', '2025-05-05', 2, 'Lab', 'Micro:bit')
+, (10, 'PhyComp', '2025-05-07', 4, 'Lab', 'Micro:bit')
 -- , (12, 'PhyComp', '2025-05-12', 2, 'Lab', 'Micro:bit')
 -- , (13, 'PhyComp', '2025-05-14', 4, 'Lab', 'Micro:bit')
 
@@ -696,7 +695,7 @@ WHERE idEdizione IN (
  , 'Crypto4G' -- 70 %
  , 'CyberSec3B' -- 60 % (12) CS1
  , 'CyberSec4B' -- 55 % (11) CS2
- , 'PhyComp' -- 40 %
+ , 'PhyComp' -- 50 %
  , 'RelAx5LSinf' -- 50 %
  , 'RelAx4E' -- 70 %
 );
