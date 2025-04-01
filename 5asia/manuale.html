@@ -7,9 +7,6 @@
   <title>Manuale d'Informatica - Esame di Stato 2025 - 5A SIA - IIS Savoia Benincasa</title>
   <style>
     html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
       color: #1a1a1a;
       background-color: #fdfdfd;
     }
@@ -28,13 +25,16 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 1em;
+        padding: 12px;
       }
       h1 {
         font-size: 1.8em;
       }
     }
     @media print {
+      html {
+        background-color: white;
+      }
       body {
         background-color: transparent;
         color: black;
@@ -58,6 +58,10 @@
       color: #1a1a1a;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -84,9 +88,10 @@
       color: #606060;
     }
     code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
+      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -148,10 +153,21 @@
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -215,7 +231,6 @@
     code span.va { color: #19177c; } /* Variable */
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
@@ -223,6 +238,80 @@
 <h1 class="title">Manuale d'Informatica - Esame di Stato 2025 - 5A SIA -
 IIS Savoia Benincasa</h1>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#manuale-dinformatica-per-lesame-di-stato"
+id="toc-manuale-dinformatica-per-lesame-di-stato">Manuale d’Informatica
+per l’Esame di Stato</a>
+<ul>
+<li><a href="#progettazione-dellapplicazione"
+id="toc-progettazione-dellapplicazione">Progettazione
+dell’applicazione</a>
+<ul>
+<li><a href="#specifiche-dei-requisiti---diagramma-dei-casi-duso"
+id="toc-specifiche-dei-requisiti---diagramma-dei-casi-duso">Specifiche
+dei Requisiti - Diagramma dei casi d’uso</a></li>
+</ul></li>
+<li><a href="#progettazione-dei-dati"
+id="toc-progettazione-dei-dati">Progettazione dei dati</a>
+<ul>
+<li><a href="#diagramma-delle-classi"
+id="toc-diagramma-delle-classi">Diagramma delle classi</a>
+<ul>
+<li><a href="#classe" id="toc-classe">Classe</a></li>
+<li><a href="#associazione" id="toc-associazione">Associazione</a>
+<ul>
+<li><a href="#associazione-uno-a-uno"
+id="toc-associazione-uno-a-uno">Associazione uno a uno</a>
+<ul>
+<li><a href="#progettazione-concettuale---classi-di-analisi"
+id="toc-progettazione-concettuale---classi-di-analisi">Progettazione
+concettuale - Classi di analisi</a></li>
+<li><a href="#progettazione-logica---classi-di-progettazione"
+id="toc-progettazione-logica---classi-di-progettazione">Progettazione
+logica - Classi di progettazione</a></li>
+<li><a href="#ristrutturazione-nel-modello-logico-relazionale"
+id="toc-ristrutturazione-nel-modello-logico-relazionale">Ristrutturazione
+nel modello logico relazionale</a></li>
+<li><a href="#schema-logico" id="toc-schema-logico">Schema
+logico</a></li>
+<li><a href="#ddl---sql" id="toc-ddl---sql">DDL - SQL</a></li>
+</ul></li>
+<li><a href="#associazione-uno-a-molti"
+id="toc-associazione-uno-a-molti">Associazione uno a molti</a>
+<ul>
+<li><a href="#progettazione-concettuale---classi-di-analisi-1"
+id="toc-progettazione-concettuale---classi-di-analisi-1">Progettazione
+concettuale - Classi di analisi</a></li>
+<li><a href="#progettazione-logica---classi-di-progettazione-1"
+id="toc-progettazione-logica---classi-di-progettazione-1">Progettazione
+logica - Classi di progettazione</a></li>
+<li><a href="#schema-logico-1" id="toc-schema-logico-1">Schema
+logico</a></li>
+<li><a href="#ddl---sql-1" id="toc-ddl---sql-1">DDL - SQL</a></li>
+</ul></li>
+<li><a href="#associazione-molti-a-molti"
+id="toc-associazione-molti-a-molti">Associazione molti a molti</a>
+<ul>
+<li><a href="#progettazione-concettuale---classi-di-analisi-2"
+id="toc-progettazione-concettuale---classi-di-analisi-2">Progettazione
+concettuale - Classi di analisi</a></li>
+<li><a href="#progettazione-logica---classi-di-progettazione-2"
+id="toc-progettazione-logica---classi-di-progettazione-2">Progettazione
+logica - Classi di progettazione</a></li>
+<li><a href="#ristrutturazione-nel-modello-logico-relazionale-1"
+id="toc-ristrutturazione-nel-modello-logico-relazionale-1">Ristrutturazione
+nel modello logico relazionale</a></li>
+<li><a href="#schema-logico-2" id="toc-schema-logico-2">Schema
+logico</a></li>
+<li><a href="#ddl---sql-2" id="toc-ddl---sql-2">DDL - SQL</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
 <h1 id="manuale-dinformatica-per-lesame-di-stato">Manuale d’Informatica
 per l’Esame di Stato</h1>
 <h2 id="progettazione-dellapplicazione">Progettazione
@@ -230,7 +319,7 @@ dell’applicazione</h2>
 <h3 id="specifiche-dei-requisiti---diagramma-dei-casi-duso">Specifiche
 dei Requisiti - Diagramma dei casi d’uso</h3>
 <div hidden="">
-<pre><code>@startuml esempioUseCase
+<pre class="plantuml"><code>@startuml esempioUseCase
 
 left to right direction
 
@@ -258,11 +347,10 @@ SP -- SpedisciProdotto
 </div>
 <p><img src="esempioUseCase.svg" /></p>
 <h2 id="progettazione-dei-dati">Progettazione dei dati</h2>
-<h3 id="progettazione-concettuale">Progettazione concettuale</h3>
-<h4 id="diagramma-delle-classi">Diagramma delle classi</h4>
-<h5 id="classe">Classe</h5>
+<h3 id="diagramma-delle-classi">Diagramma delle classi</h3>
+<h4 id="classe">Classe</h4>
 <div hidden="">
-<pre><code>@startuml esempioClasse
+<pre class="plantuml"><code>@startuml esempioClasse
 hide circle
 left to right direction
 
@@ -278,11 +366,12 @@ class ContoBancario {
 @enduml</code></pre>
 </div>
 <p><img src="esempioClasse.svg" /></p>
-<h5 id="associazione">Associazione</h5>
-<h6 id="associazione-uno-a-uno---classi-di-analisi">Associazione uno a
-uno - Classi di analisi</h6>
+<h4 id="associazione">Associazione</h4>
+<h5 id="associazione-uno-a-uno">Associazione uno a uno</h5>
+<h6 id="progettazione-concettuale---classi-di-analisi">Progettazione
+concettuale - Classi di analisi</h6>
 <div hidden="">
-<pre><code>@startuml esempioAss11Conc
+<pre class="plantuml"><code>@startuml esempioAss11Conc
 hide circle
 hide methods
 hide attributes
@@ -296,10 +385,10 @@ Studente &quot;1&quot; -- &quot;0..1&quot; Badge: identificare
 @enduml</code></pre>
 </div>
 <p><img src="esempioAss11Conc.svg" /></p>
-<h6 id="associazione-uno-a-uno---classi-di-progettazione">Associazione
-uno a uno - Classi di progettazione</h6>
+<h6 id="progettazione-logica---classi-di-progettazione">Progettazione
+logica - Classi di progettazione</h6>
 <div hidden="">
-<pre><code>@startuml esempioAss11Ristr1
+<pre class="plantuml"><code>@startuml esempioAss11Ristr1
 hide circle
 hide methods
 
@@ -318,10 +407,11 @@ Studente &quot;1&quot; -- &quot;0..1&quot; Badge: identificare
 @enduml</code></pre>
 </div>
 <p><img src="esempioAss11Ristr1.svg" /></p>
-<h6 id="associazione-uno-a-uno---classi-di-analisi-1">Associazione uno a
-uno - Classi di analisi</h6>
+<h6
+id="ristrutturazione-nel-modello-logico-relazionale">Ristrutturazione
+nel modello logico relazionale</h6>
 <div hidden="">
-<pre><code>@startuml esempioAss11Ristr2
+<pre class="plantuml"><code>@startuml esempioAss11Ristr2
 hide circle
 hide methods
 
@@ -335,21 +425,20 @@ class Studente {
 @enduml</code></pre>
 </div>
 <p><img src="esempioAss11Ristr2.svg" /></p>
-<h6 id="schema-logico-associazione-1-1">Schema logico associazione
-1-1</h6>
-<pre class="text"><code>Studente(matricola &lt;PK&gt;, codiceBadge, …)
-Sintassi SQL per associazioni 1-1</code></pre>
-<h6 id="codice-sql-associazione-1-1">Codice SQL associazione 1-1</h6>
+<h6 id="schema-logico">Schema logico</h6>
+<pre class="text"><code>Studente(matricola &lt;PK&gt;, codiceBadge, …)</code></pre>
+<h6 id="ddl---sql">DDL - SQL</h6>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode sql"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Studente (</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    matricola <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    codiceBadge <span class="dt">INTEGER</span>,</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    …</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
-<h6 id="associazioni-uno-a-molti---classi-di-analisi">Associazioni uno a
-molti - Classi di analisi</h6>
+<h5 id="associazione-uno-a-molti">Associazione uno a molti</h5>
+<h6 id="progettazione-concettuale---classi-di-analisi-1">Progettazione
+concettuale - Classi di analisi</h6>
 <div hidden="">
-<pre><code>@startuml esempioAss1nConc
+<pre class="plantuml"><code>@startuml esempioAss1nConc
 hide circle
 hide methods
 hide attributes
@@ -368,10 +457,10 @@ Cliente &quot;0..1&quot; -- &quot;1..n&quot; Prodotto: acquistare
 @enduml</code></pre>
 </div>
 <p><img src="esempioAss1nConc.svg" /></p>
-<h6 id="associazione-uno-a-molti---classi-di-progettazione">Associazione
-uno a molti - Classi di progettazione</h6>
+<h6 id="progettazione-logica---classi-di-progettazione-1">Progettazione
+logica - Classi di progettazione</h6>
 <div hidden="">
-<pre><code>@startuml esempioAss1nRistr1
+<pre class="plantuml"><code>@startuml esempioAss1nRistr1
 hide circle
 hide methods
 
@@ -384,18 +473,17 @@ class Cliente {
 class Prodotto {
   **idProdotto** {id}
   //idCliente// {fk}
+  ...
 }
 
 Cliente &quot;0..1&quot; -- &quot;1..n&quot; Prodotto: acquistare
 @enduml</code></pre>
 </div>
 <p><img src="esempioAss1nRistr1.svg" /></p>
-<h6 id="schema-logico-delle-associazioni-1-n">Schema logico delle
-associazioni 1-n</h6>
+<h6 id="schema-logico-1">Schema logico</h6>
 <pre class="text"><code>Cliente(idCliente &lt;PK&gt;, …)
 Prodotto(idProdotto &lt;PK&gt;, idCliente &lt;FK&gt;, …)</code></pre>
-<h6 id="sintassi-sql-per-associazioni-1-n">Sintassi SQL per associazioni
-1-n</h6>
+<h6 id="ddl---sql-1">DDL - SQL</h6>
 <div class="sourceCode" id="cb11"><pre
 class="sourceCode sql"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Cliente (</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    idCliente <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
@@ -406,28 +494,105 @@ class="sourceCode sql"><code class="sourceCode sql"><span id="cb11-1"><a href="#
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    idCliente <span class="dt">INTEGER</span> <span class="kw">FOREIGN</span> <span class="kw">KEY</span> <span class="kw">REFERENCES</span> Cliente(idCliente),</span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    …</span>
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
-<h6 id="associazione-molti-a-molti">Associazione molti a molti</h6>
-<h6 id="schema-logico-dellassociazione-n-n">Schema logico
-dell’associazione n-n</h6>
+<h5 id="associazione-molti-a-molti">Associazione molti a molti</h5>
+<h6 id="progettazione-concettuale---classi-di-analisi-2">Progettazione
+concettuale - Classi di analisi</h6>
+<div hidden="">
+<pre class="plantuml"><code>@startuml esempioAssnnConc
+hide circle
+hide methods
+hide attributes
+
+class Societa {
+  **partitaIVA** {id}
+  ...
+}
+class Azionista {
+  **CF** {id}
+  ...
+}
+class Partecipazione {
+  quota
+}
+
+Societa &quot;1..n&quot; - &quot;1..n&quot; Azionista
+(Societa, Azionista) -- Partecipazione
+@enduml</code></pre>
+</div>
+<p><img src="esempioAssnnConc.svg" /></p>
+<h6 id="progettazione-logica---classi-di-progettazione-2">Progettazione
+logica - Classi di progettazione</h6>
+<div hidden="">
+<pre class="plantuml"><code>@startuml esempioAssnnRistr1
+hide circle
+hide methods
+
+class Societa {
+  **partitaIVA** {id}
+  ...
+}
+class Azionista {
+  **CF** {id}
+  ...
+}
+class Partecipazione {
+  //**partitaIVA**// {id, fk}
+  //**CF**// {id, fk}
+  quota
+}
+
+Societa &quot;1..n&quot; - &quot;1..n&quot; Azionista
+(Societa, Azionista) -- Partecipazione</code></pre>
+</div>
+<p><img src="esempioAssnnRistr1.svg" /></p>
+<h6
+id="ristrutturazione-nel-modello-logico-relazionale-1">Ristrutturazione
+nel modello logico relazionale</h6>
+<div hidden="">
+<pre class="plantuml"><code>@startuml esempioAssnnRistr2
+hide circle
+hide methods
+
+left to right direction
+
+class Societa {
+  **partitaIVA** {id}
+  ...
+}
+class Azionista {
+  **CF** {id}
+  ...
+}
+class Partecipazione {
+  //**partitaIVA**// {id, fk}
+  //**CF**// {id, fk}
+  quota
+}
+
+Societa &quot;1&quot; -- &quot;1..n&quot; Partecipazione
+Partecipazione &quot;1..n&quot; -- &quot;1&quot; Azionista
+@enduml</code></pre>
+</div>
+<p><img src="esempioAssnnRistr2.svg" /></p>
+<h6 id="schema-logico-2">Schema logico</h6>
 <pre class="text"><code>Societa(partitaIVA &lt;PK&gt;, …)
 Azionista(CF &lt;PK&gt;, …)
 Partecipazione(partitaIVA &lt;PK, FK&gt;, CF &lt;PK, FK&gt;, quota)</code></pre>
-<h6 id="sintassi-sql-per-associazioni-n-n">Sintassi SQL per associazioni
-n-n</h6>
-<div class="sourceCode" id="cb13"><pre
-class="sourceCode sql"><code class="sourceCode sql"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Societa (</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    partitaIVA TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">CHECK</span> (<span class="fu">length</span>(partitaIVA) <span class="op">=</span> <span class="dv">11</span>),</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    …</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>);</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Azionista (</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    CF TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">CHECK</span> (<span class="fu">length</span>(CF) <span class="op">=</span> <span class="dv">16</span>),</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    …</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>);</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Partecipazione (</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    partitaIVA TEXT <span class="kw">REFERENCES</span> Societa(partitaIVA),</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    CF TEXT <span class="kw">REFERENCES</span> Azionista(CF),</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">quota</span> <span class="dt">REAL</span>,</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">PRIMARY</span> <span class="kw">KEY</span>(partitaIVA, CF)</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
+<h6 id="ddl---sql-2">DDL - SQL</h6>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Societa (</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    partitaIVA TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">CHECK</span> (<span class="fu">length</span>(partitaIVA) <span class="op">=</span> <span class="dv">11</span>),</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    …</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Azionista (</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    CF TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">CHECK</span> (<span class="fu">length</span>(CF) <span class="op">=</span> <span class="dv">16</span>),</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    …</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Partecipazione (</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    partitaIVA TEXT <span class="kw">REFERENCES</span> Societa(partitaIVA),</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    CF TEXT <span class="kw">REFERENCES</span> Azionista(CF),</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">quota</span> <span class="dt">REAL</span>,</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">PRIMARY</span> <span class="kw">KEY</span>(partitaIVA, CF)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
 </body>
 </html>

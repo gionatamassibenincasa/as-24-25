@@ -5,7 +5,8 @@
 ### Specifiche dei Requisiti - Diagramma dei casi d’uso
 
 <div hidden>
-```
+
+```plantuml
 @startuml esempioUseCase
 
 left to right direction
@@ -38,14 +39,13 @@ SP -- SpedisciProdotto
 
 ## Progettazione dei dati
 
-### Progettazione concettuale
+### Diagramma delle classi
 
-#### Diagramma delle classi
-
-##### Classe
+#### Classe
 
 <div hidden>
-```
+
+```plantuml
 @startuml esempioClasse
 hide circle
 left to right direction
@@ -65,12 +65,15 @@ class ContoBancario {
 
 ![](esempioClasse.svg)
 
-##### Associazione
+#### Associazione
 
-###### Associazione uno a uno - Classi di analisi
+##### Associazione uno a uno 
+
+###### Progettazione concettuale - Classi di analisi
 
 <div hidden>
-```
+
+```plantuml
 @startuml esempioAss11Conc
 hide circle
 hide methods
@@ -88,10 +91,11 @@ Studente "1" -- "0..1" Badge: identificare
 
 ![](esempioAss11Conc.svg)
 
-###### Associazione uno a uno - Classi di progettazione
+###### Progettazione logica - Classi di progettazione
 
 <div hidden>
-```
+
+```plantuml
 @startuml esempioAss11Ristr1
 hide circle
 hide methods
@@ -114,10 +118,11 @@ Studente "1" -- "0..1" Badge: identificare
 
 ![](esempioAss11Ristr1.svg)
 
-###### Associazione uno a uno - Classi di analisi
+###### Ristrutturazione nel modello logico relazionale
 
 <div hidden>
-```
+
+```plantuml
 @startuml esempioAss11Ristr2
 hide circle
 hide methods
@@ -135,13 +140,13 @@ class Studente {
 
 ![](esempioAss11Ristr2.svg)
 
-###### Schema logico associazione 1-1
+###### Schema logico
 
 ```text
 Studente(matricola <PK>, codiceBadge, …)
-Sintassi SQL per associazioni 1-1
 ```
-###### Codice SQL associazione 1-1
+
+###### DDL - SQL
 
 ```sql
 CREATE TABLE Studente (
@@ -151,10 +156,13 @@ CREATE TABLE Studente (
 );
 ```
 
-###### Associazioni uno a molti - Classi di analisi
+##### Associazione uno a molti 
+
+###### Progettazione concettuale - Classi di analisi
 
 <div hidden>
-```
+
+```plantuml
 @startuml esempioAss1nConc
 hide circle
 hide methods
@@ -177,10 +185,11 @@ Cliente "0..1" -- "1..n" Prodotto: acquistare
 
 ![](esempioAss1nConc.svg)
 
-###### Associazione uno a molti - Classi di progettazione
+###### Progettazione logica - Classi di progettazione
 
 <div hidden>
-```
+
+```plantuml
 @startuml esempioAss1nRistr1
 hide circle
 hide methods
@@ -204,14 +213,14 @@ Cliente "0..1" -- "1..n" Prodotto: acquistare
 
 ![](esempioAss1nRistr1.svg)
 
-###### Schema logico delle associazioni 1-n
+###### Schema logico
 
 ```text
 Cliente(idCliente <PK>, …)
 Prodotto(idProdotto <PK>, idCliente <FK>, …)
 ```
 
-###### Sintassi SQL per associazioni 1-n
+###### DDL - SQL
 
 ```sql
 CREATE TABLE Cliente (
@@ -225,69 +234,77 @@ CREATE TABLE Prodotto (
 );
 ```
 
-###### Associazione molti a molti
+##### Associazione molti a molti
 
-###### Associazioni molti a molti - Classi di analisi
+###### Progettazione concettuale - Classi di analisi
 
 <div hidden>
-```
+
+```plantuml
 @startuml esempioAssnnConc
 hide circle
 hide methods
 hide attributes
 
-left to right direction
-
-class Cliente {
-  **idCliente** {id}
+class Societa {
+  **partitaIVA** {id}
   ...
 }
-class Prodotto {
-  **idProdotto** {id}
+class Azionista {
+  **CF** {id}
+  ...
+}
+class Partecipazione {
+  quota
 }
 
-Cliente "0..1" -- "1..n" Prodotto: acquistare
+Societa "1..n" - "1..n" Azionista
+(Societa, Azionista) -- Partecipazione
 @enduml
 ```
 </div>
 
 ![](esempioAssnnConc.svg)
 
-###### Associazione molti a molti - Classi di progettazione
+###### Progettazione logica - Classi di progettazione
 
 <div hidden>
-```
-@startuml esempioAss1nRistr1
+
+```plantuml
+@startuml esempioAssnnRistr1
 hide circle
 hide methods
 
-left to right direction
-
-class Cliente {
-  **idCliente** {id}
+class Societa {
+  **partitaIVA** {id}
   ...
 }
-class Prodotto {
-  **idProdotto** {id}
-  //idCliente// {fk}
+class Azionista {
+  **CF** {id}
   ...
 }
+class Partecipazione {
+  //**partitaIVA**// {id, fk}
+  //**CF**// {id, fk}
+  quota
+}
 
-Cliente "0..1" -- "1..n" Prodotto: acquistare
+Societa "1..n" - "1..n" Azionista
+(Societa, Azionista) -- Partecipazione
 @enduml
 ```
 </div>
 
-![](esempioAssnRistr1.svg)
+![](esempioAssnnRistr1.svg)
 
-###### Associazione molti a molti - Classi di progettazione
+###### Ristrutturazione nel modello logico relazionale
 
 <div hidden>
-```
+
+```plantuml
 @startuml esempioAssnnRistr2
 hide circle
 hide methods
-hide attributes
 
 left to right direction
 
@@ -299,22 +316,21 @@ class Azionista {
   **CF** {id}
   ...
 }
+class Partecipazione {
+  //**partitaIVA**// {id, fk}
+  //**CF**// {id, fk}
+  quota
+}
 
-Societa "1..n" -- "1..n" Azionista: acquistare
+Societa "1" -- "1..n" Partecipazione
+Partecipazione "1..n" -- "1" Azionista
 @enduml
 ```
 </div>
 
 ![](esempioAssnnRistr2.svg)
 
-###### Schema logico delle associazioni 1-n
-
-```text
-Cliente(idCliente <PK>, …)
-Prodotto(idProdotto <PK>, idCliente <FK>, …)
-```
-
-###### Schema logico dell’associazione n-n
+###### Schema logico
 
 ```text
 Societa(partitaIVA <PK>, …)
@@ -322,7 +338,7 @@ Azionista(CF <PK>, …)
 Partecipazione(partitaIVA <PK, FK>, CF <PK, FK>, quota)
 ```
 
-###### Sintassi SQL per associazioni n-n
+###### DDL - SQL
 
 ```sql
 CREATE TABLE Societa (
@@ -340,8 +356,3 @@ CREATE TABLE Partecipazione (
 	PRIMARY KEY(partitaIVA, CF)
 );
 ```
-
-
-
-
-
