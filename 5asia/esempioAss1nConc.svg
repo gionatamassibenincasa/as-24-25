@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="52px" preserveAspectRatio="none" style="width:256px;height:52px;" version="1.1" viewBox="0 0 256 52" width="256px" zoomAndPan="magnify"><defs><filter height="300%" id="fisz1opk50l09" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[20a748d5ee336a9a91751b0a3d4f0beb]
+class Cliente--><rect fill="#FEFECE" filter="url(#fisz1opk50l09)" height="23.9688" id="Cliente" style="stroke: #A80036; stroke-width: 1.5;" width="49" x="6" y="13"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="43" x="9" y="29.1387">Cliente</text><!--MD5=[0135bd918e0e85fbd308a4e0f54657e2]
+class Prodotto--><rect fill="#FEFECE" filter="url(#fisz1opk50l09)" height="23.9688" id="Prodotto" style="stroke: #A80036; stroke-width: 1.5;" width="61" x="184" y="13"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="187" y="29.1387">Prodotto</text><!--MD5=[2238ca0b479c939bb1fe969ffef6b9c7]
+link Cliente to Prodotto--><path d="M55.29,25 C88.34,25 148.11,25 183.97,25 " fill="none" id="Cliente-Prodotto" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="67" x="86" y="21.0669">acquistare</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="62.8779" y="38.6307">0..1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="152.1285" y="38.4648">1..n</text><!--MD5=[9d2beef4d208947b0fcd6d7c6378ae47]
+@startuml esempioAss1nConc
+hide circle
+hide methods
+hide attributes
+
+left to right direction
+
+class Cliente {
+  **idCliente** {id}
+  ...
+}
+class Prodotto {
+  **idProdotto** {id}
+}
+
+Cliente "0..1" - - "1..n" Prodotto: acquistare
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 11:22:07 CET 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 17.0.14+7-Debian-1deb12u1
+Operating System: Linux
+Default Encoding: ISO-8859-1
+Language: it
+Country: IT
+--></g></svg>
