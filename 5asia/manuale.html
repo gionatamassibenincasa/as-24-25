@@ -304,9 +304,18 @@ id="toc-ristrutturazione-nel-modello-logico-relazionale-1">Ristrutturazione
 nel modello logico relazionale</a></li>
 <li><a href="#schema-logico-2" id="toc-schema-logico-2">Schema
 logico</a></li>
-<li><a href="#ddl---sql-2" id="toc-ddl---sql-2">DDL - SQL</a></li>
+<li><a href="#sql" id="toc-sql">SQL</a></li>
 </ul></li>
 </ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#sql-1" id="toc-sql-1">SQL</a>
+<ul>
+<li><a href="#tipi-di-dato" id="toc-tipi-di-dato">Tipi di dato</a>
+<ul>
+<li><a href="#sqlite" id="toc-sqlite">SQLite</a></li>
+<li><a href="#altri-possibili-tipi" id="toc-altri-possibili-tipi">Altri
+possibili tipi</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -511,12 +520,8 @@ class Azionista {
   **CF** {id}
   ...
 }
-class Partecipazione {
-  quota
-}
 
-Societa &quot;1..n&quot; - &quot;1..n&quot; Azionista
-(Societa, Azionista) -- Partecipazione
+Societa &quot;1..n&quot; - &quot;1..n&quot; Azionista: Partecipazione
 @enduml</code></pre>
 </div>
 <p><img src="esempioAssnnConc.svg" /></p>
@@ -542,7 +547,8 @@ class Partecipazione {
 }
 
 Societa &quot;1..n&quot; - &quot;1..n&quot; Azionista
-(Societa, Azionista) -- Partecipazione</code></pre>
+(Societa, Azionista) -- Partecipazione
+@enduml</code></pre>
 </div>
 <p><img src="esempioAssnnRistr1.svg" /></p>
 <h6
@@ -578,7 +584,7 @@ Partecipazione &quot;1..n&quot; -- &quot;1&quot; Azionista
 <pre class="text"><code>Societa(partitaIVA &lt;PK&gt;, …)
 Azionista(CF &lt;PK&gt;, …)
 Partecipazione(partitaIVA &lt;PK, FK&gt;, CF &lt;PK, FK&gt;, quota)</code></pre>
-<h6 id="ddl---sql-2">DDL - SQL</h6>
+<h6 id="sql">SQL</h6>
 <div class="sourceCode" id="cb16"><pre
 class="sourceCode sql"><code class="sourceCode sql"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Societa (</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    partitaIVA TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">CHECK</span> (<span class="fu">length</span>(partitaIVA) <span class="op">=</span> <span class="dv">11</span>),</span>
@@ -594,5 +600,30 @@ class="sourceCode sql"><code class="sourceCode sql"><span id="cb16-1"><a href="#
 <span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">quota</span> <span class="dt">REAL</span>,</span>
 <span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">PRIMARY</span> <span class="kw">KEY</span>(partitaIVA, CF)</span>
 <span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
+<h2 id="sql-1">SQL</h2>
+<h3 id="tipi-di-dato">Tipi di dato</h3>
+<h4 id="sqlite">SQLite</h4>
+<ul>
+<li><p><strong><code>INTEGER</code></strong> Valore intero con
+segno.</p></li>
+<li><p><strong><code>REAL</code></strong> Valore numerico
+“reale”.</p></li>
+<li><p><strong><code>TEXT</code></strong> Una stringa di
+caratteri.</p></li>
+<li><p><strong><code>BLOB</code></strong> (Binary Large OBject) Una
+rappresentazione binaria di un qualunque file.</p></li>
+</ul>
+<h4 id="altri-possibili-tipi">Altri possibili tipi</h4>
+<ul>
+<li><strong><code>BOOL</code></strong> <code>FALSE</code> o
+<code>TRUE</code>. In SQLite si usa <code>INTEGER</code> con la
+convenzione per cui <code>FALSE = 0</code> e <code>TRUE = 1</code></li>
+<li><strong><code>DATE</code></strong> Conserva la data. In SQLite
+possiamo usare <code>TEXT</code> con date scritte secondo lo standard
+ISO 8601: “YYYY-MM-DD”.</li>
+<li><strong><code>DATETIME</code></strong>. Conserva l’istante
+temporale. In SQLite possiamo usare <code>TEXT</code> e lo standard ISO
+8601: “YYYY-MM-DD HH:MM:SS.SSS”.</li>
+</ul>
 </body>
 </html>

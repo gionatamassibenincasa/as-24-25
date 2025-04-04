@@ -254,12 +254,8 @@ class Azionista {
   **CF** {id}
   ...
 }
-class Partecipazione {
-  quota
-}
 
-Societa "1..n" - "1..n" Azionista
-(Societa, Azionista) -- Partecipazione
+Societa "1..n" - "1..n" Azionista: Partecipazione
 @enduml
 ```
 </div>
@@ -338,7 +334,7 @@ Azionista(CF <PK>, …)
 Partecipazione(partitaIVA <PK, FK>, CF <PK, FK>, quota)
 ```
 
-###### DDL - SQL
+###### SQL
 
 ```sql
 CREATE TABLE Societa (
@@ -356,3 +352,23 @@ CREATE TABLE Partecipazione (
 	PRIMARY KEY(partitaIVA, CF)
 );
 ```
+
+## SQL
+
+### Tipi di dato
+
+#### SQLite
+
+- **``INTEGER``** Valore intero con segno.
+
+- **``REAL``** Valore numerico "reale".
+
+- **``TEXT``** Una stringa di caratteri.
+
+- **``BLOB``** (Binary Large OBject) Una rappresentazione binaria di un qualunque file.
+
+#### Altri possibili tipi
+
+- **``BOOL``** ``FALSE`` o ``TRUE``. In SQLite si usa ``INTEGER`` con la convenzione per cui ``FALSE = 0`` e ``TRUE = 1``
+- **``DATE``** Conserva la data. In SQLite possiamo usare ``TEXT`` con date scritte secondo lo standard ISO 8601: "YYYY-MM-DD".
+- **``DATETIME``**. Conserva l'istante temporale. In SQLite possiamo usare ``TEXT`` e lo standard ISO 8601: "YYYY-MM-DD HH:MM:SS.SSS".
