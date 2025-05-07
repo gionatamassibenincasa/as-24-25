@@ -54,7 +54,7 @@ CREATE TABLE Edizione
 INSERT INTO Edizione (idEdizione, idCorso, idClasse, bando, denominazione) VALUES
 --  ('LM1', 'LabMat1', 'LicMat', 'interno', 'LABORATORIO DI MATEMATICA 1') -- Petrella
   ('LM2', 'LabMat2', 'LicMat', 'interno', 'LABORATORIO DI MATEMATICA 2') -- Massi
--- , ('LM3', 'LabMat3', 'LicMat', 'interno', 'LABORATORIO DI MATEMATICA 3') -- Lillini
+-- , ('LM3', 'LabMat3', 'LicMat', 'interno', 'LABORATORIO DI MATEMATICA 3') -- ?
 -- , ('MIT1B','MIT1B', 'S1B', 'esterno', 'GTL MIT - Crypto') -- Thomas
 -- , ('MIT2B','MIT2B', 'S2B', 'esterno', 'GTL MIT - RelAlg') -- Thomas
 , ('Crypto1B','CryptoWithBlocks', 'S1B', 'esterno', 'CRITTOGRAFIA CON BLOCCHI 1') -- Taccari
@@ -70,6 +70,7 @@ INSERT INTO Edizione (idEdizione, idCorso, idClasse, bando, denominazione) VALUE
 , ('PhyComp', 'PhyComp', 'E2B', 'interno', 'PHYSICAL COMPUTING')  -- Massi
 , ('EduRobot', 'EduRobot', 'Aperto', 'esterno', 'ROBOTICA EDUCATIVA')  -- Agostinelli
 , ('PassInf', 'PassInf', 'Aperto', 'esterno', 'PASSIONE INFORMATICA')  -- Agostinelli
+, ('EduRobotC', 'EduRobot', 'Aperto', 'esterno', 'ROBOTICA EDUCATIVA DA COMPETIZIONE')  -- Agostinelli
 ;
 
 CREATE TABLE Personale (
@@ -334,6 +335,31 @@ INSERT INTO ObiettivoCorso VALUES
 , ('RicOp', 'generaliInformatica')
 ;
 
+CREATE TABLE Partecipazione
+(
+  idEdizione TEXT PRIMARY KEY REFERENCES Edizione(idEdizione),
+  iscritti INTEGER,
+  attestati INTEGER
+);
+
+INSERT INTO Partecipazione VALUES
+  ('LM2', 15, 9) -- Massi
+, ('Crypto1B', 10, 10) -- Taccari
+, ('Crypto2B', 18, 18) -- Massi
+, ('Crypto4G',14, 14) -- Taccari, Lorenzoni
+, ('CyberSec3B', 22, 20)  -- Taccari
+, ('CyberSec4B', 21, 19)  -- Taccari
+, ('RelAx4E', 23, 22) -- Massi
+, ('RelAx4F', 14, 13) -- Massi
+, ('RelAx5LSinf', 14, 11) -- Massi
+, ('RelAx5E', 16, 15) -- Massi
+, ('RicOp5A', 16, 15) -- Marinelli, Massi
+, ('PhyComp', 18, 10)  -- Massi
+, ('EduRobot', 22, 11)  -- Agostinelli
+, ('PassInf', 22, 11)  -- Agostinelli
+, ('EduRobotC', 15, 14)  -- Agostinelli
+;
+
 CREATE VIEW OrariAttesi AS
 SELECT
     idClasse,
@@ -488,20 +514,9 @@ INSERT INTO Lezione VALUES
 -- , (5, 'MIT2B', '2025-01-20', 2, 'AulaClasse', 'Portatile')
 -- , (6, 'MIT2B', '2025-01-22', 4, 'AulaClasse', 'Portatile')
 
--- Lillini
--- , (1, 'LM3', '2025-03-14', 5, NULL, NULL)
--- , (2, 'LM3', '2025-03-14', 6, NULL, NULL)
--- , (3, 'LM3', '2025-03-21', 5, NULL, NULL)
--- , (4, 'LM3', '2025-03-21', 6, NULL, NULL)
--- , (5, 'LM3', '2025-03-28', 5, NULL, NULL)
--- , (6, 'LM3', '2025-03-28', 6, NULL, NULL)
--- , (7, 'LM3', '2025-04-04', 5, NULL, NULL)
--- , (8, 'LM3', '2025-04-04', 6, NULL, NULL)
--- , (9, 'LM3', '2025-04-11', 5, NULL, NULL)
--- , (10, 'LM3', '2025-04-11', 6, NULL, NULL)
-
 -- Solo per aggiungere la riga
 -- , (1, 'EduRobot', '2025-01-08', 7, 'FabLab', 'Spike')
+-- , (1, 'EduRobotC', '2025-01-08', 7, 'FabLab', 'Spike')
 -- , (1, 'PassInf',  '2025-01-09', 7, 'FabLab', 'Raspberry Pi')
 
   (1, 'RicOp5A', '2025-02-03', 1, 'AulaClasse', 'PC')
@@ -513,7 +528,7 @@ INSERT INTO Lezione VALUES
 , (7, 'RicOp5A', '2025-02-24', 1, 'AulaClasse', 'PC')
 , (8, 'RicOp5A', '2025-02-24', 2, 'AulaClasse', 'PC')
 , (9, 'RicOp5A', '2025-03-03', 1, 'AulaClasse', 'PC')
-, (10, 'RicOp5A', '2025-03-03', 2, 'AulaClasse', 'PC') -- OK
+, (10, 'RicOp5A', '2025-03-03', 2, 'AulaClasse', 'PC')
 
 , (1, 'RelAx5E', '2024-12-11', 3, 'FabLab', 'Raspberry Pi')
 , (2, 'RelAx5E', '2024-12-16', 2, 'FabLab', 'Raspberry Pi')
@@ -524,7 +539,7 @@ INSERT INTO Lezione VALUES
 , (7, 'RelAx5E', '2025-01-20', 2, 'FabLab', 'Raspberry Pi')
 , (8, 'RelAx5E', '2025-01-22', 3, 'FabLab', 'Raspberry Pi')
 , (9, 'RelAx5E', '2025-01-29', 3, 'FabLab', 'Raspberry Pi')
-, (10, 'RelAx5E', '2025-02-05', 3, 'FabLab', 'Raspberry Pi') -- OK
+, (10, 'RelAx5E', '2025-02-05', 3, 'FabLab', 'Raspberry Pi')
 
 , (1, 'RelAx4F', '2024-12-11', 4, 'FabLab', 'Raspberry Pi')
 , (2, 'RelAx4F', '2024-12-16', 1, 'FabLab', 'Raspberry Pi')
@@ -535,7 +550,7 @@ INSERT INTO Lezione VALUES
 , (7, 'RelAx4F', '2025-01-20', 1, 'FabLab', 'Raspberry Pi')
 , (8, 'RelAx4F', '2025-01-22', 4, 'FabLab', 'Raspberry Pi')
 , (9, 'RelAx4F', '2025-01-29', 4, 'FabLab', 'Raspberry Pi')
-, (10, 'RelAx4F', '2025-02-26', 4, 'FabLab', 'Raspberry Pi') -- OK
+, (10, 'RelAx4F', '2025-02-26', 4, 'FabLab', 'Raspberry Pi')
 
 , (1, 'Crypto1B', '2025-02-05', 1, 'Lab', 'PC')
 , (2, 'Crypto1B', '2025-02-08', 4, 'Lab', 'PC')
@@ -546,7 +561,7 @@ INSERT INTO Lezione VALUES
 , (7, 'Crypto1B', '2025-02-26', 1, 'Lab', 'PC')
 , (8, 'Crypto1B', '2025-03-01', 4, 'Lab', 'PC')
 , (9, 'Crypto1B', '2025-03-05', 1, 'Lab', 'PC')
-, (10, 'Crypto1B', '2025-03-08', 4, 'Lab', 'PC') -- OK
+, (10, 'Crypto1B', '2025-03-08', 4, 'Lab', 'PC')
 
 , (1, 'LM2', '2025-01-31', 5, 'AulaClasse', 'Notebook')
 , (2, 'LM2', '2025-01-31', 6, 'AulaClasse', 'Notebook')
@@ -557,7 +572,7 @@ INSERT INTO Lezione VALUES
 , (7, 'LM2', '2025-03-07', 5, 'AulaClasse', 'Notebook')
 , (8, 'LM2', '2025-03-07', 6, 'AulaClasse', 'Notebook')
 , (9, 'LM2', '2025-03-21', 5, 'AulaClasse', 'Notebook')
-, (10, 'LM2', '2025-03-21', 6, 'AulaClasse', 'Notebook') -- OK
+, (10, 'LM2', '2025-03-21', 6, 'AulaClasse', 'Notebook')
 
 , (1, 'RelAx4E', '2025-02-05', 2, 'Lab', 'PC')
 , (2, 'RelAx4E', '2025-02-12', 2, 'Lab', 'PC')
@@ -568,7 +583,7 @@ INSERT INTO Lezione VALUES
 , (7, 'RelAx4E', '2025-03-19', 2, 'Lab', 'PC')
 , (8, 'RelAx4E', '2025-04-02', 2, 'Lab', 'PC')
 , (9, 'RelAx4E', '2025-04-16', 2, 'Lab', 'PC')
-, (10, 'RelAx4E', '2025-04-23', 2, 'Lab', 'PC') -- OK
+, (10, 'RelAx4E', '2025-04-23', 2, 'Lab', 'PC')
 
 , (1, 'Crypto2B', '2025-02-05', 1, 'Lab', 'PC')
 , (2, 'Crypto2B', '2025-02-05', 4, 'Lab', 'PC')
@@ -579,7 +594,7 @@ INSERT INTO Lezione VALUES
 , (7, 'Crypto2B', '2025-03-19', 4, 'Lab', 'PC')
 , (8, 'Crypto2B', '2025-04-02', 4, 'Lab', 'PC')
 , (9, 'Crypto2B', '2025-04-16', 4, 'Lab', 'PC')
-, (10, 'Crypto2B', '2025-04-23', 4, 'Lab', 'PC') -- OK
+, (10, 'Crypto2B', '2025-04-23', 4, 'Lab', 'PC')
 
 , (1, 'CyberSec3B', '2025-01-29', 5, 'FabLab', 'Raspberry Pi')
 , (2, 'CyberSec3B', '2025-01-31', 6, 'FabLab', 'Raspberry Pi')
@@ -611,9 +626,7 @@ INSERT INTO Lezione VALUES
 , (7, 'Crypto4G', '2025-03-25', 2, 'FabLab', 'Raspberry Pi')
 , (8, 'Crypto4G', '2025-04-01', 2, 'FabLab', 'Raspberry Pi')
 , (9, 'Crypto4G', '2025-04-15', 2, 'FabLab', 'Raspberry Pi')
-, (10, 'Crypto4G', '2025-04-29', 2, 'FabLab', 'Raspberry Pi') -- OK
-
--- COPIA DA QUI
+, (10, 'Crypto4G', '2025-04-29', 2, 'FabLab', 'Raspberry Pi')
 
 , (1, 'PhyComp', '2025-03-10', 2, 'Lab', 'Micro:bit')
 , (2, 'PhyComp', '2025-03-17', 2, 'Lab', 'Micro:bit')
@@ -622,11 +635,11 @@ INSERT INTO Lezione VALUES
 , (5, 'PhyComp', '2025-03-31', 2, 'Lab', 'Micro:bit')
 , (6, 'PhyComp', '2025-04-07', 2, 'Lab', 'Micro:bit')
 , (7, 'PhyComp', '2025-04-09', 4, 'Lab', 'Micro:bit')
-, (8, 'PhyComp', '2025-04-28', 2, 'Lab', 'Micro:bit') -- OK
+, (8, 'PhyComp', '2025-04-28', 2, 'Lab', 'Micro:bit')
 , (9, 'PhyComp', '2025-05-05', 2, 'Lab', 'Micro:bit')
 , (10, 'PhyComp', '2025-05-07', 4, 'Lab', 'Micro:bit')
--- , (11, 'PhyComp', '2025-05-12', 2, 'Lab', 'Micro:bit')
--- , (12, 'PhyComp', '2025-05-14', 4, 'Lab', 'Micro:bit')
+
+-- COPIA DA QUI
 
 , (1, 'RelAx5LSinf', '2024-12-13', 5, 'FabLab', 'Raspberry Pi')
 , (2, 'RelAx5LSinf', '2024-12-20', 5, 'FabLab', 'Raspberry Pi')
@@ -655,37 +668,38 @@ INSERT INTO Lezione VALUES
 , (14, 'CyberSec4B', '2025-04-02', 6, 'FabLab', 'Raspberry Pi')
 , (15, 'CyberSec4B', '2025-04-04', 4, 'FabLab', 'Raspberry Pi')
 , (16, 'CyberSec4B', '2025-04-16', 6, 'FabLab', 'Raspberry Pi')
-, (17, 'CyberSec4B', '2025-04-23', 6, 'FabLab', 'Raspberry Pi')  -- OK
-, (18, 'CyberSec4B', '2025-05-07', 6, 'FabLab', 'Raspberry Pi')
+, (17, 'CyberSec4B', '2025-04-23', 6, 'FabLab', 'Raspberry Pi')
+, (18, 'CyberSec4B', '2025-05-07', 6, 'FabLab', 'Raspberry Pi') -- OK
 , (19, 'CyberSec4B', '2025-05-09', 4, 'FabLab', 'Raspberry Pi')
 , (20, 'CyberSec4B', '2025-05-14', 6, 'FabLab', 'Raspberry Pi')
 ;
 
-UPDATE Edizione
-SET stato = 'DA CHIUDERE'
-WHERE idEdizione IN (
-    'Crypto2B'
-  , 'Crypto4G'
-  , 'CyberSec3B'
-  , 'RelAx4E'
-);
+-- UPDATE Edizione
+-- SET stato = 'DA CHIUDERE'
+-- WHERE idEdizione IN (
+-- );
 
 UPDATE Edizione
 SET stato = 'CHIUSO'
 WHERE idEdizione IN (
- 'RicOp5A',
- 'RelAx5E',
- 'RelAx4F',
- 'EduRobot',
- 'PassInf',
  'Crypto1B',
- 'LM2'
+ 'Crypto2B',
+ 'Crypto4G',
+ 'CyberSec3B',
+ 'EduRobot',
+ 'EduRobotC',
+ 'LM2',
+ 'PassInf',
+-- 'PhyComp',
+ 'RelAx4E',
+ 'RelAx4F',
+ 'RelAx5E',
+ 'RicOp5A'
 );
 
 UPDATE Edizione
 SET stato = 'IN CORSO'
 WHERE idEdizione IN (
-   'PhyComp' -- 70 %
- , 'RelAx5LSinf' -- 80 %
- , 'CyberSec4B' -- 85 % (17) CS2
+   'RelAx5LSinf' -- 80 %
+ , 'CyberSec4B' -- 90 % (18) CS2
 );
