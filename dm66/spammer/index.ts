@@ -2,8 +2,9 @@ const nodemailer = require("nodemailer");
 const mustache = require("mustache");
 const fs = require('fs').promises; // Using the promises API for cleaner async/await
 
+const today = new Date().toISOString().substr(0, 10);
 const HOURS = 10;
-const REMAINING_HOURS = HOURS - 6;
+const REMAINING_HOURS = HOURS - 8;
 const HOURS_TO_BE_CERTIFICATED = 7;
 
 /**
@@ -141,16 +142,15 @@ function isMale(recipientInfo) {
 }
 
 function certificatePostScriptum(recipientInfo) {
-    let str = "<br><br><p>PS: avendo registrato le tue presenze per " + recipientInfo.numOreReg + " ore di presenza, ";
+    let str = "<p><strong>PS</strong>: avendo registrato " + recipientInfo.numOreReg + " ore di presenza, ";
     if (recipientInfo.numOreReg >= HOURS_TO_BE_CERTIFICATED) {
         str += 'sono lieto di informarti che che al termine del corso potrai scaricare l\'attestato su <a href="https://scuolafutura.pubblica.istruzione.it/">Scuola Futura</a>.</p>';
-    }
-    if (recipientInfo.numOreReg + REMAINING_HOURS >= HOURS_TO_BE_CERTIFICATED) {
+    } else if (recipientInfo.numOreReg + REMAINING_HOURS >= HOURS_TO_BE_CERTIFICATED) {
         const missingHours = HOURS_TO_BE_CERTIFICATED - recipientInfo.numOreReg;
-        str += "ti informo che necessiti di almeno " + missingHours +
-            ((missingHours == 1) ? " ora ulteriore" : " ore ulteriori") +
-            " di presenza per conseguire l'attestato del corso.</p>"
-    } else str += "mi spiace informarti che non potrai conseguire l'attestato.</p>";
+        str += "ti informo che dovrai essere presente "  +
+            ((missingHours == 1) ? "ad almeno un'ora" : "a entrambe le ore") +
+            " dell'ultimo incontro al fine di conseguire l'attestato di partecipazione al corso.</p>"
+    } else str += "mi spiace informarti che non potrai conseguire l'attestato di partecipazione al corso.</p>";
 
     return str;
 }
@@ -174,8 +174,8 @@ async function main() {
         process.exit(1);
     }
 
-    const emailSubject = await fs.readFile('subject-2025-05-07.txt', 'utf8');
-    const emailTemplate = await fs.readFile('template-2025-05-07.html', 'utf8'); // Your HTML template
+    const emailSubject = await fs.readFile(`subject-${today}.txt`, 'utf8');
+    const emailTemplate = await fs.readFile(`template-${today}.html`, 'utf8'); // Your HTML template
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
