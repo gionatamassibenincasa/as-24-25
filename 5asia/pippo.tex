@@ -1,0 +1,1158 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\usepackage{svg}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Manuale d\textquotesingle Informatica - Esame di Stato 2025 - 5A SIA - IIS Savoia Benincasa},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Manuale d\textquotesingle Informatica - Esame di Stato 2025 - 5A
+SIA - IIS Savoia Benincasa}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{6}
+\tableofcontents
+}
+\section{Progettazione
+dell'applicazione}\label{progettazione-dellapplicazione}
+
+\subsection{Specifiche dei Requisiti - Diagramma dei casi
+d'uso}\label{specifiche-dei-requisiti---diagramma-dei-casi-duso}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml esempioUseCase}
+
+\NormalTok{left to right direction}
+
+\NormalTok{actor Cliente}
+\NormalTok{actor "Societa di spedizioni" AS SS}
+\NormalTok{actor Spedizioniere AS SP}
+
+\NormalTok{rectangle "Sistema di vendita per corrispondenza" \{}
+\NormalTok{  usecase InserisciOrdine}
+\NormalTok{  usecase AnnullaOrdine}
+\NormalTok{  usecase VerificaStatoOrdine}
+\NormalTok{  usecase RichiediCatalogo}
+  
+\NormalTok{  usecase SpedisciProdotto}
+\NormalTok{\}}
+
+\NormalTok{Cliente {-}{-} InserisciOrdine}
+\NormalTok{Cliente {-}{-} AnnullaOrdine}
+\NormalTok{Cliente {-}{-} VerificaStatoOrdine}
+\NormalTok{Cliente {-}{-} RichiediCatalogo}
+
+\NormalTok{SS {-}{-} SpedisciProdotto}
+\NormalTok{SP {-}{-} SpedisciProdotto}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{esempioUseCase.svg}
+
+\subsection{Progettazione dei dati}\label{progettazione-dei-dati}
+
+\subsubsection{Diagramma delle classi}\label{diagramma-delle-classi}
+
+\paragraph{Classe}\label{classe}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml esempioClasse}
+\NormalTok{hide circle}
+\NormalTok{left to right direction}
+
+\NormalTok{class ContoBancario \{}
+\NormalTok{  **numeroConto** \{id\}}
+\NormalTok{  correntista}
+\NormalTok{  saldo}
+  
+\NormalTok{  deposita()}
+\NormalTok{  preleva()}
+\NormalTok{  calcolaInteresse()}
+\NormalTok{\}}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{esempioClasse.svg}
+
+\paragraph{Associazione}\label{associazione}
+
+\subparagraph{Associazione uno a uno}\label{associazione-uno-a-uno}
+
+Progettazione concettuale - Classi di analisi
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml esempioAss11Conc}
+\NormalTok{hide circle}
+\NormalTok{hide methods}
+\NormalTok{hide attributes}
+
+\NormalTok{left to right direction}
+
+\NormalTok{class Studente}
+\NormalTok{class Badge}
+
+\NormalTok{Studente "1" {-}{-} "0..1" Badge: identificare}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{esempioAss11Conc.svg}
+
+Letture dell'associazione:
+
+\begin{itemize}
+\tightlist
+\item
+  Uno studente può essere identificato da un badge
+\item
+  Un badge identifica uno (ed un solo) studente
+\end{itemize}
+
+Progettazione logica - Classi di progettazione
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml esempioAss11Ristr1}
+\NormalTok{hide circle}
+\NormalTok{hide methods}
+
+\NormalTok{left to right direction}
+
+\NormalTok{class Studente \{}
+\NormalTok{    **matricola** \{id\}}
+\NormalTok{    ...}
+\NormalTok{\}}
+\NormalTok{class Badge \{}
+\NormalTok{    **codice** \{id\}}
+\NormalTok{    ...}
+\NormalTok{\}}
+
+\NormalTok{Studente "1" {-}{-} "0..1" Badge: identificare}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{esempioAss11Ristr1.svg}
+
+Ristrutturazione nel modello logico relazionale
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml esempioAss11Ristr2}
+\NormalTok{hide circle}
+\NormalTok{hide methods}
+
+\NormalTok{left to right direction}
+
+\NormalTok{class Studente \{}
+\NormalTok{    **matricola** \{id\}}
+\NormalTok{    codice}
+\NormalTok{    ...}
+\NormalTok{\}}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{esempioAss11Ristr2.svg}
+
+Schema logico
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Studente(matricola \textless{}PK\textgreater{}, codiceBadge, …)}
+\end{Highlighting}
+\end{Shaded}
+
+DDL - SQL
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Studente (}
+\NormalTok{    matricola }\DataTypeTok{INTEGER} \KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{,}
+\NormalTok{    codiceBadge }\DataTypeTok{INTEGER}\NormalTok{,}
+\NormalTok{    …}
+\NormalTok{);}
+\end{Highlighting}
+\end{Shaded}
+
+\subparagraph{Associazione uno a molti}\label{associazione-uno-a-molti}
+
+Progettazione concettuale - Classi di analisi
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml esempioAss1nConc}
+\NormalTok{hide circle}
+\NormalTok{hide methods}
+\NormalTok{hide attributes}
+
+\NormalTok{left to right direction}
+
+\NormalTok{class Cliente \{}
+\NormalTok{  **idCliente** \{id\}}
+\NormalTok{  ...}
+\NormalTok{\}}
+\NormalTok{class Prodotto \{}
+\NormalTok{  **idProdotto** \{id\}}
+\NormalTok{\}}
+
+\NormalTok{Cliente "0..1" {-}{-} "1..n" Prodotto: acquistare}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{esempioAss1nConc.svg}
+
+Progettazione logica - Classi di progettazione
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml esempioAss1nRistr1}
+\NormalTok{hide circle}
+\NormalTok{hide methods}
+
+\NormalTok{left to right direction}
+
+\NormalTok{class Cliente \{}
+\NormalTok{  **idCliente** \{id\}}
+\NormalTok{  ...}
+\NormalTok{\}}
+\NormalTok{class Prodotto \{}
+\NormalTok{  **idProdotto** \{id\}}
+\NormalTok{  //idCliente// \{fk\}}
+\NormalTok{  ...}
+\NormalTok{\}}
+
+\NormalTok{Cliente "0..1" {-}{-} "1..n" Prodotto: acquistare}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{esempioAss1nRistr1.svg}
+
+Schema logico
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Cliente(idCliente \textless{}PK\textgreater{}, …)}
+\NormalTok{Prodotto(idProdotto \textless{}PK\textgreater{}, idCliente \textless{}FK\textgreater{}, …)}
+\end{Highlighting}
+\end{Shaded}
+
+DDL - SQL
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Cliente (}
+\NormalTok{    idCliente }\DataTypeTok{INTEGER} \KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{,}
+\NormalTok{    …}
+\NormalTok{);}
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Prodotto (}
+\NormalTok{    idProdotto }\DataTypeTok{INTEGER} \KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{,}
+\NormalTok{    idCliente }\DataTypeTok{INTEGER} \KeywordTok{FOREIGN} \KeywordTok{KEY} \KeywordTok{REFERENCES}\NormalTok{ Cliente(idCliente),}
+\NormalTok{    …}
+\NormalTok{);}
+\end{Highlighting}
+\end{Shaded}
+
+\subparagraph{Associazione molti a
+molti}\label{associazione-molti-a-molti}
+
+Progettazione concettuale - Classi di analisi
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml esempioAssnnConc}
+\NormalTok{hide circle}
+\NormalTok{hide methods}
+\NormalTok{hide attributes}
+
+\NormalTok{class Societa \{}
+\NormalTok{  **partitaIVA** \{id\}}
+\NormalTok{  ...}
+\NormalTok{\}}
+\NormalTok{class Azionista \{}
+\NormalTok{  **CF** \{id\}}
+\NormalTok{  ...}
+\NormalTok{\}}
+
+\NormalTok{Societa "1..n" {-} "1..n" Azionista: Partecipazione}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{esempioAssnnConc.svg}
+
+Progettazione logica - Classi di progettazione
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml esempioAssnnRistr1}
+\NormalTok{hide circle}
+\NormalTok{hide methods}
+
+\NormalTok{class Societa \{}
+\NormalTok{  **partitaIVA**: text(11) \{id\}}
+\NormalTok{  ...}
+\NormalTok{\}}
+\NormalTok{class Azionista \{}
+\NormalTok{  **CF**: text(16) \{id\}}
+\NormalTok{  ...}
+\NormalTok{\}}
+\NormalTok{class Partecipazione \{}
+\NormalTok{  //**partitaIVA**//: text(11) \{id, fk\}}
+\NormalTok{  //**CF**//: text(16) \{id, fk\}}
+\NormalTok{  quota}
+\NormalTok{\}}
+
+\NormalTok{Societa "1..n" {-} "1..n" Azionista}
+\NormalTok{(Societa, Azionista) {-}{-} Partecipazione}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{esempioAssnnRistr1.svg}
+
+Ristrutturazione nel modello logico relazionale
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml esempioAssnnRistr2}
+\NormalTok{hide circle}
+\NormalTok{hide methods}
+
+\NormalTok{left to right direction}
+
+\NormalTok{class Societa \{}
+\NormalTok{  **partitaIVA** \{id\}}
+\NormalTok{  ...}
+\NormalTok{\}}
+\NormalTok{class Azionista \{}
+\NormalTok{  **CF** \{id\}}
+\NormalTok{  ...}
+\NormalTok{\}}
+\NormalTok{class Partecipazione \{}
+\NormalTok{  //**partitaIVA**// \{id, fk\}}
+\NormalTok{  //**CF**// \{id, fk\}}
+\NormalTok{  quota}
+\NormalTok{\}}
+
+\NormalTok{Societa "1" {-}{-} "1..n" Partecipazione}
+\NormalTok{Partecipazione "1..n" {-}{-} "1" Azionista}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{esempioAssnnRistr2.svg}
+
+Schema logico
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Societa(partitaIVA \textless{}PK\textgreater{}, …)}
+\NormalTok{Azionista(CF \textless{}PK\textgreater{}, …)}
+\NormalTok{Partecipazione(partitaIVA \textless{}PK, FK\textgreater{}, CF \textless{}PK, FK\textgreater{}, quota)}
+\end{Highlighting}
+\end{Shaded}
+
+DDL-SQL
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Societa (}
+\NormalTok{    partitaIVA TEXT }\KeywordTok{PRIMARY} \KeywordTok{KEY} \KeywordTok{CHECK}\NormalTok{ (}\FunctionTok{length}\NormalTok{(partitaIVA) }\OperatorTok{=} \DecValTok{11}\NormalTok{),}
+\NormalTok{    …}
+\NormalTok{);}
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Azionista (}
+\NormalTok{    CF TEXT }\KeywordTok{PRIMARY} \KeywordTok{KEY} \KeywordTok{CHECK}\NormalTok{ (}\FunctionTok{length}\NormalTok{(CF) }\OperatorTok{=} \DecValTok{16}\NormalTok{),}
+\NormalTok{    …}
+\NormalTok{);}
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Partecipazione (}
+\NormalTok{    partitaIVA TEXT }\KeywordTok{REFERENCES}\NormalTok{ Societa(partitaIVA),}
+\NormalTok{    CF TEXT }\KeywordTok{REFERENCES}\NormalTok{ Azionista(CF),}
+    \KeywordTok{quota} \DataTypeTok{REAL}\NormalTok{,}
+    \KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{(partitaIVA, CF)}
+\NormalTok{);}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Ristrutturazione del modello concettuale in quello logico
+relazionale}\label{ristrutturazione-del-modello-concettuale-in-quello-logico-relazionale}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ogni \emph{entità} diventa una \emph{relazione}, ossia una tabella
+  SQL;
+\item
+  ogni \emph{attributo} di un'entità diventa un \emph{attributo} della
+  relazione, cioè il nome di una colonna della tabella SQL;
+\item
+  ogni \emph{attributo} della relazione eredita le caratteristiche
+  dell'attributo dell'entità da cui deriva;
+\item
+  l'identifi catore univoco di un'entità diventa la chiave primaria
+  della relazione derivata;
+\item
+  l'associazione uno a uno diventa un'unica relazione che contiene gli
+  attributi della prima e della seconda entità, salvo alcune eccezioni;
+\item
+  l'associazione uno a molti viene rappresentata aggiungendo, agli
+  attributi dell'entità che svolge il ruolo a molti, l'identifi catore
+  univoco dell'entità che svolge il ruolo a unonell'associazione. Questo
+  identificatore, che prende il nome di chiave esterna dell'entità
+  associata, è costituito dall'insieme di attributi che compongono la
+  chiave dell'entitàa uno dell'associazione. Gli eventuali attributi
+  dell'associazione vengono inseriti nella relazione che rappresenta
+  l'entità a molti, assieme alla chiave esterna;
+\item
+  l'associazione molti a molti diventa una nuova relazione (in aggiunta
+  alle relazioni derivate dalle entità) composta dagli identifi catori
+  univoci delle due entità e dagli eventuali attributi
+  dell'associazione. La chiave della nuova relazione è formata
+  dall'insieme di attributi che compongo le chiavi delle due entità,
+  oltre agli eventuali attributi dell'associazione necessari a garantire
+  l'unicità delle n-uple nella relazione ottenuta.
+\end{enumerate}
+
+\subsection{SQL}\label{sql}
+
+\subsubsection{Tipi di dato}\label{tipi-di-dato}
+
+\paragraph{SQLite}\label{sqlite}
+
+\begin{itemize}
+\item
+  \textbf{\texttt{INTEGER}} Valore intero con segno.
+\item
+  \textbf{\texttt{REAL}} Valore numerico ``reale''.
+\item
+  \textbf{\texttt{TEXT}} Una stringa di caratteri.
+\item
+  \textbf{\texttt{BLOB}} (Binary Large OBject) Una rappresentazione
+  binaria di un qualunque file.
+\end{itemize}
+
+\paragraph{Altri possibili tipi}\label{altri-possibili-tipi}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\texttt{BOOL}} \texttt{FALSE} o \texttt{TRUE}. In SQLite si
+  usa \texttt{INTEGER} con la convenzione per cui \texttt{FALSE\ =\ 0} e
+  \texttt{TRUE\ =\ 1}
+\item
+  \textbf{\texttt{DATE}} Conserva la data. In SQLite possiamo usare
+  \texttt{TEXT} con date scritte secondo lo standard ISO 8601:
+  ``YYYY-MM-DD''.
+\item
+  \textbf{\texttt{DATETIME}}. Conserva l'istante temporale. In SQLite
+  possiamo usare \texttt{TEXT} e lo standard ISO 8601: ``YYYY-MM-DD
+  HH:MM:SS.SSS''.
+\end{itemize}
+
+\subsubsection{Sintassi Base - SELECT in
+SQLite}\label{sintassi-base---select-in-sqlite}
+
+Le parentesi quadre (\texttt{{[}} e \texttt{{]}}) indicano
+l'opzionalità.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{SELECT}\NormalTok{ colonne}
+\NormalTok{[}\KeywordTok{FROM}\NormalTok{ tabella]}
+\NormalTok{[}\KeywordTok{WHERE}\NormalTok{ condizione]}
+\NormalTok{[}\KeywordTok{GROUP} \KeywordTok{BY}\NormalTok{ colonne\_raggruppamento]}
+\NormalTok{[}\KeywordTok{HAVING}\NormalTok{ condizione\_raggruppamento]}
+\NormalTok{[}\KeywordTok{ORDER} \KeywordTok{BY}\NormalTok{ colonne\_ordinamento [}\KeywordTok{ASC}\NormalTok{|}\KeywordTok{DESC}\NormalTok{]]}
+\NormalTok{[}\KeywordTok{LIMIT}\NormalTok{ numero [OFFSET inizio]];}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{colonne := espressione [, espressione]*}
+\NormalTok{espressione := nome\_colonna |}
+\NormalTok{               letterale |}
+\NormalTok{               espressione AS nome |}
+\NormalTok{               espressione + espressione |}
+\NormalTok{               espressione {-} espressione |}
+\NormalTok{               espressione * espressione |}
+\NormalTok{               espressione / espresssione |}
+\NormalTok{               min(espressione) |}
+\NormalTok{               max(espressione) |}
+\NormalTok{               count(espressione) |}
+\NormalTok{               avg(espressione) |}
+\NormalTok{               sum(espressione) |}
+\NormalTok{               espressione = espressione |}
+\NormalTok{               espressione \textless{}\textgreater{} espressione |}
+\NormalTok{               espressione \textless{}= espressione |}
+\NormalTok{               espressione \textless{} espressione |}
+\NormalTok{               espressione \textgreater{}= espressione |}
+\NormalTok{               espressione \textgreater{} espressione}
+\NormalTok{               espressione BETWEEN espressione AND espressione;}
+
+\NormalTok{tabella := nome\_tabella |}
+\NormalTok{           nome\_tabella, nome\_tabella |}
+\NormalTok{           nome\_tabella join nome\_tabella clausola\_join;}
+
+\NormalTok{join := , |}
+\NormalTok{        INNER JOIN |}
+\NormalTok{        CROSS JOIN |}
+\NormalTok{        LEFT OUTER JOIN |}
+\NormalTok{        RIGHT OUTER JOIN |}
+\NormalTok{        FULL OUTER JOIN |}
+\NormalTok{        NATURAL JOIN;}
+
+\NormalTok{clausola\_join : ON condizione |}
+\NormalTok{                USING(nome\_attributo) |}
+\NormalTok{                "";}
+
+\NormalTok{condizione := FALSE | TRUE |}
+\NormalTok{              condizione AND condizione |}
+\NormalTok{              condizione OR condizione |}
+\NormalTok{              NOT condizione |}
+\NormalTok{              espressione}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{SELECT} \emph{colonne}: Specifica le colonne che si desidera
+  visualizzare nel risultato della query. È possibile specificare una o
+  più colonne separate da virgole. Utilizzare \texttt{*} per selezionare
+  tutte le colonne della tabella. È possibile utilizzare alias per le
+  colonne usando la parola chiave \texttt{AS} (es.
+  \texttt{nome\_colonna\ AS\ alias}). Si possono applicare funzioni
+  aggregate (es. \texttt{COUNT()}, \texttt{SUM()}, \texttt{AVG()},
+  \texttt{MIN()}, \texttt{MAX()}) alle colonne.
+\item
+  {[}\texttt{FROM} \emph{tabella}{]}: Indica la tabella o le tabelle da
+  cui recuperare i dati. Se si interrogano più tabelle, è necessario
+  specificarle separate da virgole (e solitamente utilizzare clausole
+  \texttt{JOIN} ).
+\item
+  {[}\texttt{WHERE} \emph{condizione}{]}: Filtra le righe in base a una
+  condizione specificata. La condizione può includere operatori di
+  confronto (\texttt{=}, \texttt{\textgreater{}}, \texttt{\textless{}},
+  \texttt{\textgreater{}=}, \texttt{\textless{}=}, \texttt{!=},
+  \texttt{\textless{}\textgreater{}}), operatori logici (\texttt{AND},
+  \texttt{OR}, \texttt{NOT}), operatori \texttt{IN}, \texttt{BETWEEN},
+  \texttt{LIKE}, \texttt{IS\ NULL}, \texttt{IS\ NOT\ NULL}.
+\item
+\item
+\item
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{ASC} (ascendente) è l'ordine predefinito.
+  \item
+    \texttt{DESC} (discendente) ordina dal valore più alto al più basso.
+  \end{itemize}
+\item
+  \texttt{OFFSET} \emph{inizio} (opzionale) specifica il numero di righe
+  da saltare prima di iniziare a restituire i risultati.
+\end{itemize}
+
+\subsubsection{Date}\label{date}
+
+\paragraph{ISO 8601 (Representation of dates and
+times)}\label{iso-8601-representation-of-dates-and-times}
+
+\texttt{YYYY-MM-DD}
+
+date()
+
+\begin{itemize}
+\tightlist
+\item
+  Giorno:
+  \texttt{substr(\textquotesingle{}2025-04-12\textquotesingle{},\ 9,\ 2)}
+\item
+  Mese:
+  \texttt{substr(\textquotesingle{}2025-04-12\textquotesingle{},\ 6,\ 2)}
+\item
+  Anno:
+  \texttt{substr(\textquotesingle{}2025-04-12\textquotesingle{},\ 1,\ 4)}
+\item
+  Mese corrente: \texttt{substr(date(),\ 6,\ 2)}
+\item
+  Anno corrente: \texttt{substr(date(),\ 1,\ 4)}
+\end{itemize}
+
+\subsection{Web}\label{web}
+
+\subsubsection{HTML}\label{html}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1809}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8191}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Nome tag
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Descrizione
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{\textless{}html\textgreater{}} & La radice di un documento HTML.
+Tutti gli altri elementi sono discendenti di questo tag. \\
+\texttt{\textless{}head\textgreater{}} & I metadati del documento HTML,
+come il titolo, set di caratteri, link a fogli di stile, ecc. Questi non
+sono visualizzati direttamente nella pagina. \\
+\texttt{\textless{}title\textgreater{}} & Il titolo del documento, che
+appare nella barra del titolo del browser o nella scheda della
+pagina. \\
+\texttt{\textless{}body\textgreater{}} & Il contenuto visibile del
+documento HTML (testo, immagini, link, ecc.). \\
+\texttt{\textless{}h1\textgreater{}} -
+\texttt{\textless{}h6\textgreater{}} & Le intestazioni di diverso
+livello (da quella più importante \texttt{\textless{}h1\textgreater{}} a
+quella meno importante \texttt{\textless{}h6\textgreater{}}). \\
+\texttt{\textless{}p\textgreater{}} & Un capoverso
+(\emph{paragraph}). \\
+\texttt{\textless{}a\textgreater{}} & Un hyperlink (collegamento).
+L'attributo \texttt{href} specifica l'URL di destinazione. \\
+\texttt{\textless{}img\textgreater{}} & Un'immagine nel documento.
+L'attributo \texttt{src} specifica il percorso dell'immagine. \\
+\texttt{\textless{}ul\textgreater{}} & Una lista non ordinata (con punti
+elenco). \\
+\texttt{\textless{}ol\textgreater{}} & Una lista ordinata (con numeri o
+lettere). \\
+\texttt{\textless{}li\textgreater{}} & Un elemento di una lista (sia
+ordinata che non ordinata). \\
+\texttt{\textless{}div\textgreater{}} & Una sezione o un contenitore
+generico per altri elementi HTML. \\
+\texttt{\textless{}span\textgreater{}} & Una sezione o un contenitore
+inline generico per altri elementi HTML. Simile a
+\texttt{\textless{}div\textgreater{}}, ma per elementi inline. \\
+\texttt{\textless{}table\textgreater{}} & Una tabella. \\
+\texttt{\textless{}tr\textgreater{}} & Una riga all'interno di una
+tabella. \\
+\texttt{\textless{}th\textgreater{}} & Una cella di intestazione in una
+tabella. \\
+\texttt{\textless{}td\textgreater{}} & Una cella di dati in una
+tabella. \\
+\texttt{\textless{}form\textgreater{}} & Un modulo HTML utilizzato per
+raccogliere l'input dell'utente. \\
+\texttt{\textless{}input\textgreater{}} & Un campo di input all'interno
+di un modulo (testo, password, pulsante, ecc.). \\
+\texttt{\textless{}button\textgreater{}} & Un pulsante cliccabile. \\
+\texttt{\textless{}select\textgreater{}} & Un menu a tendina (lista di
+opzioni). \\
+\texttt{\textless{}option\textgreater{}} & Un'opzione all'interno di un
+elemento \texttt{\textless{}select\textgreater{}}. \\
+\texttt{\textless{}strong\textgreater{}} & Evidenzia il testo con una
+forte enfasi (solitamente visualizzato in grassetto). \\
+\texttt{\textless{}em\textgreater{}} & Enfatizza il testo (solitamente
+visualizzato in corsivo). \\
+\texttt{\textless{}br\textgreater{}} & Un'interruzione di riga
+singola. \\
+\texttt{\textless{}hr\textgreater{}} & Una linea orizzontale tematica
+(separatore). \\
+\end{longtable}
+
+\paragraph{Pagina web vouta - HTML}\label{pagina-web-vouta---html}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{\textless{}!DOCTYPE}\NormalTok{ html}\DataTypeTok{\textgreater{}}
+\DataTypeTok{\textless{}}\KeywordTok{html}\OtherTok{ lang}\OperatorTok{=}\StringTok{"it"}\DataTypeTok{\textgreater{}}
+\DataTypeTok{\textless{}}\KeywordTok{head}\DataTypeTok{\textgreater{}}
+    \DataTypeTok{\textless{}}\KeywordTok{meta}\OtherTok{ charset}\OperatorTok{=}\StringTok{"UTF{-}8"}\DataTypeTok{\textgreater{}}
+    \DataTypeTok{\textless{}}\KeywordTok{title}\DataTypeTok{\textgreater{}}\NormalTok{Pagina Vuota}\DataTypeTok{\textless{}/}\KeywordTok{title}\DataTypeTok{\textgreater{}}
+\DataTypeTok{\textless{}/}\KeywordTok{head}\DataTypeTok{\textgreater{}}
+\DataTypeTok{\textless{}}\KeywordTok{body}\DataTypeTok{\textgreater{}}
+
+\DataTypeTok{\textless{}/}\KeywordTok{body}\DataTypeTok{\textgreater{}}
+\DataTypeTok{\textless{}/}\KeywordTok{html}\DataTypeTok{\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{Pagina web vouta - Document Object
+Model}\label{pagina-web-vouta---document-object-model}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml dom\_vuoto}
+\NormalTok{left to right direction}
+\NormalTok{object "html" as html \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+\NormalTok{object "head" as head \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+\NormalTok{object "body" as body \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+\NormalTok{object "title" as title \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+\NormalTok{object "meta" as meta \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{  charset="utf8"}
+\NormalTok{\}}
+\NormalTok{object "!DOCTYPE html" as doctype \{}
+\NormalTok{  \textless{}\textless{}Document Type\textgreater{}\textgreater{}}
+\NormalTok{\}}
+\NormalTok{doctype {-}{-} html}
+\NormalTok{html {-}{-} head}
+\NormalTok{html {-}{-} body}
+\NormalTok{head {-}{-} title}
+\NormalTok{head {-}{-} meta}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{dom_vuoto.svg}
+
+\paragraph{Tabella - HTML}\label{tabella---html}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DataTypeTok{\textless{}}\KeywordTok{table}\DataTypeTok{\textgreater{}}
+  \DataTypeTok{\textless{}}\KeywordTok{caption}\DataTypeTok{\textgreater{}}\NormalTok{Tabella di Esempio}\DataTypeTok{\textless{}/}\KeywordTok{caption}\DataTypeTok{\textgreater{}}
+  \DataTypeTok{\textless{}}\KeywordTok{thead}\DataTypeTok{\textgreater{}}
+    \DataTypeTok{\textless{}}\KeywordTok{tr}\DataTypeTok{\textgreater{}}
+      \DataTypeTok{\textless{}}\KeywordTok{th}\DataTypeTok{\textgreater{}}\NormalTok{Intestazione Colonna 1}\DataTypeTok{\textless{}/}\KeywordTok{th}\DataTypeTok{\textgreater{}}
+      \DataTypeTok{\textless{}}\KeywordTok{th}\DataTypeTok{\textgreater{}}\NormalTok{Intestazione Colonna 2}\DataTypeTok{\textless{}/}\KeywordTok{th}\DataTypeTok{\textgreater{}}
+    \DataTypeTok{\textless{}/}\KeywordTok{tr}\DataTypeTok{\textgreater{}}
+  \DataTypeTok{\textless{}/}\KeywordTok{thead}\DataTypeTok{\textgreater{}}
+  \DataTypeTok{\textless{}}\KeywordTok{tbody}\DataTypeTok{\textgreater{}}
+    \DataTypeTok{\textless{}}\KeywordTok{tr}\DataTypeTok{\textgreater{}}
+      \DataTypeTok{\textless{}}\KeywordTok{td}\DataTypeTok{\textgreater{}}\NormalTok{Dato Riga 1, Colonna 1}\DataTypeTok{\textless{}/}\KeywordTok{td}\DataTypeTok{\textgreater{}}
+      \DataTypeTok{\textless{}}\KeywordTok{td}\DataTypeTok{\textgreater{}}\NormalTok{Dato Riga 1, Colonna 2}\DataTypeTok{\textless{}/}\KeywordTok{td}\DataTypeTok{\textgreater{}}
+    \DataTypeTok{\textless{}/}\KeywordTok{tr}\DataTypeTok{\textgreater{}}
+    \DataTypeTok{\textless{}}\KeywordTok{tr}\DataTypeTok{\textgreater{}}
+      \DataTypeTok{\textless{}}\KeywordTok{td}\DataTypeTok{\textgreater{}}\NormalTok{Dato Riga 2, Colonna 1}\DataTypeTok{\textless{}/}\KeywordTok{td}\DataTypeTok{\textgreater{}}
+      \DataTypeTok{\textless{}}\KeywordTok{td}\DataTypeTok{\textgreater{}}\NormalTok{Dato Riga 2, Colonna 2}\DataTypeTok{\textless{}/}\KeywordTok{td}\DataTypeTok{\textgreater{}}
+    \DataTypeTok{\textless{}/}\KeywordTok{tr}\DataTypeTok{\textgreater{}}
+  \DataTypeTok{\textless{}/}\KeywordTok{tbody}\DataTypeTok{\textgreater{}}
+  \DataTypeTok{\textless{}}\KeywordTok{tfoot}\DataTypeTok{\textgreater{}}
+    \DataTypeTok{\textless{}}\KeywordTok{tr}\DataTypeTok{\textgreater{}}
+      \DataTypeTok{\textless{}}\KeywordTok{td}\OtherTok{ colspan}\OperatorTok{=}\StringTok{"2"}\DataTypeTok{\textgreater{}}\NormalTok{Nota a piè di pagina della tabella}\DataTypeTok{\textless{}/}\KeywordTok{td}\DataTypeTok{\textgreater{}}
+    \DataTypeTok{\textless{}/}\KeywordTok{tr}\DataTypeTok{\textgreater{}}
+  \DataTypeTok{\textless{}/}\KeywordTok{tfoot}\DataTypeTok{\textgreater{}}
+\DataTypeTok{\textless{}/}\KeywordTok{table}\DataTypeTok{\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+Tabella di Esempio
+
+Intestazione Colonna 1
+
+Intestazione Colonna 2
+
+Dato Riga 1, Colonna 1
+
+Dato Riga 1, Colonna 2
+
+Dato Riga 2, Colonna 1
+
+Dato Riga 2, Colonna 2
+
+Nota a piè di pagina della tabella
+
+\paragraph{Tabella - DOM}\label{tabella---dom}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{@startuml tabella}
+\NormalTok{left to right direction}
+
+\NormalTok{object "table" as table \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "caption" as caption \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{  Tabella di Esempio}
+\NormalTok{\}}
+
+\NormalTok{object "thead" as thead \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "tbody" as tbody \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "tfoot" as tfoot \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "tr1 (thead)" as tr1\_thead \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "th1" as th1 \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "th2" as th2 \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "tr1 (tbody)" as tr1\_tbody \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "td1\_1" as td1\_1 \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "td1\_2" as td1\_2 \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "tr2 (tbody)" as tr2\_tbody \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "td2\_1" as td2\_1 \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "td2\_2" as td2\_2 \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "tr (tfoot)" as tr\_tfoot \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{object "td (tfoot)" as td\_tfoot \{}
+\NormalTok{  \textless{}\textless{}Element\textgreater{}\textgreater{}}
+\NormalTok{\}}
+
+\NormalTok{table {-}{-} caption}
+\NormalTok{table {-}{-} thead}
+\NormalTok{table {-}{-} tbody}
+\NormalTok{table {-}{-} tfoot}
+
+\NormalTok{thead {-}{-} tr1\_thead}
+\NormalTok{tr1\_thead {-}{-} th1}
+\NormalTok{tr1\_thead {-}{-} th2}
+
+\NormalTok{tbody {-}{-} tr1\_tbody}
+\NormalTok{tr1\_tbody {-}{-} td1\_1}
+\NormalTok{tr1\_tbody {-}{-} td1\_2}
+\NormalTok{tbody {-}{-} tr2\_tbody}
+\NormalTok{tr2\_tbody {-}{-} td2\_1}
+\NormalTok{tr2\_tbody {-}{-} td2\_2}
+
+\NormalTok{tfoot {-}{-} tr\_tfoot}
+\NormalTok{tr\_tfoot {-}{-} td\_tfoot}
+\NormalTok{@enduml}
+\end{Highlighting}
+\end{Shaded}
+
+\includesvg{tabella.svg}
+
+\subsubsection{PHP con PDO e SQLite}\label{php-con-pdo-e-sqlite}
+
+Questo manuale mostra un semplice esempio di come utilizzare PHP con PDO
+(PHP Data Objects) per interagire con un database SQLite e leggere i
+dati degli ordini da una tabella, per poi visualizzarli in una tabella
+HTML.
+
+\paragraph{Prerequisiti}\label{prerequisiti}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Database SQLite:} Devi avere un database SQLite esistente
+\end{itemize}
+
+\paragraph{Passaggi}\label{passaggi}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Creazione del Database SQLite (se non esiste):}
+
+  Se non hai già un database SQLite, devi crearlo. Supponiamo di avere
+  un database nel file \texttt{mio\_database.db} con la tabella
+  \texttt{ordini} e alcuni dati di esempio.
+\item
+  \textbf{Creazione del File PHP:}
+
+  Crea un file PHP chiamato, ad esempio, \texttt{mostra\_ordini.php}.
+\item
+  \textbf{Scrittura del Codice PHP:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{\textless{}!}\ConstantTok{DOCTYPE}\NormalTok{ html}\OperatorTok{\textgreater{}}
+\OperatorTok{\textless{}}\NormalTok{html lang}\OperatorTok{=}\StringTok{"it"}\OperatorTok{\textgreater{}}
+\OperatorTok{\textless{}}\NormalTok{head}\OperatorTok{\textgreater{}}
+    \OperatorTok{\textless{}}\NormalTok{meta charset}\OperatorTok{=}\StringTok{"UTF{-}8"}\OperatorTok{\textgreater{}}
+    \OperatorTok{\textless{}}\NormalTok{title}\OperatorTok{\textgreater{}}\NormalTok{Elenco Ordini}\OperatorTok{\textless{}/}\NormalTok{title}\OperatorTok{\textgreater{}}
+    \OperatorTok{\textless{}}\NormalTok{style}\OperatorTok{\textgreater{}}
+\NormalTok{        table \{}
+\NormalTok{            border}\OperatorTok{{-}}\NormalTok{collapse}\OtherTok{:}\NormalTok{ collapse}\OtherTok{;}
+\NormalTok{            width}\OtherTok{:} \DecValTok{80}\OperatorTok{\%}\OtherTok{;}
+\NormalTok{            margin}\OtherTok{:} \ErrorTok{20}\NormalTok{px auto}\OtherTok{;}
+\NormalTok{        \}}
+\NormalTok{        th}\OtherTok{,}\NormalTok{ td \{}
+\NormalTok{            border}\OtherTok{:} \ErrorTok{1}\NormalTok{px solid }\CommentTok{\#ddd;}
+\NormalTok{            padding}\OtherTok{:} \ErrorTok{8}\NormalTok{px}\OtherTok{;}
+\NormalTok{            text}\OperatorTok{{-}}\NormalTok{align}\OtherTok{:}\NormalTok{ left}\OtherTok{;}
+\NormalTok{        \}}
+\NormalTok{        th \{}
+\NormalTok{            background}\OperatorTok{{-}}\NormalTok{color}\OtherTok{:} \CommentTok{\#f2f2f2;}
+\NormalTok{        \}}
+    \OperatorTok{\textless{}/}\NormalTok{style}\OperatorTok{\textgreater{}}
+\OperatorTok{\textless{}/}\NormalTok{head}\OperatorTok{\textgreater{}}
+\OperatorTok{\textless{}}\NormalTok{body}\OperatorTok{\textgreater{}}
+    \OperatorTok{\textless{}}\NormalTok{h1}\OperatorTok{\textgreater{}}\NormalTok{Elenco Ordini}\OperatorTok{\textless{}/}\NormalTok{h1}\OperatorTok{\textgreater{}}
+
+    \OperatorTok{\textless{}}\OtherTok{?}\NormalTok{php}
+    \CommentTok{// Percorso al database SQLite}
+    \VariableTok{$dbFile} \OperatorTok{=} \StringTok{\textquotesingle{}mio\_database.db\textquotesingle{}}\OtherTok{;}
+
+    \ControlFlowTok{try}\NormalTok{ \{}
+        \CommentTok{// Connessione al database SQLite usando PDO}
+        \VariableTok{$pdo} \OperatorTok{=} \KeywordTok{new} \BuiltInTok{PDO}\NormalTok{(}\StringTok{"sqlite:"} \OperatorTok{.} \VariableTok{$dbFile}\NormalTok{)}\OtherTok{;}
+
+        \CommentTok{// Imposta la modalità di errore PDO su eccezioni}
+        \VariableTok{$pdo}\NormalTok{{-}\textgreater{}setAttribute(}\BuiltInTok{PDO}\NormalTok{::}\ConstantTok{ATTR\_ERRMODE}\OtherTok{,} \BuiltInTok{PDO}\NormalTok{::}\ConstantTok{ERRMODE\_EXCEPTION}\NormalTok{)}\OtherTok{;}
+
+        \CommentTok{// Query per selezionare tutti gli ordini}
+        \VariableTok{$sql} \OperatorTok{=} \StringTok{"SELECT id, data\_ordine, cliente, prodotto, quantita FROM ordini"}\OtherTok{;}
+        \VariableTok{$stmt} \OperatorTok{=} \VariableTok{$pdo}\NormalTok{{-}\textgreater{}prepare(}\VariableTok{$sql}\NormalTok{)}\OtherTok{;}
+        \VariableTok{$stmt}\NormalTok{{-}\textgreater{}execute()}\OtherTok{;}
+
+        \CommentTok{// Recupera tutti i risultati come un array associativo}
+        \VariableTok{$ordini} \OperatorTok{=} \VariableTok{$stmt}\NormalTok{{-}\textgreater{}fetchAll(}\BuiltInTok{PDO}\NormalTok{::}\ConstantTok{FETCH\_ASSOC}\NormalTok{)}\OtherTok{;}
+
+        \CommentTok{// Verifica se ci sono ordini}
+        \ControlFlowTok{if}\NormalTok{ (}\FunctionTok{count}\NormalTok{(}\VariableTok{$ordini}\NormalTok{) }\OperatorTok{\textgreater{}} \DecValTok{0}\NormalTok{) \{}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}table\textgreater{}\textquotesingle{}}\OtherTok{;}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}thead\textgreater{}\textquotesingle{}}\OtherTok{;}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}tr\textgreater{}\textquotesingle{}}\OtherTok{;}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}th\textgreater{}ID\textless{}/th\textgreater{}\textquotesingle{}}\OtherTok{;}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}th\textgreater{}Data Ordine\textless{}/th\textgreater{}\textquotesingle{}}\OtherTok{;}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}th\textgreater{}Cliente\textless{}/th\textgreater{}\textquotesingle{}}\OtherTok{;}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}th\textgreater{}Prodotto\textless{}/th\textgreater{}\textquotesingle{}}\OtherTok{;}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}th\textgreater{}Quantità\textless{}/th\textgreater{}\textquotesingle{}}\OtherTok{;}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}/tr\textgreater{}\textquotesingle{}}\OtherTok{;}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}/thead\textgreater{}\textquotesingle{}}\OtherTok{;}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}tbody\textgreater{}\textquotesingle{}}\OtherTok{;}
+
+            \CommentTok{// Itera attraverso gli ordini e crea le righe della tabella HTML}
+            \ControlFlowTok{foreach}\NormalTok{ (}\VariableTok{$ordini} \KeywordTok{as} \VariableTok{$ordine}\NormalTok{) \{}
+                \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}tr\textgreater{}\textquotesingle{}}\OtherTok{;}
+                \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}td\textgreater{}\textquotesingle{}} \OperatorTok{.} \FunctionTok{htmlspecialchars}\NormalTok{(}\VariableTok{$ordine}\NormalTok{[}\StringTok{\textquotesingle{}id\textquotesingle{}}\NormalTok{]) }\OperatorTok{.} \StringTok{\textquotesingle{}\textless{}/td\textgreater{}\textquotesingle{}}\OtherTok{;}
+                \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}td\textgreater{}\textquotesingle{}} \OperatorTok{.} \FunctionTok{htmlspecialchars}\NormalTok{(}\VariableTok{$ordine}\NormalTok{[}\StringTok{\textquotesingle{}data\_ordine\textquotesingle{}}\NormalTok{]) }\OperatorTok{.} \StringTok{\textquotesingle{}\textless{}/td\textgreater{}\textquotesingle{}}\OtherTok{;}
+                \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}td\textgreater{}\textquotesingle{}} \OperatorTok{.} \FunctionTok{htmlspecialchars}\NormalTok{(}\VariableTok{$ordine}\NormalTok{[}\StringTok{\textquotesingle{}cliente\textquotesingle{}}\NormalTok{]) }\OperatorTok{.} \StringTok{\textquotesingle{}\textless{}/td\textgreater{}\textquotesingle{}}\OtherTok{;}
+                \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}td\textgreater{}\textquotesingle{}} \OperatorTok{.} \FunctionTok{htmlspecialchars}\NormalTok{(}\VariableTok{$ordine}\NormalTok{[}\StringTok{\textquotesingle{}prodotto\textquotesingle{}}\NormalTok{]) }\OperatorTok{.} \StringTok{\textquotesingle{}\textless{}/td\textgreater{}\textquotesingle{}}\OtherTok{;}
+                \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}td\textgreater{}\textquotesingle{}} \OperatorTok{.} \FunctionTok{htmlspecialchars}\NormalTok{(}\VariableTok{$ordine}\NormalTok{[}\StringTok{\textquotesingle{}quantita\textquotesingle{}}\NormalTok{]) }\OperatorTok{.} \StringTok{\textquotesingle{}\textless{}/td\textgreater{}\textquotesingle{}}\OtherTok{;}
+                \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}/tr\textgreater{}\textquotesingle{}}\OtherTok{;}
+\NormalTok{            \}}
+
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}/tbody\textgreater{}\textquotesingle{}}\OtherTok{;}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}/table\textgreater{}\textquotesingle{}}\OtherTok{;}
+\NormalTok{        \} }\ControlFlowTok{else}\NormalTok{ \{}
+            \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}p\textgreater{}Nessun ordine trovato.\textless{}/p\textgreater{}\textquotesingle{}}\OtherTok{;}
+\NormalTok{        \}}
+
+        \CommentTok{// Chiudi la connessione}
+        \VariableTok{$pdo} \OperatorTok{=} \KeywordTok{null}\OtherTok{;}
+
+\NormalTok{    \} }\ControlFlowTok{catch}\NormalTok{ (}\BuiltInTok{PDOException} \VariableTok{$e}\NormalTok{) \{}
+        \KeywordTok{echo} \StringTok{\textquotesingle{}\textless{}p\textgreater{}Errore di connessione o query: \textquotesingle{}} \OperatorTok{.} \VariableTok{$e}\NormalTok{{-}\textgreater{}getMessage() }\OperatorTok{.} \StringTok{\textquotesingle{}\textless{}/p\textgreater{}\textquotesingle{}}\OtherTok{;}
+\NormalTok{    \}}
+    \KeywordTok{?\textgreater{}}
+
+\OperatorTok{\textless{}/}\NormalTok{body}\OperatorTok{\textgreater{}}
+\OperatorTok{\textless{}/}\NormalTok{html}\OperatorTok{\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+\end{enumerate}
+
+\paragraph{Spiegazione del Codice PHP}\label{spiegazione-del-codice-php}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\texttt{\$dbFile\ =\ \textquotesingle{}mio\_database.db\textquotesingle{};}}:
+  Definisce il percorso al file del database SQLite. Assicurati che
+  questo percorso sia corretto.
+\item
+  \textbf{\texttt{try...catch}}: Blocca il codice che potrebbe generare
+  eccezioni (come errori di connessione al database o errori nella
+  query).
+\item
+  \textbf{\texttt{\$pdo\ =\ new\ PDO("sqlite:"\ .\ \$dbFile);}}: Crea un
+  nuovo oggetto PDO per connettersi al database SQLite specificato. Il
+  prefisso \texttt{"sqlite:"} indica il driver da utilizzare.
+\item
+  \textbf{\texttt{\$pdo-\textgreater{}setAttribute(PDO::ATTR\_ERRMODE,\ PDO::ERRMODE\_EXCEPTION);}}:
+  Imposta la modalità di gestione degli errori di PDO per lanciare
+  eccezioni in caso di problemi. Questo è utile per il debugging.
+\item
+  \textbf{\texttt{\$sql\ =\ "SELECT\ id,\ data\_ordine,\ cliente,\ prodotto,\ quantita\ FROM\ ordini";}}:
+  Definisce la query SQL per selezionare tutte le colonne dalla tabella
+  \texttt{ordini}.
+\item
+  \textbf{\texttt{\$stmt\ =\ \$pdo-\textgreater{}prepare(\$sql);}}:
+  Prepara la query SQL per l'esecuzione. Anche se in questo caso la
+  query è semplice e non contiene input esterni, la preparazione è una
+  buona pratica per la sicurezza e l'efficienza, soprattutto con query
+  più complesse.
+\item
+  \textbf{\texttt{\$stmt-\textgreater{}execute();}}: Esegue la query
+  preparata.
+\item
+  \textbf{\texttt{\$ordini\ =\ \$stmt-\textgreater{}fetchAll(PDO::FETCH\_ASSOC);}}:
+  Recupera tutte le righe risultanti dalla query come un array
+  associativo. Ogni elemento dell'array \texttt{\$ordini} è un array con
+  chiavi corrispondenti ai nomi delle colonne della tabella.
+\item
+  \textbf{\texttt{count(\$ordini)\ \textgreater{}\ 0}}: Verifica se sono
+  stati trovati ordini nel database.
+\item
+  \textbf{Creazione della Tabella HTML}: Se ci sono ordini, il codice
+  PHP genera dinamicamente una tabella HTML
+  (\texttt{\textless{}table\textgreater{}},
+  \texttt{\textless{}thead\textgreater{}},
+  \texttt{\textless{}tbody\textgreater{}},
+  \texttt{\textless{}tr\textgreater{}},
+  \texttt{\textless{}th\textgreater{}},
+  \texttt{\textless{}td\textgreater{}}) per visualizzare i dati.
+\item
+  \textbf{\texttt{htmlspecialchars()}}: Questa funzione viene utilizzata
+  per rendere sicuri i dati visualizzati nella tabella HTML, prevenendo
+  potenziali attacchi XSS (Cross-Site Scripting) convertendo caratteri
+  speciali HTML nelle loro entità HTML.
+\item
+  \textbf{\texttt{\$pdo\ =\ null;}}: Chiude la connessione al database
+  impostando l'oggetto PDO a \texttt{null}.
+\item
+  \textbf{\texttt{catch\ (PDOException\ \$e)}}: Cattura qualsiasi
+  eccezione PDO che si verifica e visualizza un messaggio di errore.
+\end{itemize}
+
+\end{document}

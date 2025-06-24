@@ -1,0 +1,16 @@
+{
+  "name": "labs",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "carbone": "^3.5.6",
+    "yaml": "^2.8.0"
+  }
+}

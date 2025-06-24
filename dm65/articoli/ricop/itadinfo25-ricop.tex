@@ -1,0 +1,345 @@
+% -*- mode: latex; coding: utf8; TeX-master: itadinfo25-ricop.tex -*-
+% !TeX root = itadinfo25-ricop.tex
+% !TeX encoding = UTF-8 Unicode
+% !Tex TS-program = LuaLaTeX
+\documentclass[withtimes]{easychair}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+%\usepackage[autostyle,italian=guillemets]{csquotes}
+\usepackage[backend=biber,style=numeric,hyperref]{biblatex}
+\addbibresource{itadinfo25-ricop.bib}
+\usepackage{doc}
+
+%% Front Matter
+%%
+% Regular title as in the article class.
+%
+\pagestyle{empty}
+\fontfamily{garamond}
+\title{Un Percorso Sfidante tra Informatica e Matematica\\
+Gamification e Metacognizione per l'apprendimento della Ricerca
+Operativa}
+
+% Authors are joined by \and. Their affiliations are given by \inst, which indexes
+% into the list defined using \institute
+%
+\author{
+Fabrizio Marinelli\inst{1}\thanks{Docente esperto che ha proposto il corso}
+\and
+Gionata Massi\inst{2}\thanks{Tutor}
+}
+
+% Institutes for affiliations are also joined by \and,
+\institute{
+  Dipartimento di Ingegneria dell'Informazione
+  \\Universit\`a Politecnica delle Marche
+  Ancona, Italia\\
+  \email{fabrizio.marinelli@staff.univpm.it}
+\and
+   Istituto di Istruzione Superiore Savoia Benincasa\\
+   Ancona, Italia\\
+   \email{gionata.massi@savoiabenincasa.it}
+ }
+
+%  \authorrunning{} has to be set for the shorter version of the authors' names;
+% otherwise a warning will be rendered in the running heads. When processed by
+% EasyChair, this command is mandatory: a document without \authorrunning
+% will be rejected by EasyChair
+
+\authorrunning{Marinelli e Massi}
+
+% \titlerunning{} has to be set to either the main title or its shorter
+% version for the running heads. When processed by
+% EasyChair, this command is mandatory: a document without \titlerunning
+% will be rejected by EasyChair
+\titlerunning{Un Percorso Sfidante tra Informatica e Matematica}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+Il corso di introduzione alla \textbf{Ricerca Operativa} mira a
+integrare le conoscenze multidisciplinari degli studenti, supportandoli
+nelle scelte post-diploma. I suoi obiettivi includono lo sviluppo di
+competenze di \textbf{problem solving} e \textbf{modellizzazione
+quantitativa}, potenziando la \textbf{sinergia matematica-informatica} e
+la motivazione verso le materie STEM.
+
+Viene adottata una metodologia didattica innovativa basata su: (a) un
+\textbf{approccio ``sfidante''} con problemi reali e complessi; (b) la
+\textbf{costruzione di conoscenza di gruppo} tramite attività
+collaborative; (c) la \textbf{gamification} con sfide tra gruppi e
+individui; (d) la stimolazione del \textbf{processo metacognitivo}
+attraverso scommesse sulla qualità delle soluzioni; (e) la segmentazione
+delle attività per ottimizzare l'efficacia del tempo di spiegazione
+teorica.
+
+La sequenza didattica adatta gli argomenti alle competenze pregresse e
+allo sviluppo di nuove, privilegiando una didattica attiva. Le
+spiegazioni teoriche sono brevi e fornite solo quando lo studente ne
+percepisce la necessità, in linea con un approccio ispirato al
+\emph{Necessity Learning Design}~\cite{Sbaraglia}. In questo contesto, il meccanismo
+della ``scommessa'' non solo attiva la metacognizione ma stimola anche
+la ricerca di una dimostrazione rigorosa della qualità del
+proprio lavoro.
+
+L'impatto sul coinvolgimento degli studenti è stato elevato, con
+significativi risultati nell'attivazione dei meccanismi di problem
+solving e modellizzazione. Basandosi sui questionari di gradimento, il
+percorso didattico ha pienamente realizzato gli obiettivi prefissati.
+\end{abstract}
+
+\section{Introduzione}\label{sect:introduzione}
+
+Questo articolo presenta un'esperienza didattica innovativa sviluppata
+nell'ambito del DM 65/2023{[}\^{}1{]}, finalizzata al
+\textbf{potenziamento delle competenze STEM{[}\^{}2{]}, digitali e di
+innovazione} tramite un corso di introduzione alla \textbf{Ricerca
+Operativa}. Il progetto ha coinvolto 16 studenti di una classe V
+dell'articolazione Sistemi Informativi Aziendali dell'Istituto Tecnico
+Economico ``Grazioso Benincasa'' di Ancona{[}\^{}3{]}.
+
+Nelle programmazioni curricolari di tale indirizzo, le tematiche della
+Ricerca Operativa sono spesso trattate in modo non organico, frammentate
+tra matematica, informatica ed economia aziendale. Il corso proposto, in
+linea con gli obiettivi del DM 65/2023, mira a:
+
+\begin{itemize}
+\tightlist
+\item
+  Integrare conoscenze e abilità multidisciplinari per affrontare e
+  risolvere problemi quantitativi complessi.
+\item
+  Applicare principi matematici e algoritmi a problemi decisionali non
+  banali.
+\item
+  Sviluppare competenze di problem solving scientifico e pensiero
+  critico.
+\item
+  Accrescere la motivazione verso lo studio delle discipline STEM, in
+  particolare matematica e informatica.
+\item
+  Costruire un sapere multidisciplinare che metta in nuova luce
+  l'importanza di discipline tradizionali.
+\end{itemize}
+
+Il percorso didattico si è articolato in \textbf{cinque incontri di due
+ore ciascuno}, nei quali sono state proposte 11 domande individuali e 5
+sfide di gruppo.
+
+\section{Approccio Didattico}\label{approccio-didattico}
+
+Il corso è stato concepito come un \textbf{gioco} per massimizzare il
+coinvolgimento degli studenti, con le seguenti regole:
+
+\begin{itemize}
+\tightlist
+\item
+  Ogni partecipante riceve una dotazione iniziale di 1000 ``dobloni''.
+\item
+  I partecipanti sono raggruppati in squadre.
+\item
+  I dobloni si guadagnano rispondendo correttamente a domande
+  individuali.
+\item
+  Le squadre partecipano a gare, scommettendo da 10 a 200 dobloni sulla
+  propria performance.
+\end{itemize}
+
+Le attività di gruppo si basano sulla \textbf{sfida cooperativa}. Viene
+presentato un problema decisionale accattivante e realistico, prima di
+ogni spiegazione teorica formale. I gruppi, in competizione, sono
+invitati a determinare soluzioni al problema sotto forma di numeri,
+modelli o algoritmi.
+
+Al termine del tempo prestabilito, i gruppi consegnano la loro soluzione
+e scommettono una quantità di dobloni sulla qualità della propria
+proposta rispetto a quelle degli altri gruppi. Segue la fase di
+attribuzione dei punteggi, durante la quale il formatore mostra
+pubblicamente le soluzioni e valuta le performance. Al termine della
+valutazione, uno studente per gruppo esplicita le strategie utilizzate.
+
+L'ultima fase è la \textbf{formalizzazione guidata}, dove il formatore
+illustra la teoria. Questo avviene nel momento in cui la conoscenza
+formale diventa ``necessaria'' per gli studenti, per tradurre il
+problema in variabili, funzione obiettivo e vincoli, o per
+visualizzare/calcolare lo spazio delle soluzioni e definire strategie o
+algoritmi. L'induzione nell'esigenza di un nuovo modello o costrutto è
+simile al \emph{Necessity Learning Design} (NLD), differenziandosi
+leggermente in quanto gli studenti potrebbero aver già trovato una
+soluzione empirica al problema.
+
+L'approccio è affine al \emph{Problem-Based Learning} (PBL) ma ne
+potenzia il coinvolgimento attivo attraverso elementi di
+\textbf{gamification}:
+
+\begin{itemize}
+\tightlist
+\item
+  Vengono proposte situazioni complesse del mondo reale, le quali, a
+  differenza di quanto rigidamente prescritto dal PBL, possiedono una
+  soluzione quantitativa ``esatta'' o ottimale.
+\item
+  Gli studenti lavorano in gruppo, confrontandosi con il problema,
+  sviluppando possibili modelli e algoritmi risolutivi.
+\item
+  Gli studenti costruiscono una conoscenza di gruppo attraverso
+  l'apprendimento autodiretto, induttivo e cooperativo.
+\item
+  Viene sviluppata e potenziata la competenza di \emph{problem solving}.
+\end{itemize}
+
+L'introduzione della scommessa ha la duplice finalità di attivare il
+processo metacognitivo e di indurre l'esigenza di \textbf{dimostrare
+formalmente la bontà della soluzione proposta}.
+
+\section{Contenuti}\label{contenuti}
+
+Il percorso didattico ha affrontato diverse tipologie di problemi di
+Ricerca Operativa.
+
+Il primo problema proposto è stato quello dello \textbf{zaino (0-1
+knapsack problem)}. La sfida individuale iniziale ha richiesto agli
+studenti di selezionare, tra quattro oggetti con peso e valore
+specifici, quelli da inserire in un bagaglio a mano per massimizzare il
+valore complessivo senza superare un limite di peso. Successivamente, è
+stata mostrata l'enumerazione di tutte le soluzioni possibili. Il
+problema è stato contestualizzato a scenari reali come il caricamento di
+container o veicoli. La sfida di gruppo ha poi richiesto di caricare un
+furgone scegliendo tra 50 oggetti, massimizzando il valore trasportato.
+Al termine, sono state analizzate le strategie algoritmiche dei gruppi,
+focalizzando la discussione sulla necessità di determinare se la
+soluzione trovata fosse la migliore possibile.
+
+Successivamente, si è affrontato il problema della
+\textbf{determinazione del rettangolo di area massima dato il
+perimetro}. La sfida individuale ha previsto l'uso di un foglio di
+calcolo per determinare le lunghezze dei lati. La soluzione analitica è
+stata poi confrontata con procedure di calcolo basate su simulazioni
+numeriche, inducendo la necessità di un modello matematico per
+dimostrare formalmente l'ottimalità. È stato introdotto un linguaggio
+per esprimere problemi di programmazione matematica (es. AMPL). La
+seconda sfida di gruppo ha richiesto di descrivere un problema
+ambientato nel \emph{vecchio west} nei termini della programmazione
+matematica, definendo variabili di decisione, funzione obiettivo e
+vincoli.
+
+Si è poi ritornati al problema dello zaino per un processo metacognitivo
+sulle modalità risolutive. Sono state proposte sfide individuali sulla
+determinazione del numero di sotto-insiemi e sulla definizione di
+variabili e vincoli per il problema dello zaino. La discussione ha
+condotto alla comprensione dell'\textbf{intrattenibilità computazionale}
+del problema dello zaino con molti oggetti tramite ricerca esaustiva
+(\(2^{50}\) soluzioni). Dal problema reale, si sono astratte le entità
+del modello: variabili, funzione obiettivo e vincoli, richiamando
+concetti noti come variabili booleane, array e codifiche binarie, e
+mostrando esempi reali di problemi con complessità esponenziale.
+
+Dai problemi combinatori si è passati alla \textbf{programmazione
+lineare} con una sfida di gruppo su un problema di mix ottimo di
+produzione (due variabili) nel settore dolciario. Lo sviluppo della
+conoscenza è proseguito con sfide individuali sulla determinazione di
+variabili di decisione, vincoli e funzione obiettivo, e sulla ricerca
+della soluzione ottima. La discussione delle strategie ha fatto
+emergere, seppur senza conoscenza formale del metodo, principi analoghi
+alle strategie di scelta delle variabili nel metodo del simplesso e al
+test di ammissibilità. Attraverso un processo di elicitazione, è stato
+costruito il modello matematico completo del problema, quindi illustrato
+il metodo del simplesso in forma grafica. La gara di gruppo successiva
+ha previsto l'applicazione del metodo grafico del simplesso ad
+un'istanza di programma lineare, attivando conoscenze pregresse su
+rette, derivate, gradienti e curve di livello.
+
+Infine, è stata proposta una sfida di gruppo sul \textbf{problema della
+dieta} con più di due alimenti. Anche per questo problema, tramite sfide
+individuali, si sono identificate le variabili di decisione, i vincoli e
+la funzione obiettivo. È seguita un'illustrazione sui concetti di spazi
+a dimensioni maggiori di tre per fornire una base di conoscenza per la
+risoluzione di problemi di programmazione lineare più complessi.
+
+\section{Risultati}\label{risultati}
+
+Gli studenti hanno mostrato un \textbf{coinvolgimento e una motivazione
+mediamente superiori} rispetto alle lezioni tradizionali. Su 16
+studenti, 15 hanno partecipato ad almeno 7 ore del corso, con l'unica
+assenza prolungata dovuta a problemi di salute.
+
+La maggioranza degli studenti ha manifestato un \textbf{accresciuto
+interesse per la matematica e l'informatica}, percepite in una nuova
+ottica. Questa osservazione è corroborata dai questionari di gradimento
+anonimi, dove 10 studenti su 15 hanno affermato che il formatore è stato
+``capace di suscitare interesse e coinvolgere'', 9 hanno ritenuto il
+corso utile per le informazioni fornite, 8 per le abilità/capacità
+operative sviluppate e 7 per l'interesse complessivo suscitato.
+
+Lo sviluppo delle competenze di problem solving e modellizzazione è
+stato evidente negli esiti delle sfide individuali e di gruppo, dove gli
+studenti hanno dimostrato capacità di analizzare un problema,
+identificare le entità del modello e tentare una formalizzazione.
+L'elemento della scommessa ha stimolato una profonda \textbf{riflessione
+sulla validità delle proprie strategie e soluzioni}, sebbene non siano
+state osservate intense discussioni e argomentazioni \emph{all'interno}
+dei gruppi riguardo le scommesse stesse, quanto piuttosto sulla
+soluzione del problema.
+
+La \textbf{spiegazione formale è risultata più significativa e meglio
+compresa} dopo che gli studenti si erano confrontati attivamente con il
+problema. Gli studenti hanno colto il ruolo complementare di matematica
+e informatica, comprendendo meglio le distinzioni tra descrizioni
+dichiarative (es. linguaggio matematico, SQL) e linguaggi procedurali.
+
+Il lavoro di gruppo si è svolto, con l'eccezione di un singolo studente
+particolarmente demotivato, in modo molto partecipe. Anche studenti
+solitamente meno coinvolti hanno contribuito attivamente alla
+risoluzione delle sfide.
+
+\emph{(Considerazione: Inserire qui un'immagine sintetica o un grafico
+sui risultati del questionario di gradimento potrebbe essere molto
+efficace, se lo spazio lo consente.)}
+
+Un limite riscontrato è stato la \textbf{ristrettezza dei tempi}: 10 ore
+complessive potrebbero essere state insufficienti per approfondire tutti
+gli aspetti, suggerendo che 15 ore sarebbero state più adeguate.
+
+\section{Conclusioni e Prospettive
+Future}\label{conclusioni-e-prospettive-future}
+
+L'approccio didattico descritto si è rivelato \textbf{efficace nel
+raggiungere gli obiettivi formativi del DM 65/2023}. L'approccio attivo
+stimola gli studenti nel processo di costruzione di una conoscenza più
+profonda. La gamification aumenta la motivazione e la collaborazione,
+mentre il meccanismo della scommessa stimola la metacognizione e la
+ricerca autonoma di validazione. La spiegazione teorica, presentata solo
+dopo il tentativo empirico degli studenti, risulta più interessante e
+l'alternanza tra fasi attive e momenti di ascolto della spiegazione
+ottimizza l'efficacia della lezione.
+
+Questo modello didattico può essere applicato con successo ad altri
+argomenti dell'informatica o della matematica, anche in contesti
+educativi diversi. In particolare, si adatta bene al Liceo Scientifico
+(indirizzo Scienze Applicate). Per annualità differenti o altri ordini
+di scuola, i contenuti dovrebbero essere adattati alle conoscenze
+pregresse e alle capacità di astrazione tipiche della fascia d'età.
+
+In prospettiva futura, si potrebbe sviluppare una versione online del
+sistema di assegnazione dei punteggi come \emph{proof of concept} per
+una piattaforma didattica. Sarebbe inoltre prezioso realizzare una
+seconda edizione del corso con un \textbf{monitoraggio più sistematico e
+scientifico} del conseguimento delle competenze e dell'efficacia
+didattica, per raccogliere dati più robusti a supporto delle
+osservazioni qualitative iniziali.
+
+\section*{Ringraziamenti}
+\label{sect:ringraziamenti}
+
+Gli autori ringraziano le prof.sse Annamaria Rossi e Silvana Sabracone, rispettivamente insegnanti di Matematica ed Economia Aziendale nella classe target, per aver concesso parte delle loro ore al fine di realizzare il progetto e per aver assistito a parte lezioni del corso. I loro feedback contribuiranno a migliorare il progetto. 
+
+\label{sect:bib}
+%\bibliographystyle{plain}
+%\bibliography{itadinfo25-ricop}
+\printbibliography
+
+\end{document}

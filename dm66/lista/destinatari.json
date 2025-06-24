@@ -1,0 +1,504 @@
+[
+   {
+     "nome": "ERMANNO",
+     "cognome": "ASTOLFI",
+     "email": [
+       "ermanno.astolfi@gmail.com",
+       "astolfi.e@iisvoltapescara.edu.it"
+     ],
+     "sesso": "M",
+     "numOreReg": 3,
+     "tipo": "DOCENTE",
+     "codStu": "5D9D44AF00"
+   },
+   {
+     "nome": "CRISTINA",
+     "cognome": "BATTAGLINO",
+     "email": [
+       "aikira00@gmail.com",
+       "cbattaglino@itisavogadro.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "DA866E1F00"
+   },
+   {
+     "nome": "GIOVANNA",
+     "cognome": "BATTISTINI",
+     "email": [
+       "giovanna.battistini60@gmail.com",
+       "prg.battistini@iisve.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "64FD8B6F00"
+   },
+   {
+     "nome": "SIMONA",
+     "cognome": "BENIGNO",
+     "email": [
+       "simona.benigno75@gmail.com",
+       "simona.benigno@scuola.istruzione.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 4,
+     "tipo": "DOCENTE",
+     "codStu": "26F7249900"
+   },
+   {
+     "nome": "GIUSEPPINA",
+     "cognome": "CASAZZA",
+     "email": [
+       "giuseppina.casazza@gmail.com"
+     ],
+     "sesso": "F",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "998462D700"
+   },
+   {
+     "nome": "ANDREA",
+     "cognome": "CESETTI",
+     "email": [
+       "andrea.cesetti@gmail.com",
+       "andrea.cesetti@liceoscientificoancona.it"
+     ],
+     "sesso": "M",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "5DB1DE7900"
+   },
+   {
+     "nome": "MARCO",
+     "cognome": "CIRI",
+     "email": [
+       "marco.ciri@gmail.com"
+     ],
+     "sesso": "M",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "D238063800"
+   },
+   {
+     "nome": "SIMONA",
+     "cognome": "COLUCCI",
+     "email": [
+       "simona.colucci75@gmail.com"
+     ],
+     "sesso": "F",
+     "numOreReg": 3,
+     "tipo": "DOCENTE",
+     "codStu": "80385A3B00"
+   },
+   {
+     "nome": "MARILENA",
+     "cognome": "CORRAO",
+     "email": [
+       "marilenacorrao@gmail.com"
+     ],
+     "sesso": "F",
+     "numOreReg": 0,
+     "tipo": "DOCENTE",
+     "codStu": "11CE653500"
+   },
+   {
+     "nome": "ANGELA",
+     "cognome": "CORTESE",
+     "email": [
+       "ange.cortese@gmail.com",
+       "angela.cortese@tulliobuzzi.edu.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 3,
+     "tipo": "DOCENTE",
+     "codStu": "619590D600"
+   },
+   {
+     "nome": "SIMONETTA",
+     "cognome": "CRISTINI",
+     "email": [
+       "simoxti@hotmail.com",
+       "cristini.s@iisvoltapescara.edu.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 3,
+     "tipo": "DOCENTE",
+     "codStu": "E64EE7FE00"
+   },
+   {
+     "nome": "MONICA",
+     "cognome": "D'ALTERIO",
+     "email": [
+       "mdalterio82@gmail.com",
+       "monica.dalterio2@istruzione.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 0,
+     "tipo": "DOCENTE",
+     "codStu": "8A4BF7D300"
+   },
+   {
+     "nome": "GIUSEPPE",
+     "cognome": "D'AMICO",
+     "email": [
+       "damicogiuseppe77@gmail.com"
+     ],
+     "sesso": "M",
+     "numOreReg": 0,
+     "tipo": "DOCENTE",
+     "codStu": "FF43BC8C00"
+   },
+   {
+     "nome": "GIUSEPPINA",
+     "cognome": "DE FELICE PROIA",
+     "email": [
+       "giu.defeliceproia@gmail.com"
+     ],
+     "sesso": "F",
+     "numOreReg": 3,
+     "tipo": "DOCENTE",
+     "codStu": "56CDC4D900"
+   },
+   {
+     "nome": "ANNALISA",
+     "cognome": "DI BARTOLOMEO",
+     "email": [
+       "annalisa.dibartolomeo@gmail.com",
+       "dibartolomeo.a@iisvoltapescara.edu.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 0,
+     "tipo": "DOCENTE",
+     "codStu": "4949811800"
+   },
+   {
+     "nome": "TONY",
+     "cognome": "DI GIANNANTONIO",
+     "email": [
+       "digiannantonio.t@iisvoltapescara.edu.it",
+       "tony.digiannantonio@scuola.istruzione.it"
+     ],
+     "sesso": "M",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "DA6CA6A400"
+   },
+   {
+     "nome": "GIUSEPPE DAVID",
+     "cognome": "DODDIS",
+     "email": [
+       "gdoddis@gmail.com",
+       "giuseppedavid.doddis@scuola.istruzione.it"
+     ],
+     "sesso": "M",
+     "numOreReg": 3,
+     "tipo": "DOCENTE",
+     "codStu": "1715B54200"
+   },
+   {
+     "nome": "FILOMENA",
+     "cognome": "ESPOSITO FARAONE",
+     "email": [
+       "faraone.filomena@virgilio.it",
+       "filomena.faraone@gmail.com"
+     ],
+     "sesso": "F",
+     "numOreReg": 0,
+     "tipo": "DOCENTE",
+     "codStu": "265185F300"
+   },
+   {
+     "nome": "FABIOLA",
+     "cognome": "FILIPPONE",
+     "email": [
+       "fabiola.filippone@scuola.istruzione.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 3,
+     "tipo": "DOCENTE",
+     "codStu": "AA880CA200"
+   },
+   {
+     "nome": "ALBERTO",
+     "cognome": "FRANZAROLI",
+     "email": [
+       "albertfr@libero.it",
+       "alberto.franzaroli@scuole.provincia.tn.it"
+     ],
+     "sesso": "M",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "1464012101"
+   },
+   {
+     "nome": "ANNA MARIA",
+     "cognome": "GRECO",
+     "email": [
+       "greco.anna@gmail.com",
+       "anna.greco@itispaleocapa.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "A4FD6B3300"
+   },
+   {
+     "nome": "SONIA",
+     "cognome": "GUERCI",
+     "email": [
+       "sonia_guerci@hotmail.com",
+       "sonia.guerci@itzanon.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 3,
+     "tipo": "DOCENTE",
+     "codStu": "83A3287300"
+   },
+   {
+     "nome": "MARISA",
+     "cognome": "IANDOLO",
+     "email": [
+       "marisa.iandolo@gmail.com"
+     ],
+     "sesso": "F",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "A92195B300"
+   },
+   {
+     "nome": "MASSIMO",
+     "cognome": "LEONE",
+     "email": [
+       "massimoleone.wk@gmail.com"
+     ],
+     "sesso": "M",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "8AB5D6D600"
+   },
+   {
+     "nome": "EMANUELE",
+     "cognome": "LORENZONI",
+     "email": [
+       "emalorentz@gmail.com",
+       "emanuele.lorenzoni@savoiabenincasa.it"
+     ],
+     "sesso": "M",
+     "numOreReg": 5,
+     "tipo": "DOCENTE",
+     "codStu": "B834F01100"
+   },
+   {
+     "nome": "PAOLO",
+     "cognome": "MANGRAVITI",
+     "email": [
+       "paolo.mangraviti@nesea.eu"
+     ],
+     "sesso": "M",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "1DE1EFF600"
+   },
+   {
+     "nome": "MARCO",
+     "cognome": "MEDORI",
+     "email": [
+       "marcomed@gmail.com",
+       "marco.medori@polourbani.edu.it"
+     ],
+     "sesso": "M",
+     "numOreReg": 3,
+     "tipo": "DOCENTE",
+     "codStu": "319376A900"
+   },
+   {
+     "nome": "FEDERICA",
+     "cognome": "MINNI",
+     "email": [
+       "federica.minni@savoiabenincasa.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "AB2ACD1A00"
+   },
+   {
+     "nome": "PAOLO",
+     "cognome": "MOLINARI",
+     "email": [
+       "molinarp69@gmail.com"
+     ],
+     "sesso": "M",
+     "numOreReg": 0,
+     "tipo": "DOCENTE",
+     "codStu": "C97C889800"
+   },
+   {
+     "nome": "PAOLO",
+     "cognome": "MOSCA",
+     "email": [
+       "moscapaolo@gmail.com"
+     ],
+     "sesso": "M",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "E5C3433D00"
+   },
+   {
+     "nome": "MARIA CATERINA",
+     "cognome": "PALAZZO",
+     "email": [
+       "palmar01@virgilio.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 3,
+     "tipo": "DOCENTE",
+     "codStu": "BF57D1E800"
+   },
+   {
+     "nome": "FILOMENA",
+     "cognome": "PARISI",
+     "email": [
+       "ing.parisifilomena@libero.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 3,
+     "tipo": "DOCENTE",
+     "codStu": "FE4CAFF000"
+   },
+   {
+     "nome": "GABRIELLA",
+     "cognome": "POMILI",
+     "email": [
+       "gabriella.pomili@savoiabenincasa.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "B55CBFA000"
+   },
+   {
+     "nome": "ANGELA",
+     "cognome": "ROSSI",
+     "email": [
+       "alegna.issor@gmail.com"
+     ],
+     "sesso": "F",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "E010CD9800"
+   },
+   {
+     "nome": "DANIELA",
+     "cognome": "SCIAMANNA",
+     "email": [
+       "daniela.sciamanna@savoiabenincasa.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "6C80014900"
+   },
+   {
+     "nome": "ROBERTO",
+     "cognome": "SILVESTRI",
+     "email": [
+       "roberto.silvestri@ipsia.edu.it"
+     ],
+     "sesso": "M",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "858DE8D600"
+   },
+   {
+     "nome": "LOREDANA",
+     "cognome": "TADDEI",
+     "email": [
+       "prl.taddei@iisve.it"
+     ],
+     "sesso": "F",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "9AE081AF00"
+   },
+   {
+     "nome": "MAURIZIO",
+     "cognome": "TORCASIO",
+     "email": [
+       "maurizio.torcasio@gmail.com"
+     ],
+     "sesso": "M",
+     "numOreReg": 5,
+     "tipo": "DOCENTE",
+     "codStu": "8435B88F00"
+   },
+   {
+     "nome": "PAOLO",
+     "cognome": "VENTURINI",
+     "email": [
+       "paolo_venturini@libero.it",
+       "p.venturini@iisve.it"
+     ],
+     "sesso": "M",
+     "numOreReg": 0,
+     "tipo": "DOCENTE",
+     "codStu": "6DF1E5E900"
+   },
+   {
+     "nome": "GIOVANNI",
+     "cognome": "VISCIANO",
+     "email": [
+       "visciano.giovanni@gmail.com"
+     ],
+     "sesso": "M",
+     "numOreReg": 0,
+     "tipo": "DOCENTE",
+     "codStu": "994493AA00"
+   },
+   {
+     "nome": "LUCIA RITA",
+     "cognome": "ZINGALE",
+     "email": [
+       "luciarita.zingale@gmail.com"
+     ],
+     "sesso": "F",
+     "numOreReg": 6,
+     "tipo": "DOCENTE",
+     "codStu": "87345EAC00"
+   },
+   {
+    "nome": "Michael",
+    "cognome": "Lodi",
+    "email": [
+      "michael.lodi@unibo.it"
+    ],
+    "sesso": "M",
+    "numOreReg": 6,
+    "tipo": "FORMATORE",
+    "codStu": "1"
+  },   {
+    "nome": "Gionata",
+    "cognome": "Massi",
+    "email": [
+      "gionata.massi@gmail.com"
+    ],
+    "sesso": "M",
+    "numOreReg": 6,
+    "tipo": "TUTOR",
+    "codStu": "2"
+  },
+  {
+    "nome": "ANDREA",
+    "cognome": "Bernacchia",
+    "email": [
+      "andrea.bernacchia@savoiabenincasa.it"
+    ],
+    "sesso": "M",
+    "numOreReg": 0,
+    "tipo": "ORGANIZZATORE",
+    "codStu": "3"
+  }
+ ]
+ 

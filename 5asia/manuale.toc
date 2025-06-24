@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Progettazione dell'applicazione}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Specifiche dei Requisiti - Diagramma dei casi d'uso}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Progettazione dei dati}{2}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Diagramma delle classi}{2}{subsubsection.1.2.1}%
+\contentsline {paragraph}{\numberline {1.2.1.1}Classe}{2}{paragraph.1.2.1.1}%
+\contentsline {paragraph}{\numberline {1.2.1.2}Associazione}{2}{paragraph.1.2.1.2}%
+\contentsline {subparagraph}{\numberline {1.2.1.2.1}Associazione uno a uno}{3}{subparagraph.1.2.1.2.1}%
+\contentsline {subparagraph}{\numberline {1.2.1.2.2}Associazione uno a molti}{3}{subparagraph.1.2.1.2.2}%
+\contentsline {subparagraph}{\numberline {1.2.1.2.3}Associazione molti a molti}{4}{subparagraph.1.2.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.2}Ristrutturazione del modello concettuale in quello logico relazionale}{5}{subsubsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.3}SQL}{5}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Tipi di dato}{5}{subsubsection.1.3.1}%
+\contentsline {paragraph}{\numberline {1.3.1.1}SQLite}{5}{paragraph.1.3.1.1}%
+\contentsline {paragraph}{\numberline {1.3.1.2}Altri possibili tipi}{6}{paragraph.1.3.1.2}%
+\contentsline {subsubsection}{\numberline {1.3.2}Sintassi Base - SELECT in SQLite}{6}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Date}{7}{subsubsection.1.3.3}%
+\contentsline {paragraph}{\numberline {1.3.3.1}ISO 8601 (Representation of dates and times)}{7}{paragraph.1.3.3.1}%
+\contentsline {subsection}{\numberline {1.4}Web}{7}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}HTML}{7}{subsubsection.1.4.1}%
+\contentsline {paragraph}{\numberline {1.4.1.1}Pagina web vouta - HTML}{8}{paragraph.1.4.1.1}%
+\contentsline {paragraph}{\numberline {1.4.1.2}Tabella - HTML}{9}{paragraph.1.4.1.2}%
+\contentsline {subsubsection}{\numberline {1.4.2}PHP con PDO e SQLite}{10}{subsubsection.1.4.2}%
+\contentsline {paragraph}{\numberline {1.4.2.1}Prerequisiti}{10}{paragraph.1.4.2.1}%
+\contentsline {paragraph}{\numberline {1.4.2.2}Passaggi}{10}{paragraph.1.4.2.2}%
+\contentsline {paragraph}{\numberline {1.4.2.3}Spiegazione del Codice PHP}{12}{paragraph.1.4.2.3}%

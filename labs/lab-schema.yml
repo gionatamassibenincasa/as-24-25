@@ -1,0 +1,106 @@
+$schema: http://json-schema.org/draft-07/schema#
+title: Schema per la Configurazione dei Laboratori Informatici
+description: Schema per la validazione dei dati dei laboratori di informatica e intelligenza artificiale.
+type: array
+items:
+  type: object
+  properties:
+    indirizzo:
+      type: string
+      description: L'indirizzo del laboratorio (es. "AFM Triennio").
+    area:
+      type: string
+      description: L'area disciplinare a cui appartiene il laboratorio.
+    target:
+      type: string
+      description: Il pubblico o l'indirizzo specifico (es. "Sistemi Informativi Aziendali").
+    modulo:
+      type: string
+      description: Il modulo didattico associato.
+    plesso:
+      type: string
+      description: Il plesso scolastico in cui si trova il laboratorio.
+    aula:
+      type: string
+      description: Il nome dell'aula del laboratorio.
+    discipline:
+      type: string
+      description: Descrizione delle discipline coperte dal modulo.
+    descrizione:
+      type: string
+      description: Descrizione dettagliata del laboratorio e del suo funzionamento.
+    obiettivi_generali:
+      type: array
+      description: Lista degli obiettivi didattici generali del laboratorio.
+      items:
+        type: string
+    obiettivi_specifici:
+      type: array
+      description: Lista degli obiettivi didattici specifici e dettagliati del laboratorio.
+      items:
+        type: string
+    strumenti_hardware:
+      type: array
+      description: Lista della dotazione hardware del laboratorio.
+      items:
+        type: object
+        properties:
+          tipo:
+            type: string
+            description: Il tipo di componente hardware (es. "Workstation Studenti", "Server di Laboratorio").
+          quantita:
+            type: string
+            description: La quantità del componente hardware. Può essere un numero o un intervallo (es. "30", "1-2").
+          specifiche:
+            type: array
+            description: Dettagli tecnici o note sulle specifiche del componente.
+            items:
+              type: string
+          prezzo_unitario:
+            type: number
+            description: Il prezzo unitario stimato del componente hardware (IVA inclusa).
+          prezzo_unitario_IVA_esclusa:
+            type: number
+            description: Il prezzo unitario stimato del componente hardware (IVA esclusa).
+        required:
+          - tipo
+          - quantita
+          - specifiche
+          - prezzo_unitario
+    strumenti_software:
+      type: array
+      description: Lista della dotazione software del laboratorio.
+      items:
+        type: object
+        properties:
+          categoria:
+            type: string
+            description: La categoria del software (es. "Sistemi Operativi", "Editor di Codice / IDE").
+          elenco:
+            type: array
+            description: Lista dei nomi specifici del software all'interno della categoria.
+            items:
+              type: string
+          prezzo_unitario:
+            type: string
+            description: Il prezzo unitario del software (es. "0.00" per open source/gratuito).
+          prezzo_unitario_IVA_esclusa:
+            type: string
+            description: Il prezzo unitario del software (IVA esclusa, es. "0.00" per open source/gratuito).
+        required:
+          - categoria
+          - elenco
+          - prezzo_unitario
+  required:
+    - indirizzo
+    - area
+    - target
+    - modulo
+    - plesso
+    - aula
+    - discipline
+    - descrizione
+    - obiettivi_generali
+    - obiettivi_specifici
+    - strumenti_hardware
+    - strumenti_software

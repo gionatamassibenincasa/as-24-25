@@ -1,0 +1,74 @@
+%% Creator: Inkscape 1.4.2 (ebf0e940d0, 2025-05-08), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'esempioAssnnRistr1_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{145.41435242bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.89106985)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{esempioAssnnRistr1_svg-tex.pdf}}%
+    \put(0.01676244,0.7868028){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Societa\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{esempioAssnnRistr1_svg-tex.pdf}}%
+    \put(0.03223547,0.64203717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{esempioAssnnRistr1_svg-tex.pdf}}%
+    \put(0.67642907,0.7868028){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Azionista\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{esempioAssnnRistr1_svg-tex.pdf}}%
+    \put(0.6919021,0.64203717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{esempioAssnnRistr1_svg-tex.pdf}}%
+    \put(0.21853069,0.18784197){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Partecipazione\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{esempioAssnnRistr1_svg-tex.pdf}}%
+    \put(0.23400372,0.04307638){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}quota\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{esempioAssnnRistr1_svg-tex.pdf}}%
+    \put(0.30180498,0.77729411){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1..n\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{esempioAssnnRistr1_svg-tex.pdf}}%
+    \put(0.52053268,0.77699961){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1..n\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{esempioAssnnRistr1_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%

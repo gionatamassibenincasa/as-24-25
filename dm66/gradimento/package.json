@@ -1,0 +1,15 @@
+{
+  "name": "gradimento",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@googleapis/forms": "^2.5.0"
+  }
+}

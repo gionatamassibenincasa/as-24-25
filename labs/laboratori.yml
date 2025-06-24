@@ -1,0 +1,115 @@
+laboratoriITE:
+- indirizzo: "AFM Triennio"
+  area: "Area Informatica ed Economica"
+  target: "Sistemi Informativi Aziendali"
+  modulo: "Management and Operations"
+  plesso: "Via Vecchini"
+  aula: "Laboratorio di Informatica"
+  discipline: "Il modulo di Management e Operations permette di svolgere percorsi didattici multidisciplinari di Economia Aziendale, Informatica, Matematica e altre discipline del triennio SIA"
+  descrizione: "Laboratorio pratico per lo sviluppo di competenze nella gestione aziendale, ottimizzazione dei processi e implementazione di soluzioni informatiche. Per semplificare le operazioni di manutenzione, un server mantiene l'immagine aggiornata del sistema operativo, che viene caricata dai PC all'avvio (netboot). I dati degli utenti sono salvati su un server Samba. Il disco locale è usato come cache per il sistema operativo e come eventuale partizione di swap. Le credenziali di accesso sono memorizzare al fine di consentire un accesso con singola password (Single Sign-On)"
+  obiettivi_generali:
+    - "Utilizzare tecnologie e programmi informatici dedicati alla gestione amministrativo-finanziaria."
+    - "Utilizzare programmi per la gestione della contabilità integrata."
+    - "Progettare e gestire siti web."
+    - "Creare software applicativo gestionale per le diverse necessità aziendali."
+    - "Gestire le reti informatiche e la loro sicurezza."
+    - "Analizzare, sviluppare e controllare i sistemi informatici."
+  obiettivi_specifici:
+    - "Utilizzare un software gestionale ERP/CRM per simulare processi aziendali (contabilità, magazzino, vendite, acquisti) e analizzare i flussi informativi."
+    - "Progettare e implementare basi di dati relazionali (MySQL) per la gestione di informazioni aziendali complesse, applicando i principi di normalizzazione."
+    - "Sviluppare applicazioni web dinamiche in PHP per l'interazione con le basi di dati, realizzando interfacce utente intuitive e funzionali."
+    - "Integrare il software gestionale con applicazioni web personalizzate per estendere le funzionalità o automatizzare processi specifici."
+    - "Applicare tecniche di Operations Research (es. simulazione, ottimizzazione) per risolvere problemi gestionali reali, utilizzando dati estratti dal software gestionale o dalle basi di dati."
+    - "Analizzare e migliorare l'efficienza dei processi aziendali attraverso l'uso degli strumenti informatici e delle tecniche di OR."
+    - "Acquisire competenze pratiche nella gestione di server web (Apache/Nginx) e ambienti di sviluppo (IDE, version control)."
+    - "Sviluppare capacità di problem-solving e di lavoro in team nella creazione di soluzioni IT per le esigenze aziendali."
+    - "Comprendere le problematiche di sicurezza informatica relative ai sistemi gestionali e alle applicazioni web."
+  strumenti_hardware:
+    - tipo: "Workstation Studenti"
+      quantita: "30"
+      specifiche:
+        - "Processore Intel Core i5/i7 o equivalente AMD"
+        - "16 GB RAM DDR4"
+        - "SSD da 512 GB"
+        - "Scheda grafica con CUDA"
+        - "Monitor 24 pollici"
+        - "Connettività di rete Gigabit Ethernet"
+      prezzo_unitario: 1200
+    - tipo: "Server di Laboratorio"
+      quantita: "1"
+      specifiche:
+        - "Processore Intel Xeon E3/E5 o equivalente AMD EPYC"
+        - "64 GB RAM DDR4 (espandibile)"
+        - "SSD/NVMe da 1 TB per il sistema operativo e applicazioni"
+        - "Scheda di rete Gigabit Ethernet dual-port"
+        - "Sistema di alimentazione ridondante (consigliato)"
+      prezzo_unitario: 2500.00 # Prezzo stimato per workstation di fascia media/alta
+    - tipo: "Router/Switch di Rete"
+      quantita: "1-2"
+      specifiche:
+        - "Switch Gigabit gestibile con almeno 24 porte"
+        - "Router con funzionalità di firewall e VLAN"
+      prezzo_unitario: 200.00 # Prezzo stimato per uno switch gestito gestito
+    - tipo: "Digital Board"
+      quantita: "2"
+      specifiche: "Per attività collaborative e di brainstorming"
+      prezzo_unitario: 1700.00 # Prezzo stimato
+    - tipo: "Multifunzione Laser a colori"
+      quantita: "2"
+      specifiche: "Per stampa e scannerizzazione attività"
+      prezzo_unitario: 450.00 # Prezzo stimato
+  strumenti_software:
+    - categoria: "Sistemi Operativi"
+      elenco:
+        - "Linux Desktop (Ubuntu)"
+        - "Linux Server (Ubuntu Server LTS o Debian)"
+      prezzo_unitario: 0 # Open Source
+    - categoria: "Software Gestionale (ERP/CRM)"
+      elenco:
+        - "Odoo Community Edition (Open Source, versatile e modulare)"
+        - "Dolibarr (Open Source, per piccole e medie imprese)"
+      prezzo_unitario: 0 # Open Source / Community Edition
+    - categoria: "Database Management System (DBMS)"
+      elenco:
+        - "MySQL Community Server"
+        - "phpMyAdmin (per la gestione via web di MySQL)"
+      prezzo_unitario: 0 # Open Source
+      prezzo_unitario_IVA_esclusa: 0
+    - categoria: "Ambienti di Sviluppo Web"
+      elenco:
+        - "Apache HTTP Server (per il server di laboratorio)"
+        - "PHP (ultima versione stabile)"
+        - "MySQL Client"
+      prezzo_unitario: 0 # Open Source
+    - categoria: "Editor di Codice / IDE"
+      elenco:
+        - "Visual Studio Code"
+      prezzo_unitario: 0 # Gratuito
+    - categoria: "Strumenti di Operations Research"
+      elenco:
+        - "Spreadsheet software (LibreOffice Calc con add-in solver)"
+        - "Python con librerie per OR (es. SciPy, PuLP, OR-Tools)"
+        - "IDE per linguaggio di modellizzazione algebrica GLPK/AMPL"
+        - "IDE per linguaggio di programmazione a vincoli MiniZinc"
+        - "Jupyter Lab"
+        - "Streamlit"
+      prezzo_unitario: 0 # Open Source / Gratuito
+    - categoria: "Strumenti di Controllo Versione"
+      elenco:
+        - "Git"
+        - "GitHub Desktop / GitLab (per la gestione collaborativa del codice)"
+      prezzo_unitario: 0 # Gratuito / Open Source
+    - categoria: "Software per Virtualizzazione"
+      elenco:
+        - "Proxmox VE (per il server di laboratorio, per gestire più ambienti isolati)"
+        - "Docker"
+      prezzo_unitario: 0 # Open Source / Community Edition
+    - categoria: "Browser Web"
+      elenco:
+        - "Google Chrome"
+        - "Mozilla Firefox"
+      prezzo_unitario: 0 # Gratuiti
+    - categoria: "Gestione del laboratorio"
+      elenco:
+        - "Veyon Licenza perpetua add-on pack"
+      prezzo_unitario: 1123
