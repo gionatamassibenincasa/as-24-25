@@ -9,6 +9,7 @@ INSERT INTO Corso (idCorso, descrizioneBreve, ore, descrizione) VALUES
   ('CryptoWithBlocks','Crittografia con un linguaggio a blocchi', 10, 'Il corso fornisce un''introduzione alle "grandi idee" della crittografia tramite un approccio didattico che procede "per scoperta" e “per necessità”. Partendo da attività progettate per la comprensione dei crittosistemi classici si procede per tappe fino alla crittografia moderna. Ogni attività prevede la sperimentazione del crittosistema, una realizzazione di quelle grandi idee, e richiede agli studenti la costruzione di possibili procedure di attacco. Gli studenti saranno quindi in grado di valutare i limiti del sistema stesso e la consapevolezza delle debolezze dovrebbe indurre la necessità di scoprire un crittosistema successivo  (approccio didattico orientato dalla necessità, Necessity Learning Design).' || CHAR(10) || 'Il corso si basa sul lavoro di M. Lodi - M. Sbaraglia - S. Martini, "PROGRAMMARE PER IMPARARE LA CRITTOGRAFIA AL LICEO MATEMATICO" e usa il materiale didattico realizzato in Snap! (un linguaggio di programmazione visuale a blocchi) da Michael Lodi (Università di Bologna) che consiste in procedure di codifica e decodifica, di analisi e di attacco e attività guidate')
 , ('CyberSec','Cyber sicurezza', 20, 'Il percorso avvicina le studentesse e gli studenti alla sicurezza informatica tramite attività di gioco (challenge) ed è propedeutico alla partecipazione alle iniziative sulla sicurezza informatica proposte dalla rete CyberHighSchools (OliCyber, CyberChallenge, CyberTrials).' | CHAR(10) || 'Il laboratorio propone l''uso di un ecosistema hardware e software libero e/o a sorgente aperto con il quale scoprire giocando le problematiche di sicurezza, sviluppare una coscienza critica sull''argomento e promuovere comportamenti orientati ad una protezione dei dati personali.')
 , ('EduRobot', 'Robotica educativa', 20, 'Il corso coniuga una fase di ricerca ed esposizione ad una o più gare di robotica.')
+, ('EduRobotComp', 'Robotica educativa', 15, 'Il corso coniuga una fase di ricerca ed esposizione ad una o più gare di robotica.')
 , ('LabMat1','Laboratorio di matematica 1 -L''ottica geometrica, la matematica e la fisica del "come" vediamo', 10, NULL)
 , ('LabMat2','Laboratorio di matematica 2 - Giochi di numeri - La natura ricorsiva delle operazioni', 10, 'Il corso mira a sviluppare il pensiero ricorsivo attraverso lo sviluppo dell''aritmetica. Tra induzione e ricorsione saranno definiti l''insieme dei numeri naturali e, con le sole funzioni primitive di riconoscimento dello zero, successore e predecessore, saranno definiti alcuni operatori di confronto e operazioni di addizione, sottrazione, moltiplicazione e divisione intera. Lo stesso modo di ragionare su problemi numerici può essere applicato alla risoluzione di tutti problemi che l''informatica può risolvere. Sono questi ragionamenti il vero oggetto del corso.')
 , ('LabMat3','Laboratorio di matematica 3', 10, NULL)
@@ -70,7 +71,7 @@ INSERT INTO Edizione (idEdizione, idCorso, idClasse, bando, denominazione) VALUE
 , ('PhyComp', 'PhyComp', 'E2B', 'interno', 'PHYSICAL COMPUTING')  -- Massi
 , ('EduRobot', 'EduRobot', 'Aperto', 'esterno', 'ROBOTICA EDUCATIVA')  -- Agostinelli
 , ('PassInf', 'PassInf', 'Aperto', 'esterno', 'PASSIONE INFORMATICA')  -- Agostinelli
-, ('EduRobotC', 'EduRobot', 'Aperto', 'esterno', 'ROBOTICA EDUCATIVA DA COMPETIZIONE')  -- Agostinelli
+, ('EduRobotC', 'EduRobotComp', 'Aperto', 'esterno', 'ROBOTICA EDUCATIVA DA COMPETIZIONE')  -- Agostinelli
 ;
 
 CREATE TABLE Personale (
@@ -639,8 +640,6 @@ INSERT INTO Lezione VALUES
 , (9, 'PhyComp', '2025-05-05', 2, 'Lab', 'Micro:bit')
 , (10, 'PhyComp', '2025-05-07', 4, 'Lab', 'Micro:bit')
 
--- COPIA DA QUI
-
 , (1, 'RelAx5LSinf', '2024-12-13', 5, 'FabLab', 'Raspberry Pi')
 , (2, 'RelAx5LSinf', '2024-12-20', 5, 'FabLab', 'Raspberry Pi')
 , (3, 'RelAx5LSinf', '2025-01-10', 5, 'FabLab', 'Raspberry Pi')
@@ -648,9 +647,11 @@ INSERT INTO Lezione VALUES
 , (5, 'RelAx5LSinf', '2025-01-24', 5, 'FabLab', 'Raspberry Pi')
 , (6, 'RelAx5LSinf', '2025-04-04', 5, 'FabLab', 'Raspberry Pi')
 , (7, 'RelAx5LSinf', '2025-04-04', 6, 'FabLab', 'Raspberry Pi')
-, (8, 'RelAx5LSinf', '2025-04-11', 6, 'FabLab', 'Raspberry Pi') -- OK
+, (8, 'RelAx5LSinf', '2025-04-11', 6, 'FabLab', 'Raspberry Pi')
 , (9, 'RelAx5LSinf', '2025-05-09', 5, 'FabLab', 'Raspberry Pi')
 , (10, 'RelAx5LSinf', '2025-05-09', 6, 'FabLab', 'Raspberry Pi')
+
+-- COPIA DA QUI
 
 , (1, 'CyberSec4B', '2025-01-29', 6, 'FabLab', 'Raspberry Pi')
 , (2, 'CyberSec4B', '2025-01-31', 4, 'FabLab', 'Raspberry Pi')
@@ -669,15 +670,10 @@ INSERT INTO Lezione VALUES
 , (15, 'CyberSec4B', '2025-04-04', 4, 'FabLab', 'Raspberry Pi')
 , (16, 'CyberSec4B', '2025-04-16', 6, 'FabLab', 'Raspberry Pi')
 , (17, 'CyberSec4B', '2025-04-23', 6, 'FabLab', 'Raspberry Pi')
-, (18, 'CyberSec4B', '2025-05-07', 6, 'FabLab', 'Raspberry Pi') -- OK
+, (18, 'CyberSec4B', '2025-05-07', 6, 'FabLab', 'Raspberry Pi')
 , (19, 'CyberSec4B', '2025-05-09', 4, 'FabLab', 'Raspberry Pi')
 , (20, 'CyberSec4B', '2025-05-14', 6, 'FabLab', 'Raspberry Pi')
 ;
-
--- UPDATE Edizione
--- SET stato = 'DA CHIUDERE'
--- WHERE idEdizione IN (
--- );
 
 UPDATE Edizione
 SET stato = 'CHIUSO'
@@ -686,20 +682,71 @@ WHERE idEdizione IN (
  'Crypto2B',
  'Crypto4G',
  'CyberSec3B',
+ 'CyberSec4B',
  'EduRobot',
  'EduRobotC',
  'LM2',
  'PassInf',
--- 'PhyComp',
+ 'PhyComp',
  'RelAx4E',
  'RelAx4F',
  'RelAx5E',
+ 'RelAx5LSinf',
  'RicOp5A'
 );
 
-UPDATE Edizione
-SET stato = 'IN CORSO'
-WHERE idEdizione IN (
-   'RelAx5LSinf' -- 80 %
- , 'CyberSec4B' -- 90 % (18) CS2
+CREATE TABLE Attestati (
+    -- Solo per relazione finale
+	idEdizione TEXT PRIMARY KEY REFERENCES Edizione(idEdizione),
+	numeroAttestati INTEGER DEFAULT 0
 );
+
+INSERT INTO Attestati (idEdizione, numeroAttestati) VALUES
+  ('Crypto1B', 10)
+, ('Crypto2B', 18)
+, ('Crypto4G', 14)
+, ('CyberSec3B', 20)
+, ('CyberSec4B', 20)
+, ('EduRobot', 11)
+, ('EduRobotC', 14)
+, ('LM2', 9)
+, ('PassInf', 11)
+, ('PhyComp', 17)
+, ('RelAx4E', 22)
+, ('RelAx4F', 13)
+, ('RelAx5E', 15)
+, ('RelAx5LSinf', 13)
+, ('RicOp5A', 15);
+
+CREATE TABLE Circolare (
+    idEdizione TEXT REFERENCES Edizione(idEdizione),
+    circolare INTEGER,
+    PRIMARY KEY (idEdizione, circolare)
+);
+
+INSERT INTO Circolare (idEdizione, circolare) VALUES
+  ('Crypto1B', 443)
+, ('Crypto2B', 441)
+, ('Crypto4G', 440)
+, ('CyberSec3B', 435)
+, ('CyberSec4B', 436)
+, ('EduRobot', 345)
+, ('EduRobot', 382)
+, ('EduRobot', 431)
+, ('EduRobot', 497)
+, ('EduRobot', 516)
+, ('EduRobot', 535)
+, ('EduRobotC', 664)
+, ('EduRobotC', 697)
+, ('EduRobotC', 698)
+, ('LM2', 446)
+, ('PassInf', 431)
+, ('PassInf', 497)
+, ('PassInf', 516)
+, ('PassInf', 535)
+, ('PhyComp', 434)
+, ('RelAx4E', 437)
+, ('RelAx4F', 318)
+, ('RelAx5E', 317)
+, ('RelAx5LSinf', 316)
+, ('RicOp5A', 442);

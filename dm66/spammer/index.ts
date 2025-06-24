@@ -4,7 +4,7 @@ const fs = require('fs').promises; // Using the promises API for cleaner async/a
 
 const today = new Date().toISOString().substr(0, 10);
 const HOURS = 10;
-const REMAINING_HOURS = HOURS - 8;
+const REMAINING_HOURS = HOURS - 10;
 const HOURS_TO_BE_CERTIFICATED = 7;
 
 /**
@@ -40,6 +40,7 @@ async function readJsonFile(filePath) {
         return null; // Or throw the error if you want the calling function to handle it
     }
 }
+
 /**
  * Verifies the connection to the email server using the given transporter.
  * Logs a success message if the connection is established successfully, or an
@@ -118,7 +119,7 @@ async function sendPersonalizedEmails(transporter, recipients, htmlTemplate, sub
             from: 'gionata.massi@savoiabenincasa.it',
             to: email.join(','),
             subject: subject,
-            html: personalizedHtml + certificatePostScriptum(recipientInfo),
+            html: personalizedHtml + "\n\n" + certificatePostScriptum(recipientInfo),
         };
         if (process.env.SEND)
             await sendWithRetry(transporter, mailOptions, 5);
@@ -144,13 +145,15 @@ function isMale(recipientInfo) {
 function certificatePostScriptum(recipientInfo) {
     let str = "<p><strong>PS</strong>: avendo registrato " + recipientInfo.numOreReg + " ore di presenza, ";
     if (recipientInfo.numOreReg >= HOURS_TO_BE_CERTIFICATED) {
-        str += 'sono lieto di informarti che che al termine del corso potrai scaricare l\'attestato su <a href="https://scuolafutura.pubblica.istruzione.it/">Scuola Futura</a>.</p>';
-    } else if (recipientInfo.numOreReg + REMAINING_HOURS >= HOURS_TO_BE_CERTIFICATED) {
-        const missingHours = HOURS_TO_BE_CERTIFICATED - recipientInfo.numOreReg;
-        str += "ti informo che dovrai essere presente "  +
-            ((missingHours == 1) ? "ad almeno un'ora" : "a entrambe le ore") +
-            " dell'ultimo incontro al fine di conseguire l'attestato di partecipazione al corso.</p>"
-    } else str += "mi spiace informarti che non potrai conseguire l'attestato di partecipazione al corso.</p>";
+        str += 'sono lieto di informarti che potrai scaricare l\'attestato su <a href="https://scuolafutura.pubblica.istruzione.it/">Scuola Futura</a>.</p>';
+    }
+    //  else if (recipientInfo.numOreReg + REMAINING_HOURS >= HOURS_TO_BE_CERTIFICATED) {
+    //     const missingHours = HOURS_TO_BE_CERTIFICATED - recipientInfo.numOreReg;
+    //     str += "ti informo che dovrai essere presente "  +
+    //         ((missingHours == 1) ? "ad almeno un'ora" : "a entrambe le ore") +
+    //         " dell'ultimo incontro al fine di conseguire l'attestato di partecipazione al corso.</p>"
+    // }
+     else str += "mi spiace informarti che non hai conseguito l'attestato di partecipazione al corso. Se ritieni che ci siano stati errori di registrazione delle presenze, ti invito a contattarmi il prima possibile.</p>";
 
     return str;
 }

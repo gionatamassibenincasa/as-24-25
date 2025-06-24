@@ -318,6 +318,8 @@ class="toc-section-number">1.2.1.2.3.3</span> Ristrutturazione nel
 modello logico relazionale</a></li>
 <li><a href="#schema-logico-2" id="toc-schema-logico-2"><span
 class="toc-section-number">1.2.1.2.3.4</span> Schema logico</a></li>
+<li><a href="#ddl-sql" id="toc-ddl-sql"><span
+class="toc-section-number">1.2.1.2.3.5</span> DDL-SQL</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -325,13 +327,9 @@ class="toc-section-number">1.2.1.2.3.4</span> Schema logico</a></li>
 href="#ristrutturazione-del-modello-concettuale-in-quello-logico-relazionale"
 id="toc-ristrutturazione-del-modello-concettuale-in-quello-logico-relazionale"><span
 class="toc-section-number">1.2.2</span> Ristrutturazione del modello
-concettuale in quello logico relazionale</a>
-<ul>
+concettuale in quello logico relazionale</a></li>
+</ul></li>
 <li><a href="#sql" id="toc-sql"><span
-class="toc-section-number">1.2.2.0.0.1</span> SQL</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#sql-1" id="toc-sql-1"><span
 class="toc-section-number">1.3</span> SQL</a>
 <ul>
 <li><a href="#tipi-di-dato" id="toc-tipi-di-dato"><span
@@ -346,38 +344,47 @@ class="toc-section-number">1.3.1.2</span> Altri possibili tipi</a></li>
 id="toc-sintassi-base---select-in-sqlite"><span
 class="toc-section-number">1.3.2</span> Sintassi Base - SELECT in
 SQLite</a></li>
+<li><a href="#date" id="toc-date"><span
+class="toc-section-number">1.3.3</span> Date</a>
+<ul>
+<li><a href="#iso-8601-representation-of-dates-and-times"
+id="toc-iso-8601-representation-of-dates-and-times"><span
+class="toc-section-number">1.3.3.1</span> ISO 8601 (Representation of
+dates and times)</a></li>
 </ul></li>
+</ul></li>
+<li><a href="#web" id="toc-web"><span
+class="toc-section-number">1.4</span> Web</a>
+<ul>
 <li><a href="#html" id="toc-html"><span
-class="toc-section-number">1.4</span> HTML</a>
+class="toc-section-number">1.4.1</span> HTML</a>
 <ul>
 <li><a href="#pagina-web-vouta---html"
 id="toc-pagina-web-vouta---html"><span
-class="toc-section-number">1.4.1</span> Pagina web vouta - HTML</a></li>
+class="toc-section-number">1.4.1.1</span> Pagina web vouta -
+HTML</a></li>
 <li><a href="#pagina-web-vouta---document-object-model"
 id="toc-pagina-web-vouta---document-object-model"><span
-class="toc-section-number">1.4.2</span> Pagina web vouta - Document
+class="toc-section-number">1.4.1.2</span> Pagina web vouta - Document
 Object Model</a></li>
 <li><a href="#tabella---html" id="toc-tabella---html"><span
-class="toc-section-number">1.4.3</span> Tabella - HTML</a></li>
+class="toc-section-number">1.4.1.3</span> Tabella - HTML</a></li>
 <li><a href="#tabella---dom" id="toc-tabella---dom"><span
-class="toc-section-number">1.4.4</span> Tabella - DOM</a></li>
+class="toc-section-number">1.4.1.4</span> Tabella - DOM</a></li>
 </ul></li>
-<li><a href="#applicazione-php-con-pdo-e-sqlite"
-id="toc-applicazione-php-con-pdo-e-sqlite"><span
-class="toc-section-number">1.5</span> Applicazione PHP con PDO e
-SQLite</a></li>
-<li><a href="#prerequisiti" id="toc-prerequisiti"><span
-class="toc-section-number">1.6</span> Prerequisiti</a>
+<li><a href="#php-con-pdo-e-sqlite" id="toc-php-con-pdo-e-sqlite"><span
+class="toc-section-number">1.4.2</span> PHP con PDO e SQLite</a>
 <ul>
+<li><a href="#prerequisiti" id="toc-prerequisiti"><span
+class="toc-section-number">1.4.2.1</span> Prerequisiti</a></li>
 <li><a href="#passaggi" id="toc-passaggi"><span
-class="toc-section-number">1.6.1</span> Passaggi</a></li>
-</ul></li>
+class="toc-section-number">1.4.2.2</span> Passaggi</a></li>
 <li><a href="#spiegazione-del-codice-php"
 id="toc-spiegazione-del-codice-php"><span
-class="toc-section-number">1.7</span> Spiegazione del Codice
+class="toc-section-number">1.4.2.3</span> Spiegazione del Codice
 PHP</a></li>
-<li><a href="#esecuzione" id="toc-esecuzione"><span
-class="toc-section-number">1.8</span> Esecuzione</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -679,6 +686,23 @@ class="header-section-number">1.2.1.2.3.4</span> Schema logico</h6>
 <pre class="text"><code>Societa(partitaIVA &lt;PK&gt;, …)
 Azionista(CF &lt;PK&gt;, …)
 Partecipazione(partitaIVA &lt;PK, FK&gt;, CF &lt;PK, FK&gt;, quota)</code></pre>
+<h6 data-number="1.2.1.2.3.5" id="ddl-sql"><span
+class="header-section-number">1.2.1.2.3.5</span> DDL-SQL</h6>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Societa (</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    partitaIVA TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">CHECK</span> (<span class="fu">length</span>(partitaIVA) <span class="op">=</span> <span class="dv">11</span>),</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    …</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Azionista (</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    CF TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">CHECK</span> (<span class="fu">length</span>(CF) <span class="op">=</span> <span class="dv">16</span>),</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    …</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Partecipazione (</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    partitaIVA TEXT <span class="kw">REFERENCES</span> Societa(partitaIVA),</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    CF TEXT <span class="kw">REFERENCES</span> Azionista(CF),</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">quota</span> <span class="dt">REAL</span>,</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">PRIMARY</span> <span class="kw">KEY</span>(partitaIVA, CF)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
 <h3 data-number="1.2.2"
 id="ristrutturazione-del-modello-concettuale-in-quello-logico-relazionale"><span
 class="header-section-number">1.2.2</span> Ristrutturazione del modello
@@ -711,24 +735,7 @@ dall’insieme di attributi che compongo le chiavi delle due entità, oltre
 agli eventuali attributi dell’associazione necessari a garantire
 l’unicità delle n-uple nella relazione ottenuta.</li>
 </ol>
-<h6 data-number="1.2.2.0.0.1" id="sql"><span
-class="header-section-number">1.2.2.0.0.1</span> SQL</h6>
-<div class="sourceCode" id="cb16"><pre
-class="sourceCode sql"><code class="sourceCode sql"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Societa (</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    partitaIVA TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">CHECK</span> (<span class="fu">length</span>(partitaIVA) <span class="op">=</span> <span class="dv">11</span>),</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    …</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>);</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Azionista (</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    CF TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span> <span class="kw">CHECK</span> (<span class="fu">length</span>(CF) <span class="op">=</span> <span class="dv">16</span>),</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    …</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>);</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> Partecipazione (</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    partitaIVA TEXT <span class="kw">REFERENCES</span> Societa(partitaIVA),</span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    CF TEXT <span class="kw">REFERENCES</span> Azionista(CF),</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">quota</span> <span class="dt">REAL</span>,</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">PRIMARY</span> <span class="kw">KEY</span>(partitaIVA, CF)</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
-<h2 data-number="1.3" id="sql-1"><span
+<h2 data-number="1.3" id="sql"><span
 class="header-section-number">1.3</span> SQL</h2>
 <h3 data-number="1.3.1" id="tipi-di-dato"><span
 class="header-section-number">1.3.1</span> Tipi di dato</h3>
@@ -782,6 +789,7 @@ espressione := nome_colonna |
                max(espressione) |
                count(espressione) |
                avg(espressione) |
+               sum(espressione) |
                espressione = espressione |
                espressione &lt;&gt; espressione |
                espressione &lt;= espressione |
@@ -843,8 +851,25 @@ basso.</li>
 <li><code>OFFSET</code> <em>inizio</em> (opzionale) specifica il numero
 di righe da saltare prima di iniziare a restituire i risultati.</li>
 </ul>
-<h2 data-number="1.4" id="html"><span
-class="header-section-number">1.4</span> HTML</h2>
+<h3 data-number="1.3.3" id="date"><span
+class="header-section-number">1.3.3</span> Date</h3>
+<h4 data-number="1.3.3.1"
+id="iso-8601-representation-of-dates-and-times"><span
+class="header-section-number">1.3.3.1</span> ISO 8601 (Representation of
+dates and times)</h4>
+<p><code>YYYY-MM-DD</code></p>
+<p>date()</p>
+<ul>
+<li>Giorno: <code>substr('2025-04-12', 9, 2)</code></li>
+<li>Mese: <code>substr('2025-04-12', 6, 2)</code></li>
+<li>Anno: <code>substr('2025-04-12', 1, 4)</code></li>
+<li>Mese corrente: <code>substr(date(), 6, 2)</code></li>
+<li>Anno corrente: <code>substr(date(), 1, 4)</code></li>
+</ul>
+<h2 data-number="1.4" id="web"><span
+class="header-section-number">1.4</span> Web</h2>
+<h3 data-number="1.4.1" id="html"><span
+class="header-section-number">1.4.1</span> HTML</h3>
 <table>
 <colgroup>
 <col style="width: 18%" />
@@ -859,106 +884,102 @@ class="header-section-number">1.4</span> HTML</h2>
 <tbody>
 <tr class="odd">
 <td><code>&lt;html&gt;</code></td>
-<td>Definisce la radice di un documento HTML. Tutti gli altri elementi
-sono discendenti di questo tag.</td>
+<td>La radice di un documento HTML. Tutti gli altri elementi sono
+discendenti di questo tag.</td>
 </tr>
 <tr class="even">
 <td><code>&lt;head&gt;</code></td>
-<td>Contiene metadati sul documento HTML, come il titolo, set di
-caratteri, link a fogli di stile, ecc. Questi non sono visualizzati
-direttamente nella pagina.</td>
+<td>I metadati del documento HTML, come il titolo, set di caratteri,
+link a fogli di stile, ecc. Questi non sono visualizzati direttamente
+nella pagina.</td>
 </tr>
 <tr class="odd">
 <td><code>&lt;title&gt;</code></td>
-<td>Definisce il titolo del documento, che appare nella barra del titolo
-del browser o nella scheda della pagina.</td>
+<td>Il titolo del documento, che appare nella barra del titolo del
+browser o nella scheda della pagina.</td>
 </tr>
 <tr class="even">
 <td><code>&lt;body&gt;</code></td>
-<td>Contiene il contenuto visibile del documento HTML (testo, immagini,
-link, ecc.).</td>
+<td>Il contenuto visibile del documento HTML (testo, immagini, link,
+ecc.).</td>
 </tr>
 <tr class="odd">
 <td><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code></td>
-<td>Definiscono le intestazioni di diverso livello (da quella più
-importante <code>&lt;h1&gt;</code> a quella meno importante
+<td>Le intestazioni di diverso livello (da quella più importante
+<code>&lt;h1&gt;</code> a quella meno importante
 <code>&lt;h6&gt;</code>).</td>
 </tr>
 <tr class="even">
 <td><code>&lt;p&gt;</code></td>
-<td>Definisce un paragrafo di testo.</td>
+<td>Un capoverso (<em>paragraph</em>).</td>
 </tr>
 <tr class="odd">
 <td><code>&lt;a&gt;</code></td>
-<td>Definisce un hyperlink (collegamento). L’attributo <code>href</code>
-specifica l’URL di destinazione.</td>
+<td>Un hyperlink (collegamento). L’attributo <code>href</code> specifica
+l’URL di destinazione.</td>
 </tr>
 <tr class="even">
 <td><code>&lt;img&gt;</code></td>
-<td>Inserisce un’immagine nel documento. L’attributo <code>src</code>
-specifica il percorso dell’immagine.</td>
+<td>Un’immagine nel documento. L’attributo <code>src</code> specifica il
+percorso dell’immagine.</td>
 </tr>
 <tr class="odd">
 <td><code>&lt;ul&gt;</code></td>
-<td>Definisce una lista non ordinata (con punti elenco).</td>
+<td>Una lista non ordinata (con punti elenco).</td>
 </tr>
 <tr class="even">
 <td><code>&lt;ol&gt;</code></td>
-<td>Definisce una lista ordinata (con numeri o lettere).</td>
+<td>Una lista ordinata (con numeri o lettere).</td>
 </tr>
 <tr class="odd">
 <td><code>&lt;li&gt;</code></td>
-<td>Definisce un elemento di una lista (sia ordinata che non
-ordinata).</td>
+<td>Un elemento di una lista (sia ordinata che non ordinata).</td>
 </tr>
 <tr class="even">
 <td><code>&lt;div&gt;</code></td>
-<td>Definisce una sezione o un contenitore generico per altri elementi
-HTML. Viene spesso utilizzato per scopi di layout e stilizzazione.</td>
+<td>Una sezione o un contenitore generico per altri elementi HTML.</td>
 </tr>
 <tr class="odd">
 <td><code>&lt;span&gt;</code></td>
-<td>Definisce una sezione o un contenitore inline generico per altri
-elementi HTML. Simile a <code>&lt;div&gt;</code>, ma per elementi
-inline.</td>
+<td>Una sezione o un contenitore inline generico per altri elementi
+HTML. Simile a <code>&lt;div&gt;</code>, ma per elementi inline.</td>
 </tr>
 <tr class="even">
 <td><code>&lt;table&gt;</code></td>
-<td>Definisce una tabella.</td>
+<td>Una tabella.</td>
 </tr>
 <tr class="odd">
 <td><code>&lt;tr&gt;</code></td>
-<td>Definisce una riga all’interno di una tabella.</td>
+<td>Una riga all’interno di una tabella.</td>
 </tr>
 <tr class="even">
 <td><code>&lt;th&gt;</code></td>
-<td>Definisce una cella di intestazione in una tabella.</td>
+<td>Una cella di intestazione in una tabella.</td>
 </tr>
 <tr class="odd">
 <td><code>&lt;td&gt;</code></td>
-<td>Definisce una cella di dati in una tabella.</td>
+<td>Una cella di dati in una tabella.</td>
 </tr>
 <tr class="even">
 <td><code>&lt;form&gt;</code></td>
-<td>Definisce un modulo HTML utilizzato per raccogliere l’input
-dell’utente.</td>
+<td>Un modulo HTML utilizzato per raccogliere l’input dell’utente.</td>
 </tr>
 <tr class="odd">
 <td><code>&lt;input&gt;</code></td>
-<td>Definisce un campo di input all’interno di un modulo (testo,
-password, pulsante, ecc.).</td>
+<td>Un campo di input all’interno di un modulo (testo, password,
+pulsante, ecc.).</td>
 </tr>
 <tr class="even">
 <td><code>&lt;button&gt;</code></td>
-<td>Definisce un pulsante cliccabile.</td>
+<td>Un pulsante cliccabile.</td>
 </tr>
 <tr class="odd">
 <td><code>&lt;select&gt;</code></td>
-<td>Definisce un menu a tendina (lista di opzioni).</td>
+<td>Un menu a tendina (lista di opzioni).</td>
 </tr>
 <tr class="even">
 <td><code>&lt;option&gt;</code></td>
-<td>Definisce un’opzione all’interno di un elemento
+<td>Un’opzione all’interno di un elemento
 <code>&lt;select&gt;</code>.</td>
 </tr>
 <tr class="odd">
@@ -972,16 +993,17 @@ grassetto).</td>
 </tr>
 <tr class="odd">
 <td><code>&lt;br&gt;</code></td>
-<td>Inserisce un’interruzione di riga singola.</td>
+<td>Un’interruzione di riga singola.</td>
 </tr>
 <tr class="even">
 <td><code>&lt;hr&gt;</code></td>
-<td>Definisce una linea orizzontale tematica (separatore).</td>
+<td>Una linea orizzontale tematica (separatore).</td>
 </tr>
 </tbody>
 </table>
-<h3 data-number="1.4.1" id="pagina-web-vouta---html"><span
-class="header-section-number">1.4.1</span> Pagina web vouta - HTML</h3>
+<h4 data-number="1.4.1.1" id="pagina-web-vouta---html"><span
+class="header-section-number">1.4.1.1</span> Pagina web vouta -
+HTML</h4>
 <div class="sourceCode" id="cb19"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">&quot;it&quot;</span><span class="dt">&gt;</span></span>
@@ -993,10 +1015,10 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href=
 <span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
-<h3 data-number="1.4.2"
+<h4 data-number="1.4.1.2"
 id="pagina-web-vouta---document-object-model"><span
-class="header-section-number">1.4.2</span> Pagina web vouta - Document
-Object Model</h3>
+class="header-section-number">1.4.1.2</span> Pagina web vouta - Document
+Object Model</h4>
 <div hidden="">
 <pre class="plantuml"><code>@startuml dom_vuoto
 left to right direction
@@ -1027,8 +1049,8 @@ head -- meta
 @enduml</code></pre>
 </div>
 <p><img src="dom_vuoto.svg" /></p>
-<h3 data-number="1.4.3" id="tabella---html"><span
-class="header-section-number">1.4.3</span> Tabella - HTML</h3>
+<h4 data-number="1.4.1.3" id="tabella---html"><span
+class="header-section-number">1.4.1.3</span> Tabella - HTML</h4>
 <div class="sourceCode" id="cb21"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">table</span><span class="dt">&gt;</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">caption</span><span class="dt">&gt;</span>Tabella di Esempio<span class="dt">&lt;/</span><span class="kw">caption</span><span class="dt">&gt;</span></span>
@@ -1094,8 +1116,8 @@ Nota a piè di pagina della tabella
 </tr>
 </tfoot>
 </table>
-<h3 data-number="1.4.4" id="tabella---dom"><span
-class="header-section-number">1.4.4</span> Tabella - DOM</h3>
+<h4 data-number="1.4.1.4" id="tabella---dom"><span
+class="header-section-number">1.4.1.4</span> Tabella - DOM</h4>
 <div hidden="">
 <pre class="plantuml"><code>@startuml tabella
 left to right direction
@@ -1186,150 +1208,119 @@ tr_tfoot -- td_tfoot
 @enduml</code></pre>
 </div>
 <p><img src="tabella.svg" /></p>
-<h2 data-number="1.5" id="applicazione-php-con-pdo-e-sqlite"><span
-class="header-section-number">1.5</span> Applicazione PHP con PDO e
-SQLite</h2>
+<h3 data-number="1.4.2" id="php-con-pdo-e-sqlite"><span
+class="header-section-number">1.4.2</span> PHP con PDO e SQLite</h3>
 <p>Questo manuale mostra un semplice esempio di come utilizzare PHP con
 PDO (PHP Data Objects) per interagire con un database SQLite e leggere i
 dati degli ordini da una tabella, per poi visualizzarli in una tabella
 HTML.</p>
-<h2 data-number="1.6" id="prerequisiti"><span
-class="header-section-number">1.6</span> Prerequisiti</h2>
+<h4 data-number="1.4.2.1" id="prerequisiti"><span
+class="header-section-number">1.4.2.1</span> Prerequisiti</h4>
 <ul>
 <li><strong>Database SQLite:</strong> Devi avere un database SQLite
-esistente con una tabella chiamata, ad esempio, <code>ordini</code>. La
-tabella <code>ordini</code> dovrebbe avere almeno le seguenti colonne (o
-simili, adattando lo script):
-<ul>
-<li><code>id</code>: Identificatore univoco dell’ordine (INTEGER PRIMARY
-KEY).</li>
-<li><code>data_ordine</code>: Data dell’ordine (TEXT o INTEGER).</li>
-<li><code>cliente</code>: Nome del cliente (TEXT).</li>
-<li><code>prodotto</code>: Nome del prodotto ordinato (TEXT).</li>
-<li><code>quantita</code>: Quantità ordinata (INTEGER).</li>
-</ul></li>
+esistente</li>
 </ul>
-<h3 data-number="1.6.1" id="passaggi"><span
-class="header-section-number">1.6.1</span> Passaggi</h3>
+<h4 data-number="1.4.2.2" id="passaggi"><span
+class="header-section-number">1.4.2.2</span> Passaggi</h4>
 <ol type="1">
 <li><p><strong>Creazione del Database SQLite (se non
 esiste):</strong></p>
-<p>Se non hai già un database SQLite, puoi crearne uno utilizzando la
-riga di comando di SQLite o un tool grafico. Ad esempio, usando la riga
-di comando:</p>
-<div class="sourceCode" id="cb23"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sqlite3</span> mio_database.db</span></code></pre></div>
-<p>Poi, crea la tabella <code>ordini</code>:</p>
-<div class="sourceCode" id="cb24"><pre
-class="sourceCode sql"><code class="sourceCode sql"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> ordini (</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span> AUTOINCREMENT,</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    data_ordine TEXT <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    cliente TEXT <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    prodotto TEXT <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    quantita <span class="dt">INTEGER</span> <span class="kw">NOT</span> <span class="kw">NULL</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>);</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> ordini (data_ordine, cliente, prodotto, quantita) <span class="kw">VALUES</span></span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>(<span class="st">&#39;2025-04-05&#39;</span>, <span class="st">&#39;Mario Rossi&#39;</span>, <span class="st">&#39;Laptop&#39;</span>, <span class="dv">1</span>),</span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>(<span class="st">&#39;2025-04-04&#39;</span>, <span class="st">&#39;Laura Bianchi&#39;</span>, <span class="st">&#39;Mouse&#39;</span>, <span class="dv">2</span>),</span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>(<span class="st">&#39;2025-04-04&#39;</span>, <span class="st">&#39;Mario Rossi&#39;</span>, <span class="st">&#39;Tastiera&#39;</span>, <span class="dv">1</span>),</span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>(<span class="st">&#39;2025-04-03&#39;</span>, <span class="st">&#39;Giovanni Verdi&#39;</span>, <span class="st">&#39;Monitor&#39;</span>, <span class="dv">1</span>);</span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>.exit</span></code></pre></div>
-<p>Questo creerà un file chiamato <code>mio_database.db</code> con la
-tabella <code>ordini</code> e alcuni dati di esempio.</p></li>
+<p>Se non hai già un database SQLite, devi crearlo. Supponiamo di avere
+un database nel file <code>mio_database.db</code> con la tabella
+<code>ordini</code> e alcuni dati di esempio.</p></li>
 <li><p><strong>Creazione del File PHP:</strong></p>
-<p>Crea un file PHP chiamato, ad esempio, <code>mostra_ordini.php</code>
-nella tua web directory.</p></li>
+<p>Crea un file PHP chiamato, ad esempio,
+<code>mostra_ordini.php</code>.</p></li>
 <li><p><strong>Scrittura del Codice PHP:</strong></p>
-<div class="sourceCode" id="cb25"><pre
-class="sourceCode php"><code class="sourceCode php"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!</span><span class="cn">DOCTYPE</span> html<span class="op">&gt;</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>html lang<span class="op">=</span><span class="st">&quot;it&quot;</span><span class="op">&gt;</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>head<span class="op">&gt;</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>meta charset<span class="op">=</span><span class="st">&quot;UTF-8&quot;</span><span class="op">&gt;</span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>title<span class="op">&gt;</span>Elenco Ordini<span class="op">&lt;/</span>title<span class="op">&gt;</span></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>style<span class="op">&gt;</span></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>        table {</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>            border<span class="op">-</span>collapse<span class="ot">:</span> collapse<span class="ot">;</span></span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>            width<span class="ot">:</span> <span class="dv">80</span><span class="op">%</span><span class="ot">;</span></span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>            margin<span class="ot">:</span> <span class="er">20</span>px auto<span class="ot">;</span></span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>        th<span class="ot">,</span> td {</span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>            border<span class="ot">:</span> <span class="er">1</span>px solid <span class="co">#ddd;</span></span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>            padding<span class="ot">:</span> <span class="er">8</span>px<span class="ot">;</span></span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>            text<span class="op">-</span>align<span class="ot">:</span> left<span class="ot">;</span></span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>        th {</span>
-<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>            background<span class="op">-</span>color<span class="ot">:</span> <span class="co">#f2f2f2;</span></span>
-<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;/</span>style<span class="op">&gt;</span></span>
-<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>head<span class="op">&gt;</span></span>
-<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>body<span class="op">&gt;</span></span>
-<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>h1<span class="op">&gt;</span>Elenco Ordini<span class="op">&lt;/</span>h1<span class="op">&gt;</span></span>
-<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span><span class="ot">?</span>php</span>
-<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Percorso al database SQLite</span></span>
-<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>    <span class="va">$dbFile</span> <span class="op">=</span> <span class="st">&#39;mio_database.db&#39;</span><span class="ot">;</span></span>
-<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span> {</span>
-<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Connessione al database SQLite usando PDO</span></span>
-<span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a>        <span class="va">$pdo</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">PDO</span>(<span class="st">&quot;sqlite:&quot;</span> <span class="op">.</span> <span class="va">$dbFile</span>)<span class="ot">;</span></span>
-<span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Imposta la modalità di errore PDO su eccezioni</span></span>
-<span id="cb25-34"><a href="#cb25-34" aria-hidden="true" tabindex="-1"></a>        <span class="va">$pdo</span>-&gt;setAttribute(<span class="bu">PDO</span>::<span class="cn">ATTR_ERRMODE</span><span class="ot">,</span> <span class="bu">PDO</span>::<span class="cn">ERRMODE_EXCEPTION</span>)<span class="ot">;</span></span>
-<span id="cb25-35"><a href="#cb25-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-36"><a href="#cb25-36" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Query per selezionare tutti gli ordini</span></span>
-<span id="cb25-37"><a href="#cb25-37" aria-hidden="true" tabindex="-1"></a>        <span class="va">$sql</span> <span class="op">=</span> <span class="st">&quot;SELECT id, data_ordine, cliente, prodotto, quantita FROM ordini&quot;</span><span class="ot">;</span></span>
-<span id="cb25-38"><a href="#cb25-38" aria-hidden="true" tabindex="-1"></a>        <span class="va">$stmt</span> <span class="op">=</span> <span class="va">$pdo</span>-&gt;prepare(<span class="va">$sql</span>)<span class="ot">;</span></span>
-<span id="cb25-39"><a href="#cb25-39" aria-hidden="true" tabindex="-1"></a>        <span class="va">$stmt</span>-&gt;execute()<span class="ot">;</span></span>
-<span id="cb25-40"><a href="#cb25-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-41"><a href="#cb25-41" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Recupera tutti i risultati come un array associativo</span></span>
-<span id="cb25-42"><a href="#cb25-42" aria-hidden="true" tabindex="-1"></a>        <span class="va">$ordini</span> <span class="op">=</span> <span class="va">$stmt</span>-&gt;fetchAll(<span class="bu">PDO</span>::<span class="cn">FETCH_ASSOC</span>)<span class="ot">;</span></span>
-<span id="cb25-43"><a href="#cb25-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-44"><a href="#cb25-44" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Verifica se ci sono ordini</span></span>
-<span id="cb25-45"><a href="#cb25-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="fu">count</span>(<span class="va">$ordini</span>) <span class="op">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb25-46"><a href="#cb25-46" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;table&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-47"><a href="#cb25-47" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;thead&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-48"><a href="#cb25-48" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;tr&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-49"><a href="#cb25-49" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;th&gt;ID&lt;/th&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-50"><a href="#cb25-50" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;th&gt;Data Ordine&lt;/th&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-51"><a href="#cb25-51" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;th&gt;Cliente&lt;/th&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-52"><a href="#cb25-52" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;th&gt;Prodotto&lt;/th&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-53"><a href="#cb25-53" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;th&gt;Quantità&lt;/th&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-54"><a href="#cb25-54" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;/tr&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-55"><a href="#cb25-55" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;/thead&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-56"><a href="#cb25-56" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;tbody&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-57"><a href="#cb25-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-58"><a href="#cb25-58" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Itera attraverso gli ordini e crea le righe della tabella HTML</span></span>
-<span id="cb25-59"><a href="#cb25-59" aria-hidden="true" tabindex="-1"></a>            <span class="cf">foreach</span> (<span class="va">$ordini</span> <span class="kw">as</span> <span class="va">$ordine</span>) {</span>
-<span id="cb25-60"><a href="#cb25-60" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;tr&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-61"><a href="#cb25-61" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;td&gt;&#39;</span> <span class="op">.</span> <span class="fu">htmlspecialchars</span>(<span class="va">$ordine</span>[<span class="st">&#39;id&#39;</span>]) <span class="op">.</span> <span class="st">&#39;&lt;/td&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-62"><a href="#cb25-62" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;td&gt;&#39;</span> <span class="op">.</span> <span class="fu">htmlspecialchars</span>(<span class="va">$ordine</span>[<span class="st">&#39;data_ordine&#39;</span>]) <span class="op">.</span> <span class="st">&#39;&lt;/td&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-63"><a href="#cb25-63" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;td&gt;&#39;</span> <span class="op">.</span> <span class="fu">htmlspecialchars</span>(<span class="va">$ordine</span>[<span class="st">&#39;cliente&#39;</span>]) <span class="op">.</span> <span class="st">&#39;&lt;/td&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-64"><a href="#cb25-64" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;td&gt;&#39;</span> <span class="op">.</span> <span class="fu">htmlspecialchars</span>(<span class="va">$ordine</span>[<span class="st">&#39;prodotto&#39;</span>]) <span class="op">.</span> <span class="st">&#39;&lt;/td&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-65"><a href="#cb25-65" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;td&gt;&#39;</span> <span class="op">.</span> <span class="fu">htmlspecialchars</span>(<span class="va">$ordine</span>[<span class="st">&#39;quantita&#39;</span>]) <span class="op">.</span> <span class="st">&#39;&lt;/td&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-66"><a href="#cb25-66" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;/tr&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-67"><a href="#cb25-67" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb25-68"><a href="#cb25-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-69"><a href="#cb25-69" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;/tbody&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-70"><a href="#cb25-70" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;/table&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-71"><a href="#cb25-71" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
-<span id="cb25-72"><a href="#cb25-72" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;p&gt;Nessun ordine trovato.&lt;/p&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-73"><a href="#cb25-73" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb25-74"><a href="#cb25-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-75"><a href="#cb25-75" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Chiudi la connessione</span></span>
-<span id="cb25-76"><a href="#cb25-76" aria-hidden="true" tabindex="-1"></a>        <span class="va">$pdo</span> <span class="op">=</span> <span class="kw">null</span><span class="ot">;</span></span>
-<span id="cb25-77"><a href="#cb25-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-78"><a href="#cb25-78" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">catch</span> (<span class="bu">PDOException</span> <span class="va">$e</span>) {</span>
-<span id="cb25-79"><a href="#cb25-79" aria-hidden="true" tabindex="-1"></a>        <span class="kw">echo</span> <span class="st">&#39;&lt;p&gt;Errore di connessione o query: &#39;</span> <span class="op">.</span> <span class="va">$e</span>-&gt;getMessage() <span class="op">.</span> <span class="st">&#39;&lt;/p&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb25-80"><a href="#cb25-80" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb25-81"><a href="#cb25-81" aria-hidden="true" tabindex="-1"></a>    <span class="kw">?&gt;</span></span>
-<span id="cb25-82"><a href="#cb25-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-83"><a href="#cb25-83" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
-<span id="cb25-84"><a href="#cb25-84" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!</span><span class="cn">DOCTYPE</span> html<span class="op">&gt;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>html lang<span class="op">=</span><span class="st">&quot;it&quot;</span><span class="op">&gt;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>head<span class="op">&gt;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>meta charset<span class="op">=</span><span class="st">&quot;UTF-8&quot;</span><span class="op">&gt;</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>title<span class="op">&gt;</span>Elenco Ordini<span class="op">&lt;/</span>title<span class="op">&gt;</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>style<span class="op">&gt;</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>        table {</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>            border<span class="op">-</span>collapse<span class="ot">:</span> collapse<span class="ot">;</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>            width<span class="ot">:</span> <span class="dv">80</span><span class="op">%</span><span class="ot">;</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>            margin<span class="ot">:</span> <span class="er">20</span>px auto<span class="ot">;</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>        th<span class="ot">,</span> td {</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>            border<span class="ot">:</span> <span class="er">1</span>px solid <span class="co">#ddd;</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>            padding<span class="ot">:</span> <span class="er">8</span>px<span class="ot">;</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>            text<span class="op">-</span>align<span class="ot">:</span> left<span class="ot">;</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>        th {</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>            background<span class="op">-</span>color<span class="ot">:</span> <span class="co">#f2f2f2;</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;/</span>style<span class="op">&gt;</span></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>head<span class="op">&gt;</span></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>body<span class="op">&gt;</span></span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>h1<span class="op">&gt;</span>Elenco Ordini<span class="op">&lt;/</span>h1<span class="op">&gt;</span></span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span><span class="ot">?</span>php</span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Percorso al database SQLite</span></span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>    <span class="va">$dbFile</span> <span class="op">=</span> <span class="st">&#39;mio_database.db&#39;</span><span class="ot">;</span></span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span> {</span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Connessione al database SQLite usando PDO</span></span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a>        <span class="va">$pdo</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">PDO</span>(<span class="st">&quot;sqlite:&quot;</span> <span class="op">.</span> <span class="va">$dbFile</span>)<span class="ot">;</span></span>
+<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Imposta la modalità di errore PDO su eccezioni</span></span>
+<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a>        <span class="va">$pdo</span>-&gt;setAttribute(<span class="bu">PDO</span>::<span class="cn">ATTR_ERRMODE</span><span class="ot">,</span> <span class="bu">PDO</span>::<span class="cn">ERRMODE_EXCEPTION</span>)<span class="ot">;</span></span>
+<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Query per selezionare tutti gli ordini</span></span>
+<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a>        <span class="va">$sql</span> <span class="op">=</span> <span class="st">&quot;SELECT id, data_ordine, cliente, prodotto, quantita FROM ordini&quot;</span><span class="ot">;</span></span>
+<span id="cb23-38"><a href="#cb23-38" aria-hidden="true" tabindex="-1"></a>        <span class="va">$stmt</span> <span class="op">=</span> <span class="va">$pdo</span>-&gt;prepare(<span class="va">$sql</span>)<span class="ot">;</span></span>
+<span id="cb23-39"><a href="#cb23-39" aria-hidden="true" tabindex="-1"></a>        <span class="va">$stmt</span>-&gt;execute()<span class="ot">;</span></span>
+<span id="cb23-40"><a href="#cb23-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-41"><a href="#cb23-41" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Recupera tutti i risultati come un array associativo</span></span>
+<span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a>        <span class="va">$ordini</span> <span class="op">=</span> <span class="va">$stmt</span>-&gt;fetchAll(<span class="bu">PDO</span>::<span class="cn">FETCH_ASSOC</span>)<span class="ot">;</span></span>
+<span id="cb23-43"><a href="#cb23-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-44"><a href="#cb23-44" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Verifica se ci sono ordini</span></span>
+<span id="cb23-45"><a href="#cb23-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="fu">count</span>(<span class="va">$ordini</span>) <span class="op">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb23-46"><a href="#cb23-46" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;table&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-47"><a href="#cb23-47" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;thead&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-48"><a href="#cb23-48" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;tr&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-49"><a href="#cb23-49" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;th&gt;ID&lt;/th&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-50"><a href="#cb23-50" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;th&gt;Data Ordine&lt;/th&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-51"><a href="#cb23-51" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;th&gt;Cliente&lt;/th&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-52"><a href="#cb23-52" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;th&gt;Prodotto&lt;/th&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-53"><a href="#cb23-53" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;th&gt;Quantità&lt;/th&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-54"><a href="#cb23-54" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;/tr&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-55"><a href="#cb23-55" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;/thead&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-56"><a href="#cb23-56" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;tbody&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-57"><a href="#cb23-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-58"><a href="#cb23-58" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Itera attraverso gli ordini e crea le righe della tabella HTML</span></span>
+<span id="cb23-59"><a href="#cb23-59" aria-hidden="true" tabindex="-1"></a>            <span class="cf">foreach</span> (<span class="va">$ordini</span> <span class="kw">as</span> <span class="va">$ordine</span>) {</span>
+<span id="cb23-60"><a href="#cb23-60" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;tr&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-61"><a href="#cb23-61" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;td&gt;&#39;</span> <span class="op">.</span> <span class="fu">htmlspecialchars</span>(<span class="va">$ordine</span>[<span class="st">&#39;id&#39;</span>]) <span class="op">.</span> <span class="st">&#39;&lt;/td&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-62"><a href="#cb23-62" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;td&gt;&#39;</span> <span class="op">.</span> <span class="fu">htmlspecialchars</span>(<span class="va">$ordine</span>[<span class="st">&#39;data_ordine&#39;</span>]) <span class="op">.</span> <span class="st">&#39;&lt;/td&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-63"><a href="#cb23-63" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;td&gt;&#39;</span> <span class="op">.</span> <span class="fu">htmlspecialchars</span>(<span class="va">$ordine</span>[<span class="st">&#39;cliente&#39;</span>]) <span class="op">.</span> <span class="st">&#39;&lt;/td&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-64"><a href="#cb23-64" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;td&gt;&#39;</span> <span class="op">.</span> <span class="fu">htmlspecialchars</span>(<span class="va">$ordine</span>[<span class="st">&#39;prodotto&#39;</span>]) <span class="op">.</span> <span class="st">&#39;&lt;/td&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-65"><a href="#cb23-65" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;td&gt;&#39;</span> <span class="op">.</span> <span class="fu">htmlspecialchars</span>(<span class="va">$ordine</span>[<span class="st">&#39;quantita&#39;</span>]) <span class="op">.</span> <span class="st">&#39;&lt;/td&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-66"><a href="#cb23-66" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;/tr&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-67"><a href="#cb23-67" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb23-68"><a href="#cb23-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-69"><a href="#cb23-69" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;/tbody&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-70"><a href="#cb23-70" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;/table&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-71"><a href="#cb23-71" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
+<span id="cb23-72"><a href="#cb23-72" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;p&gt;Nessun ordine trovato.&lt;/p&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-73"><a href="#cb23-73" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb23-74"><a href="#cb23-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-75"><a href="#cb23-75" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Chiudi la connessione</span></span>
+<span id="cb23-76"><a href="#cb23-76" aria-hidden="true" tabindex="-1"></a>        <span class="va">$pdo</span> <span class="op">=</span> <span class="kw">null</span><span class="ot">;</span></span>
+<span id="cb23-77"><a href="#cb23-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-78"><a href="#cb23-78" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">catch</span> (<span class="bu">PDOException</span> <span class="va">$e</span>) {</span>
+<span id="cb23-79"><a href="#cb23-79" aria-hidden="true" tabindex="-1"></a>        <span class="kw">echo</span> <span class="st">&#39;&lt;p&gt;Errore di connessione o query: &#39;</span> <span class="op">.</span> <span class="va">$e</span>-&gt;getMessage() <span class="op">.</span> <span class="st">&#39;&lt;/p&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb23-80"><a href="#cb23-80" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb23-81"><a href="#cb23-81" aria-hidden="true" tabindex="-1"></a>    <span class="kw">?&gt;</span></span>
+<span id="cb23-82"><a href="#cb23-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-83"><a href="#cb23-83" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
+<span id="cb23-84"><a href="#cb23-84" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span></code></pre></div></li>
 </ol>
-<h2 data-number="1.7" id="spiegazione-del-codice-php"><span
-class="header-section-number">1.7</span> Spiegazione del Codice PHP</h2>
+<h4 data-number="1.4.2.3" id="spiegazione-del-codice-php"><span
+class="header-section-number">1.4.2.3</span> Spiegazione del Codice
+PHP</h4>
 <ul>
 <li><strong><code>$dbFile = 'mio_database.db';</code></strong>:
 Definisce il percorso al file del database SQLite. Assicurati che questo
@@ -1376,20 +1367,5 @@ database impostando l’oggetto PDO a <code>null</code>.</li>
 qualsiasi eccezione PDO che si verifica e visualizza un messaggio di
 errore.</li>
 </ul>
-<h2 data-number="1.8" id="esecuzione"><span
-class="header-section-number">1.8</span> Esecuzione</h2>
-<ol type="1">
-<li>Assicurati che il file <code>mio_database.db</code> si trovi nella
-stessa directory del file <code>mostra_ordini.php</code> (o specifica il
-percorso corretto).</li>
-<li>Accedi al file <code>mostra_ordini.php</code> tramite il tuo web
-browser (ad esempio, <code>http://localhost/mostra_ordini.php</code>,
-modificando <code>localhost</code> e il percorso se necessario).</li>
-</ol>
-<p>Dovresti visualizzare una pagina web con una tabella HTML contenente
-i dati degli ordini estratti dal database SQLite. Se non ci sono ordini,
-verrà visualizzato il messaggio “Nessun ordine trovato.” Se si verifica
-un errore di connessione o query, verrà mostrato un messaggio di
-errore.</p>
 </body>
 </html>

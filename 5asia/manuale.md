@@ -338,19 +338,7 @@ Azionista(CF <PK>, …)
 Partecipazione(partitaIVA <PK, FK>, CF <PK, FK>, quota)
 ```
 
-### Ristrutturazione del modello concettuale in quello logico relazionale
-
-1. ogni *entità* diventa una *relazione*, ossia una tabella SQL;
-2. ogni *attributo* di  un’entità  diventa  un  *attributo*  della  relazione,  cioè  il  nome  di  una  colonna della tabella SQL;
-3. ogni *attributo* della relazione eredita le caratteristiche dell’attributo dell’entità da cui deriva;
-4. l’identifi catore univoco di un’entità diventa la chiave primaria della relazione derivata;
-5. l’associazione uno a uno  diventa un’unica  relazione  che  contiene  gli  attributi  della  prima e della seconda entità, salvo alcune eccezioni;
-6. l’associazione uno a molti viene rappresentata aggiungendo, agli attributi dell’entità che svolge il ruolo a molti, l’identifi catore univoco dell’entità che svolge il ruolo a unonell’associazione. Questo identificatore, che prende il nome di chiave esterna dell’entità associata, è costituito dall’insieme di attributi che compongono la chiave dell’entitàa uno dell’associazione. Gli eventuali attributi dell’associazione vengono inseriti nella relazione che rappresenta l’entità a molti, assieme alla chiave esterna;
-7. l’associazione molti a molti  diventa  una  nuova  relazione  (in  aggiunta  alle  relazioni  derivate dalle entità) composta dagli identifi catori univoci delle due entità e dagli eventuali attributi dell’associazione. La chiave della nuova relazione è formata dall’insieme di attributi che compongo le chiavi delle due entità, oltre agli eventuali attributi dell’associazione necessari a garantire l’unicità delle n-uple nella relazione ottenuta. 
-
-
-
-###### SQL
+###### DDL-SQL
 
 ```sql
 CREATE TABLE Societa (
@@ -368,6 +356,17 @@ CREATE TABLE Partecipazione (
 	PRIMARY KEY(partitaIVA, CF)
 );
 ```
+
+### Ristrutturazione del modello concettuale in quello logico relazionale
+
+1. ogni *entità* diventa una *relazione*, ossia una tabella SQL;
+2. ogni *attributo* di  un’entità  diventa  un  *attributo*  della  relazione,  cioè  il  nome  di  una  colonna della tabella SQL;
+3. ogni *attributo* della relazione eredita le caratteristiche dell’attributo dell’entità da cui deriva;
+4. l’identifi catore univoco di un’entità diventa la chiave primaria della relazione derivata;
+5. l’associazione uno a uno  diventa un’unica  relazione  che  contiene  gli  attributi  della  prima e della seconda entità, salvo alcune eccezioni;
+6. l’associazione uno a molti viene rappresentata aggiungendo, agli attributi dell’entità che svolge il ruolo a molti, l’identifi catore univoco dell’entità che svolge il ruolo a unonell’associazione. Questo identificatore, che prende il nome di chiave esterna dell’entità associata, è costituito dall’insieme di attributi che compongono la chiave dell’entitàa uno dell’associazione. Gli eventuali attributi dell’associazione vengono inseriti nella relazione che rappresenta l’entità a molti, assieme alla chiave esterna;
+7. l’associazione molti a molti  diventa  una  nuova  relazione  (in  aggiunta  alle  relazioni  derivate dalle entità) composta dagli identifi catori univoci delle due entità e dagli eventuali attributi dell’associazione. La chiave della nuova relazione è formata dall’insieme di attributi che compongo le chiavi delle due entità, oltre agli eventuali attributi dell’associazione necessari a garantire l’unicità delle n-uple nella relazione ottenuta. 
+
 
 ## SQL
 
@@ -416,6 +415,7 @@ espressione := nome_colonna |
                max(espressione) |
                count(espressione) |
                avg(espressione) |
+               sum(espressione) |
                espressione = espressione |
                espressione <> espressione |
                espressione <= espressione |
@@ -474,38 +474,40 @@ date()
 - Anno corrente: `substr(date(), 1, 4)`
 
 
-## HTML
+## Web
+
+### HTML
 
 | Nome tag        | Descrizione                                                                 |
 |-----------------|-----------------------------------------------------------------------------|
-| `<html>`        | Definisce la radice di un documento HTML. Tutti gli altri elementi sono discendenti di questo tag. |
-| `<head>`        | Contiene metadati sul documento HTML, come il titolo, set di caratteri, link a fogli di stile, ecc. Questi non sono visualizzati direttamente nella pagina. |
-| `<title>`       | Definisce il titolo del documento, che appare nella barra del titolo del browser o nella scheda della pagina. |
-| `<body>`        | Contiene il contenuto visibile del documento HTML (testo, immagini, link, ecc.). |
-| `<h1>` - `<h6>` | Definiscono le intestazioni di diverso livello (da quella più importante `<h1>` a quella meno importante `<h6>`). |
-| `<p>`           | Definisce un paragrafo di testo.                                              |
-| `<a>`           | Definisce un hyperlink (collegamento). L'attributo `href` specifica l'URL di destinazione. |
-| `<img>`         | Inserisce un'immagine nel documento. L'attributo `src` specifica il percorso dell'immagine. |
-| `<ul>`          | Definisce una lista non ordinata (con punti elenco).                          |
-| `<ol>`          | Definisce una lista ordinata (con numeri o lettere).                           |
-| `<li>`          | Definisce un elemento di una lista (sia ordinata che non ordinata).          |
-| `<div>`         | Definisce una sezione o un contenitore generico per altri elementi HTML. Viene spesso utilizzato per scopi di layout e stilizzazione. |
-| `<span>`        | Definisce una sezione o un contenitore inline generico per altri elementi HTML. Simile a `<div>`, ma per elementi inline. |
-| `<table>`       | Definisce una tabella.                                                        |
-| `<tr>`          | Definisce una riga all'interno di una tabella.                               |
-| `<th>`          | Definisce una cella di intestazione in una tabella.                           |
-| `<td>`          | Definisce una cella di dati in una tabella.                                  |
-| `<form>`        | Definisce un modulo HTML utilizzato per raccogliere l'input dell'utente.     |
-| `<input>`       | Definisce un campo di input all'interno di un modulo (testo, password, pulsante, ecc.). |
-| `<button>`      | Definisce un pulsante cliccabile.                                           |
-| `<select>`      | Definisce un menu a tendina (lista di opzioni).                               |
-| `<option>`      | Definisce un'opzione all'interno di un elemento `<select>`.                  |
+| `<html>`        | La radice di un documento HTML. Tutti gli altri elementi sono discendenti di questo tag. |
+| `<head>`        | I metadati del documento HTML, come il titolo, set di caratteri, link a fogli di stile, ecc. Questi non sono visualizzati direttamente nella pagina. |
+| `<title>`       | Il titolo del documento, che appare nella barra del titolo del browser o nella scheda della pagina. |
+| `<body>`        | Il contenuto visibile del documento HTML (testo, immagini, link, ecc.). |
+| `<h1>` - `<h6>` | Le intestazioni di diverso livello (da quella più importante `<h1>` a quella meno importante `<h6>`). |
+| `<p>`           | Un capoverso (*paragraph*).                                              |
+| `<a>`           | Un hyperlink (collegamento). L'attributo `href` specifica l'URL di destinazione. |
+| `<img>`         | Un'immagine nel documento. L'attributo `src` specifica il percorso dell'immagine. |
+| `<ul>`          | Una lista non ordinata (con punti elenco).                          |
+| `<ol>`          | Una lista ordinata (con numeri o lettere).                           |
+| `<li>`          | Un elemento di una lista (sia ordinata che non ordinata).          |
+| `<div>`         | Una sezione o un contenitore generico per altri elementi HTML. |
+| `<span>`        | Una sezione o un contenitore inline generico per altri elementi HTML. Simile a `<div>`, ma per elementi inline. |
+| `<table>`       | Una tabella.                                                        |
+| `<tr>`          | Una riga all'interno di una tabella.                               |
+| `<th>`          | Una cella di intestazione in una tabella.                           |
+| `<td>`          | Una cella di dati in una tabella.                                  |
+| `<form>`        | Un modulo HTML utilizzato per raccogliere l'input dell'utente.     |
+| `<input>`       | Un campo di input all'interno di un modulo (testo, password, pulsante, ecc.). |
+| `<button>`      | Un pulsante cliccabile.                                           |
+| `<select>`      | Un menu a tendina (lista di opzioni).                               |
+| `<option>`      | Un'opzione all'interno di un elemento `<select>`.                  |
 | `<strong>`      | Evidenzia il testo con una forte enfasi (solitamente visualizzato in grassetto). |
 | `<em>`          | Enfatizza il testo (solitamente visualizzato in corsivo).                     |
-| `<br>`          | Inserisce un'interruzione di riga singola.                                  |
-| `<hr>`          | Definisce una linea orizzontale tematica (separatore).                       |
+| `<br>`          | Un'interruzione di riga singola.                                  |
+| `<hr>`          | Una linea orizzontale tematica (separatore).                       |
 
-### Pagina web vouta - HTML
+#### Pagina web vouta - HTML
 
 ```html
 <!DOCTYPE html>
@@ -520,7 +522,7 @@ date()
 </html>
 ```
 
-### Pagina web vouta - Document Object Model
+#### Pagina web vouta - Document Object Model
 
 <div hidden>
 
@@ -558,7 +560,7 @@ head -- meta
 ![](dom_vuoto.svg)
 
 
-### Tabella - HTML
+#### Tabella - HTML
 
 ```html
 <table>
@@ -612,7 +614,7 @@ head -- meta
   </tfoot>
 </table>
 
-### Tabella - DOM
+#### Tabella - DOM
 
 <div hidden>
 
@@ -709,54 +711,23 @@ tr_tfoot -- td_tfoot
 
 ![](tabella.svg)
 
-## Applicazione PHP con PDO e SQLite
+### PHP con PDO e SQLite
 
 Questo manuale mostra un semplice esempio di come utilizzare PHP con PDO (PHP Data Objects) per interagire con un database SQLite e leggere i dati degli ordini da una tabella, per poi visualizzarli in una tabella HTML.
 
-## Prerequisiti
+#### Prerequisiti
 
-* **Database SQLite:** Devi avere un database SQLite esistente con una tabella chiamata, ad esempio, `ordini`. La tabella `ordini` dovrebbe avere almeno le seguenti colonne (o simili, adattando lo script):
-    * `id`: Identificatore univoco dell'ordine (INTEGER PRIMARY KEY).
-    * `data_ordine`: Data dell'ordine (TEXT o INTEGER).
-    * `cliente`: Nome del cliente (TEXT).
-    * `prodotto`: Nome del prodotto ordinato (TEXT).
-    * `quantita`: Quantità ordinata (INTEGER).
+* **Database SQLite:** Devi avere un database SQLite esistente
 
-### Passaggi
+#### Passaggi
 
 1.  **Creazione del Database SQLite (se non esiste):**
 
-    Se non hai già un database SQLite, puoi crearne uno utilizzando la riga di comando di SQLite o un tool grafico. Ad esempio, usando la riga di comando:
-
-    ```bash
-    sqlite3 mio_database.db
-    ```
-
-    Poi, crea la tabella `ordini`:
-
-    ```sql
-    CREATE TABLE ordini (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        data_ordine TEXT NOT NULL,
-        cliente TEXT NOT NULL,
-        prodotto TEXT NOT NULL,
-        quantita INTEGER NOT NULL
-    );
-
-    INSERT INTO ordini (data_ordine, cliente, prodotto, quantita) VALUES
-    ('2025-04-05', 'Mario Rossi', 'Laptop', 1),
-    ('2025-04-04', 'Laura Bianchi', 'Mouse', 2),
-    ('2025-04-04', 'Mario Rossi', 'Tastiera', 1),
-    ('2025-04-03', 'Giovanni Verdi', 'Monitor', 1);
-
-    .exit
-    ```
-
-    Questo creerà un file chiamato `mio_database.db` con la tabella `ordini` e alcuni dati di esempio.
+    Se non hai già un database SQLite, devi crearlo. Supponiamo di avere un database nel file `mio_database.db` con la tabella `ordini` e alcuni dati di esempio.
 
 2.  **Creazione del File PHP:**
 
-    Crea un file PHP chiamato, ad esempio, `mostra_ordini.php` nella tua web directory.
+    Crea un file PHP chiamato, ad esempio, `mostra_ordini.php`.
 
 3.  **Scrittura del Codice PHP:**
 
@@ -847,7 +818,7 @@ Questo manuale mostra un semplice esempio di come utilizzare PHP con PDO (PHP Da
     </html>
     ```
 
-## Spiegazione del Codice PHP
+#### Spiegazione del Codice PHP
 
 * **`$dbFile = 'mio_database.db';`**: Definisce il percorso al file del database SQLite. Assicurati che questo percorso sia corretto.
 * **`try...catch`**: Blocca il codice che potrebbe generare eccezioni (come errori di connessione al database o errori nella query).
@@ -862,10 +833,3 @@ Questo manuale mostra un semplice esempio di come utilizzare PHP con PDO (PHP Da
 * **`htmlspecialchars()`**: Questa funzione viene utilizzata per rendere sicuri i dati visualizzati nella tabella HTML, prevenendo potenziali attacchi XSS (Cross-Site Scripting) convertendo caratteri speciali HTML nelle loro entità HTML.
 * **`$pdo = null;`**: Chiude la connessione al database impostando l'oggetto PDO a `null`.
 * **`catch (PDOException $e)`**: Cattura qualsiasi eccezione PDO che si verifica e visualizza un messaggio di errore.
-
-## Esecuzione
-
-1.  Assicurati che il file `mio_database.db` si trovi nella stessa directory del file `mostra_ordini.php` (o specifica il percorso corretto).
-2.  Accedi al file `mostra_ordini.php` tramite il tuo web browser (ad esempio, `http://localhost/mostra_ordini.php`, modificando `localhost` e il percorso se necessario).
-
-Dovresti visualizzare una pagina web con una tabella HTML contenente i dati degli ordini estratti dal database SQLite. Se non ci sono ordini, verrà visualizzato il messaggio "Nessun ordine trovato." Se si verifica un errore di connessione o query, verrà mostrato un messaggio di errore.

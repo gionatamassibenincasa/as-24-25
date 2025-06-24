@@ -169,9 +169,23 @@ Ristrutturazione nel modello logico relazionale
 
 Schema logico
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Studente(matricola \textless{}PK\textgreater{}, codiceBadge, …)}
+\end{Highlighting}
+\end{Shaded}
 
 DDL - SQL
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Studente (}
+\NormalTok{    matricola }\DataTypeTok{INTEGER} \KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{,}
+\NormalTok{    codiceBadge }\DataTypeTok{INTEGER}\NormalTok{,}
+\NormalTok{    …}
+\NormalTok{);}
+\end{Highlighting}
+\end{Shaded}
 
 \subparagraph{Associazione uno a molti}\label{associazione-uno-a-molti}
 
@@ -185,7 +199,28 @@ Progettazione logica - Classi di progettazione
 
 Schema logico
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Cliente(idCliente \textless{}PK\textgreater{}, …)}
+\NormalTok{Prodotto(idProdotto \textless{}PK\textgreater{}, idCliente \textless{}FK\textgreater{}, …)}
+\end{Highlighting}
+\end{Shaded}
+
 DDL - SQL
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Cliente (}
+\NormalTok{    idCliente }\DataTypeTok{INTEGER} \KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{,}
+\NormalTok{    …}
+\NormalTok{);}
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Prodotto (}
+\NormalTok{    idProdotto }\DataTypeTok{INTEGER} \KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{,}
+\NormalTok{    idCliente }\DataTypeTok{INTEGER} \KeywordTok{FOREIGN} \KeywordTok{KEY} \KeywordTok{REFERENCES}\NormalTok{ Cliente(idCliente),}
+\NormalTok{    …}
+\NormalTok{);}
+\end{Highlighting}
+\end{Shaded}
 
 \subparagraph{Associazione molti a
 molti}\label{associazione-molti-a-molti}
@@ -204,7 +239,35 @@ Ristrutturazione nel modello logico relazionale
 
 Schema logico
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Societa(partitaIVA \textless{}PK\textgreater{}, …)}
+\NormalTok{Azionista(CF \textless{}PK\textgreater{}, …)}
+\NormalTok{Partecipazione(partitaIVA \textless{}PK, FK\textgreater{}, CF \textless{}PK, FK\textgreater{}, quota)}
+\end{Highlighting}
+\end{Shaded}
+
 DDL-SQL
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Societa (}
+\NormalTok{    partitaIVA TEXT }\KeywordTok{PRIMARY} \KeywordTok{KEY} \KeywordTok{CHECK}\NormalTok{ (}\FunctionTok{length}\NormalTok{(partitaIVA) }\OperatorTok{=} \DecValTok{11}\NormalTok{),}
+\NormalTok{    …}
+\NormalTok{);}
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Azionista (}
+\NormalTok{    CF TEXT }\KeywordTok{PRIMARY} \KeywordTok{KEY} \KeywordTok{CHECK}\NormalTok{ (}\FunctionTok{length}\NormalTok{(CF) }\OperatorTok{=} \DecValTok{16}\NormalTok{),}
+\NormalTok{    …}
+\NormalTok{);}
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ Partecipazione (}
+\NormalTok{    partitaIVA TEXT }\KeywordTok{REFERENCES}\NormalTok{ Societa(partitaIVA),}
+\NormalTok{    CF TEXT }\KeywordTok{REFERENCES}\NormalTok{ Azionista(CF),}
+    \KeywordTok{quota} \DataTypeTok{REAL}\NormalTok{,}
+    \KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{(partitaIVA, CF)}
+\NormalTok{);}
+\end{Highlighting}
+\end{Shaded}
+
 
 \subsubsection{Ristrutturazione del modello concettuale in quello logico
 relazionale}\label{ristrutturazione-del-modello-concettuale-in-quello-logico-relazionale}
