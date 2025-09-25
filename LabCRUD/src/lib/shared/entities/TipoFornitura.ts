@@ -7,8 +7,8 @@ import { Fornitura } from "./Fornitura.js"
   dbName: "TipoFornitura",
 })
 export class TipoFornitura {
-  @Fields.autoIncrement()
-  idTipoFornitura = 0
+  @Fields.integer()
+  id!: number
 
   @Fields.string({ allowNull: true })
   tipoFornitura?: string

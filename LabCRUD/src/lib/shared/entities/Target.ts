@@ -1,21 +1,28 @@
 import { Entity, Field, Fields } from "remult"
 import { Relations } from "remult"
 import { Modulo } from "./Modulo.js"
-import { Articolazione } from "./Articolazione.js"
+import { Istituto } from "./Istituto.js"
+import { Curriculum } from "./Curriculum.js"
 
 @Entity<Target>("Target", {
   allowApiCrud: true,
   dbName: "Target",
 })
 export class Target {
-  @Fields.autoIncrement()
-  idTarget = 0
+  @Fields.integer()
+  id!: number
 
   @Fields.integer()
-  idArticolazione!: number
+  idCurriculum!: number
 
-  @Relations.toOne(() => Articolazione, { field: "idArticolazione" })
-  articolazioneIdArticolazione!: Articolazione
+  @Relations.toOne(() => Curriculum, { field: "idCurriculum" })
+  curriculumIdCurriculum!: Curriculum
+
+  @Fields.integer()
+  idIstituto!: number
+
+  @Relations.toOne(() => Istituto, { field: "idIstituto" })
+  istitutoIdIstituto!: Istituto
 
   @Fields.string({ allowNull: true })
   abbreviazione?: string

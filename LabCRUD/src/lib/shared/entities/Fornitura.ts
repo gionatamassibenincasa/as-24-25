@@ -3,14 +3,15 @@ import { Relations } from "remult"
 import { Costo } from "./Costo.js"
 import { Fornitore } from "./Fornitore.js"
 import { TipoFornitura } from "./TipoFornitura.js"
+import { Utente } from "./Utente.js"
 
 @Entity<Fornitura>("Fornitura", {
   allowApiCrud: true,
   dbName: "Fornitura",
 })
 export class Fornitura {
-  @Fields.autoIncrement()
-  idFornitura = 0
+  @Fields.integer()
+  id!: number
 
   @Fields.integer()
   idTipoFornitura = 1
@@ -38,6 +39,18 @@ export class Fornitura {
 
   @Fields.string({ allowNull: true })
   SKU?: string
+
+  @Fields.integer()
+  modificatoDa = 1
+
+  @Relations.toOne(() => Utente, { field: "modificatoDa" })
+  utenteModificatoDa!: Utente
+
+  @Fields.createdAt({ allowNull: true })
+  createdAt? = new Date()
+
+  @Fields.updatedAt({ allowNull: true })
+  updatedAt? = new Date()
 
   // Relations toMany
   @Relations.toMany(() => Costo)

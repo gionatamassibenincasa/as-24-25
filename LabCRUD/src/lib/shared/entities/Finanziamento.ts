@@ -7,8 +7,14 @@ import { Laboratorio } from "./Laboratorio.js"
   dbName: "Finanziamento",
 })
 export class Finanziamento {
-  @Fields.autoIncrement()
-  idFinanziamento = 0
+  @Fields.integer()
+  id!: number
+
+  @Fields.string({ allowNull: true })
+  tipo?: string
+
+  @Fields.string({ allowNull: true })
+  denominazione?: string
 
   @Fields.string({ allowNull: true })
   urlAvviso?: string

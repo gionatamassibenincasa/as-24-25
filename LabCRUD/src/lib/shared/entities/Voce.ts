@@ -7,14 +7,14 @@ import { Costo } from "./Costo.js"
   dbName: "Voce",
 })
 export class Voce {
-  @Fields.autoIncrement()
-  idVoce = 0
+  @Fields.integer()
+  id!: number
 
-  @Fields.string({ allowNull: true })
-  lettera?: string
+  @Fields.string()
+  lettera!: string
 
-  @Fields.string({ allowNull: true })
-  voce?: string
+  @Fields.string()
+  voce!: string
 
   @Fields.string({ allowNull: true })
   descrizione?: string

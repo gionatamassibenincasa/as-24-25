@@ -7,11 +7,20 @@ import { Fornitura } from "./Fornitura.js"
   dbName: "Fornitore",
 })
 export class Fornitore {
-  @Fields.autoIncrement()
-  idFornitore = 0
+  @Fields.integer()
+  id!: number
 
   @Fields.string({ allowNull: true })
   fornitore?: string
+
+  @Fields.string({ allowNull: true })
+  PIVA?: string
+
+  @Fields.string({ allowNull: true })
+  indirizzo?: string
+
+  @Fields.string({ allowNull: true })
+  telefono?: string
 
   // Relations toMany
   @Relations.toMany(() => Fornitura)

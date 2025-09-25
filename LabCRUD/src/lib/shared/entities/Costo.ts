@@ -9,8 +9,8 @@ import { Voce } from "./Voce.js"
   dbName: "Costo",
 })
 export class Costo {
-  @Fields.autoIncrement()
-  idCosto = 0
+  @Fields.integer()
+  id!: number
 
   @Fields.integer()
   idVoce = 3

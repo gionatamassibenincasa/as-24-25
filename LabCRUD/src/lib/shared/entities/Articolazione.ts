@@ -1,6 +1,6 @@
 import { Entity, Field, Fields } from "remult"
 import { Relations } from "remult"
-import { Target } from "./Target.js"
+import { Curriculum } from "./Curriculum.js"
 import { Indirizzo } from "./Indirizzo.js"
 
 @Entity<Articolazione>("Articolazione", {
@@ -8,8 +8,8 @@ import { Indirizzo } from "./Indirizzo.js"
   dbName: "Articolazione",
 })
 export class Articolazione {
-  @Fields.autoIncrement()
-  idArticolazione = 0
+  @Fields.integer()
+  id!: number
 
   @Fields.integer()
   idIndirizzo!: number
@@ -17,13 +17,10 @@ export class Articolazione {
   @Relations.toOne(() => Indirizzo, { field: "idIndirizzo" })
   indirizzoIdIndirizzo!: Indirizzo
 
-  @Fields.string({ allowNull: true })
-  articolazione?: string
-
-  @Fields.string({ allowNull: true })
-  abbreviazione?: string
+  @Fields.string()
+  articolazione!: string
 
   // Relations toMany
-  @Relations.toMany(() => Target)
-  Target?: Target[]
+  @Relations.toMany(() => Curriculum)
+  Curriculum?: Curriculum[]
 }

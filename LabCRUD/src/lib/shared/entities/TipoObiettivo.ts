@@ -7,11 +7,11 @@ import { Obiettivo } from "./Obiettivo.js"
   dbName: "TipoObiettivo",
 })
 export class TipoObiettivo {
-  @Fields.autoIncrement()
-  idTipoObiettivo = 0
+  @Fields.integer()
+  id!: number
 
-  @Fields.string({ allowNull: true })
-  tipoObiettivo?: string
+  @Fields.string()
+  tipoObiettivo!: string
 
   @Fields.string({ allowNull: true })
   descrizione?: string

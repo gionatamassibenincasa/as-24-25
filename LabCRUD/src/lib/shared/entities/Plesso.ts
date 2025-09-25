@@ -8,8 +8,8 @@ import { Istituto } from "./Istituto.js"
   dbName: "Plesso",
 })
 export class Plesso {
-  @Fields.autoIncrement()
-  idPlesso = 0
+  @Fields.integer()
+  id!: number
 
   @Fields.string({ allowNull: true })
   plesso?: string

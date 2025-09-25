@@ -1,6 +1,12 @@
 <script lang="ts">
-	import SunIcon from '@lucide/svelte/icons/sun';
 	import MoonIcon from '@lucide/svelte/icons/moon';
+	import SunIcon from '@lucide/svelte/icons/sun';
+	import { route } from './ROUTES';
+	import type { PageData } from './$types';
+	import { remult } from 'remult';
+	import { removeListener } from 'process';
+
+	let data: PageData = $props();
 
 	let mode = $state('light');
 
@@ -10,16 +16,16 @@
 		htmlEl.setAttribute('data-theme', mode);
 	}
 
-	interface Rotte {
-		path: string;
-		testo: string;
+	interface IMyRoutes {
+		route: string;
+		text: string;
 	}
 
-	const rotte: Rotte[] = [
-		{ path: '/', testo: 'Home' },
-		{ path: '/ordinamento', testo: 'Ordinamenti' },
-		{ path: '/indirizzo', testo: 'Indirizzi' },
-		{ path: '/devhelp', testo: 'Aiuto' }
+	const myRoutes: IMyRoutes[] = [
+		{ route: route('/'), text: 'Home' },
+		{ route: route('/ordinamento'), text: 'Ordinamenti' }
+		// { path: '/indirizzo', testo: 'Indirizzi' },
+		// { path: '/devhelp', testo: 'Aiuto' },
 	];
 </script>
 
@@ -33,16 +39,23 @@
 	<navbar>
 		<nav>
 			<ul>
-				{#each rotte as r}
+				{#each myRoutes as r}
 					<li>
-						<a href={r.path}>{r.testo}</a>
+						<a href={r.route}>{r.text}</a>
 					</li>
 				{/each}
 			</ul>
 			<ul>
-				<li>
-					<a href="/api/admin">Admin</a>
-				</li>
+				{#if remult.user?.roles?.includes('admin')}
+					<li>
+						<a href="/api/admin">Admin</a>
+					</li>
+				{/if}
+				{#if remult.user}
+					<li>
+						<a href="/auth/signout">Signout</a>
+					</li>
+				{/if}
 			</ul>
 			<ul>
 				<li>

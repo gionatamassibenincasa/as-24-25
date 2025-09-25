@@ -1,5 +1,7 @@
 import { Articolazione } from './Articolazione.js';
+import { Corso } from './Corso.js';
 import { Costo } from './Costo.js';
+import { Curriculum } from './Curriculum.js';
 import { Finanziamento } from './Finanziamento.js';
 import { Fornitore } from './Fornitore.js';
 import { Fornitura } from './Fornitura.js';
@@ -11,9 +13,15 @@ import { ObiettiviModulo } from './ObiettiviModulo.js';
 import { Obiettivo } from './Obiettivo.js';
 import { Ordinamento } from './Ordinamento.js';
 import { Plesso } from './Plesso.js';
+import { PreferenzaUtente } from './PreferenzaUtente.js';
+import { Ruolo } from './Ruolo.js';
+import { RuoloUtente } from './RuoloUtente.js';
+import { Sessione } from './Sessione.js';
 import { Target } from './Target.js';
 import { TipoFornitura } from './TipoFornitura.js';
 import { TipoObiettivo } from './TipoObiettivo.js';
+import { TipoPreferenza } from './TipoPreferenza.js';
+import { Utente } from './Utente.js';
 import { Voce } from './Voce.js';
 
-export const entities = [Articolazione, Costo, Finanziamento, Fornitore, Fornitura, Indirizzo, Istituto, Laboratorio, Modulo, ObiettiviModulo, Obiettivo, Ordinamento, Plesso, Target, TipoFornitura, TipoObiettivo, Voce];
+export const entities = [Articolazione, Corso, Costo, Curriculum, Finanziamento, Fornitore, Fornitura, Indirizzo, Istituto, Laboratorio, Modulo, ObiettiviModulo, Obiettivo, Ordinamento, Plesso, PreferenzaUtente, Ruolo, RuoloUtente, Sessione, Target, TipoFornitura, TipoObiettivo, TipoPreferenza, Utente, Voce];

@@ -9,7 +9,7 @@ import { TipoObiettivo } from "./TipoObiettivo.js"
 })
 export class Obiettivo {
   @Fields.integer()
-  idObiettivo!: number
+  id!: number
 
   @Fields.integer()
   idTipoObiettivo!: number

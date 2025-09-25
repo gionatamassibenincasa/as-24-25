@@ -16,7 +16,8 @@ npx sv create my-app
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or
+`yarn`), start a development server:
 
 ```bash
 npm run dev
@@ -35,35 +36,35 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for
+> your target environment.
 
 ## GIONATA
 
 ```bash
 bun add remult
 bun add @picocss/pico
-bun add remult
 bun add -d svelte-adapter-bun
-bun add @lucide/svelte 
+bun add @lucide/svelte
 bun i
 ```
 
- `svelte.config.js`:
+`svelte.config.js`:
 
 ```js
 // svelte.config.js
-import adapter from 'svelte-adapter-bun';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
+import adapter from 'svelte-adapter-bun'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://svelte.dev/docs/kit/integrations
-	// for more information about preprocessors
-	preprocess: vitePreprocess(),
-	kit: { adapter: adapter() }
-};
+  // Consult https://svelte.dev/docs/kit/integrations
+  // for more information about preprocessors
+  preprocess: vitePreprocess(),
+  kit: { adapter: adapter() },
+}
 
-export default config;
+export default config
 ```
 
 ```bash
@@ -71,6 +72,7 @@ bun --bun run dev --host
 ```
 
 `src/app.html`:
+
 ```
 <!doctype html>
 <html lang="it">
@@ -91,24 +93,58 @@ bun --bun run dev --host
 
 ```json
 {
-	"extends": "./.svelte-kit/tsconfig.json",
-	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"sourceMap": true,
-		"strict": true,
-		"moduleResolution": "bundler",
-		"allowImportingTsExtensions": true,
-		"experimentalDecorators": true
-	}
-	// Path aliases are handled by https://svelte.dev/docs/kit/configuration#alias
-	// except $lib which is handled by https://svelte.dev/docs/kit/configuration#files
-	//
-	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
-	// from the referenced tsconfig.json - TypeScript does not merge them in
+  "extends": "./.svelte-kit/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "experimentalDecorators": true
+  }
+  // Path aliases are handled by https://svelte.dev/docs/kit/configuration#alias
+  // except $lib which is handled by https://svelte.dev/docs/kit/configuration#files
+  //
+  // If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
+  // from the referenced tsconfig.json - TypeScript does not merge them in
 }
+```
+
+### Formatting
+
+```bash
+bun add -D @kitql/eslint-config
+
+bunx @eslint/config-inspector@latest
+```
+
+`.npmrc`
+
+```
+engine-strict=true
+public-hoist-pattern[]=*eslint*
+public-hoist-pattern[]=*prettier*
+public-hoist-pattern[]=*globals*
+```
+
+`eslint.config.js`:
+
+```js
+import { kitql } from '@kitql/eslint-config'
+
+/** @type { import("eslint").Linter.Config[] } */
+export default [
+  ...kitql(),
+  {
+    name: 'app:rules',
+    rules: {
+      // Some custom things?
+    },
+  },
+]
 ```

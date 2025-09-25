@@ -4,17 +4,18 @@ import { Costo } from "./Costo.js"
 import { Modulo } from "./Modulo.js"
 import { Finanziamento } from "./Finanziamento.js"
 import { Plesso } from "./Plesso.js"
+import { Utente } from "./Utente.js"
 
 @Entity<Laboratorio>("Laboratorio", {
   allowApiCrud: true,
   dbName: "Laboratorio",
 })
 export class Laboratorio {
-  @Fields.autoIncrement()
-  idLaboratorio = 0
+  @Fields.integer()
+  id!: number
 
   @Fields.integer()
-  idPlesso!: number
+  idPlesso = 1
 
   @Relations.toOne(() => Plesso, { field: "idPlesso" })
   plessoIdPlesso!: Plesso
@@ -25,11 +26,23 @@ export class Laboratorio {
   @Fields.string({ allowNull: true })
   aula?: string
 
-  @Fields.integer({ allowNull: true })
-  idFinanziamento? = 1
+  @Fields.integer()
+  idFinanziamento = 1
 
   @Relations.toOne(() => Finanziamento, { field: "idFinanziamento" })
-  finanziamentoIdFinanziamento?: Finanziamento
+  finanziamentoIdFinanziamento!: Finanziamento
+
+  @Fields.integer()
+  modificatoDa = 1
+
+  @Relations.toOne(() => Utente, { field: "modificatoDa" })
+  utenteModificatoDa!: Utente
+
+  @Fields.createdAt({ allowNull: true })
+  createdAt? = new Date()
+
+  @Fields.updatedAt({ allowNull: true })
+  updatedAt? = new Date()
 
   // Relations toMany
   @Relations.toMany(() => Costo)

@@ -1,29 +1,30 @@
 import { Entity, Field, Fields } from "remult"
 import { Relations } from "remult"
 import { Articolazione } from "./Articolazione.js"
-import { Ordinamento } from "./Ordinamento.js"
+import { Curriculum } from "./Curriculum.js"
+import { Corso } from "./Corso.js"
 
 @Entity<Indirizzo>("Indirizzo", {
   allowApiCrud: true,
   dbName: "Indirizzo",
 })
 export class Indirizzo {
-  @Fields.autoIncrement()
-  idIndirizzo = 0
+  @Fields.integer()
+  id!: number
 
   @Fields.integer()
-  idOrdinamento!: number
+  idCorso!: number
 
-  @Relations.toOne(() => Ordinamento, { field: "idOrdinamento" })
-  ordinamentoIdOrdinamento!: Ordinamento
+  @Relations.toOne(() => Corso, { field: "idCorso" })
+  corsoIdCorso!: Corso
 
-  @Fields.string({ allowNull: true })
-  indirizzo?: string
-
-  @Fields.string({ allowNull: true })
-  abbreviazione?: string
+  @Fields.string()
+  indirizzo!: string
 
   // Relations toMany
   @Relations.toMany(() => Articolazione)
   Articolazione?: Articolazione[]
+
+  @Relations.toMany(() => Curriculum)
+  Curriculum?: Curriculum[]
 }
